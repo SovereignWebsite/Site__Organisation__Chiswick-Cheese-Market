@@ -23,6 +23,7 @@ Pictures and the home page video load from chiswickcheesemarket.uk at sizes Word
 python3 tools/fetch-wp.py      # read the WordPress API into data/ (raw responses in data/raw/, API map in data/api-map.json)
 python3 tools/check-links.py   # find dead links in their content: data/dead-links.json
 python3 tools/build.py         # build site/ from data/
+node tools/thumbs.js && python3 tools/thumbs.py   # the "Choose a design" thumbnails, after a design changes
 python3 tests/test_wordpress.py
 ```
 

@@ -229,15 +229,20 @@ class Ctx:
 
 def demo_strip(ctx, skin_routes=None):
     """The line on every page, and the design chooser (links to the same page in each design)."""
-    opts = []
-    for d, name, _ in DESIGNS:
+    cards = []
+    for d, name, line in DESIGNS:
         route = ctx.route if (d != "6" and ctx.design != "6") else ""
-        here = ' aria-current="page"' if d == ctx.design else ""
-        opts.append(f'<a href="{ctx.link(route, d)}"{here}><b>{d}</b> {esc(name)}</a>')
+        here = d == ctx.design
+        cards.append(f'<li><a href="{ctx.link(route, d)}"{" aria-current=page" if here else ""}>'
+                     f'<img src="{ctx.up()}assets/designs/{d}.webp" width="640" height="400" alt="" loading="lazy" decoding="async">'
+                     f'<strong>{d} {esc(name)}</strong><span>{esc(line)}</span>{"<span class=now>You are here</span>" if here else ""}</a></li>')
+    opts = cards
     return (f'<aside class="demo-strip" aria-label="About this demonstration"><div class="demo-line"><span class="short">Demonstration, not the official site.</span><span class="long">{esc(DISCLAIMER)} '
             f'The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>.</span>'
             f'<details class="demo-more"><summary>More</summary><span class="short">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. </span>Content snapshot {esc(ctx.c.snap_label)}. Pictures and video load from chiswickcheesemarket.uk, the market\'s own site. <a href="{ctx.up()}admin/index.html">Admin: the WordPress viewer and parser</a>.</details></div>'
-            f'<div class="demo-actions"><details class="demo-choose"><summary>Choose a design</summary><nav aria-label="Choose a design">{"".join(opts)}</nav></details>'
+            f'<div class="demo-actions"><details class="demo-choose"><summary>Choose a design</summary><nav class="pick-cards" aria-label="Choose a design">'
+            f'<p class="pick-head">The same content, six designs. Each opens the page you are on.</p><ul>{"".join(opts)}</ul>'
+            f'<p class="pick-also">Also here: <a href="{ctx.up()}buttercup/index.html">Buttercup</a> \u00b7 <a href="{ctx.up()}admin/index.html">Admin</a> \u00b7 <a href="{ctx.up()}index.html">The front door</a></p></nav></details>'
             f'</div></aside>')
 
 
@@ -259,13 +264,16 @@ footer .sws-version{opacity:1}
 .demo-choose summary{cursor:pointer;list-style:none;background:#ffd65a;color:#111;border-radius:999px;padding:3px 12px;font-weight:600;white-space:nowrap}
 .demo-choose summary::-webkit-details-marker{display:none}
 .demo-choose summary::after{content:" \\25BE"}
-.demo-choose nav{position:absolute;right:0;top:calc(100% + 6px);background:#111;border:1px solid #444;border-radius:10px;padding:6px;display:grid;min-width:220px;box-shadow:0 10px 30px rgba(0,0,0,.4)}
-.demo-choose nav a{color:#f3f3f3;text-decoration:none;padding:7px 10px;border-radius:6px}
-.demo-choose nav a b{display:inline-block;width:1.4em;color:#ffd65a}
-.demo-choose nav a:hover,.demo-choose nav a:focus{background:#2a2a2a}
-.demo-choose nav a[aria-current]{background:#ffd65a;color:#111}
-.demo-choose nav a[aria-current] b{color:#111}
-@media (max-width:600px){.demo-choose nav{right:auto;left:0}}
+.demo-choose .pick-cards{position:absolute;right:0;top:calc(100% + 8px);z-index:60;width:min(46rem,calc(100vw - 2rem));background:#fffdf7;color:#1b1b1b;border:1px solid #ddd;border-radius:12px;padding:14px;box-shadow:0 14px 44px rgba(0,0,0,.35)}
+.pick-cards ul{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(8.5rem,1fr));gap:12px}
+.pick-cards a{display:flex;flex-direction:column;gap:2px;text-decoration:none;color:#1b1b1b;font-size:13px;line-height:1.3}
+.pick-cards img{width:100%;height:auto;border-radius:6px;border:1px solid #ddd;aspect-ratio:8/5;object-fit:cover;object-position:top;margin-bottom:4px}
+.pick-cards a[aria-current] img{outline:3px solid #e0a400;outline-offset:1px}
+.pick-cards strong{font-size:14px}.pick-cards a:hover strong{text-decoration:underline}
+.pick-cards span{color:#55514b}.pick-cards .now{color:#7a4f00;font-weight:700}
+.pick-head{margin:0 0 10px;font-size:13px;color:#55514b}
+.pick-also{margin:12px 0 0;font-size:13px;color:#55514b}.pick-cards .pick-also a{display:inline;color:#7a4f00;text-decoration:underline}
+@media (max-width:600px){.demo-choose .pick-cards{position:fixed;left:10px;right:10px;top:46px;width:auto;max-height:80vh;overflow:auto}}
 """
 
 
