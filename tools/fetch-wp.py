@@ -83,6 +83,18 @@ def main():
     m.append(s.write("pages.json", items["pages"], "Public pages. The site's page builder (WPBakery / Uncode) shortcodes are converted to plain blocks.",
                      {"blocks": "section > column > heading | text | button | image | gallery | listing | embed | form",
                       "image": "the page's header image, id into media.json", "source_url": "the page on the official site"}, snap, d))
+    # The market's monthly posters: the animated GIF banners in the media library (one GET).
+    gifs = s.c.collection("media", {"mime_type": "image/gif", "_fields": "id,date_gmt,slug,title,alt_text,source_url,media_details,link"}, key="media_gif")
+    posters = []
+    for g in sorted(gifs, key=lambda g: g["date_gmt"]):
+        md = g.get("media_details") or {}
+        posters.append({"id": g["id"], "title": html.unescape(g["title"]["rendered"]), "date": g["date_gmt"] + "Z", "url": g["source_url"],
+                        "width": md.get("width"), "height": md.get("height"), "bytes": md.get("filesize"),
+                        "sizes": {k: {"url": v.get("source_url"), "width": v.get("width"), "height": v.get("height")} for k, v in (md.get("sizes") or {}).items()},
+                        "page_url": g.get("link"), "credit": CREDIT})
+    m.append(s.write("posters.json", posters, "The market's own posters: the animated GIF banners in its media library, oldest first.",
+                     {"url": "the full animated GIF on the market's site (some are large)", "sizes": "smaller copies WordPress made (usually still, not animated)",
+                      "bytes": "file size of the full GIF"}, snap, d))
     t = r["terms"]
     m.append(s.write("categories.json", {"exhibitor_categories": t.get("portfolio_category", []), "post_categories": t.get("categories", []),
                                          "tags": [x for x in t.get("tags", []) if x.get("count")]},

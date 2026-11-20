@@ -1,0 +1,960 @@
+{
+ "about": "The market's own posters: the animated GIF banners in its media library, oldest first.",
+ "snapshot": {
+  "snapshot_started": "2026-11-20T22:00:50Z",
+  "snapshot_finished": "2026-11-20T22:02:02Z",
+  "source": "https://www.chiswickcheesemarket.uk",
+  "api": "https://www.chiswickcheesemarket.uk/wp-json/",
+  "tool": "tools/fetch-wp.py (tools/wordpress)"
+ },
+ "fields": {
+  "url": "the full animated GIF on the market's site (some are large)",
+  "sizes": "smaller copies WordPress made (usually still, not animated)",
+  "bytes": "file size of the full GIF"
+ },
+ "count": 19,
+ "items": [
+  {
+   "id": 2123,
+   "title": "Jan-25-market",
+   "date": "2025-01-15T11:34:27Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market.gif",
+   "width": 2560,
+   "height": 2134,
+   "bytes": 2734534,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-1536x1280.gif",
+     "width": 1536,
+     "height": 1280
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market.gif",
+     "width": 2560,
+     "height": 2134
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/2025/01/15/cheese-adventures-down-under/jan-25-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2482,
+   "title": "web-apr-25-market",
+   "date": "2025-04-16T09:10:38Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 1510307,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/web-apr-25-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2555,
+   "title": "May-25-market",
+   "date": "2025-05-12T11:42:54Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market.gif",
+   "width": 2977,
+   "height": 2482,
+   "bytes": 13240886,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-1536x1281.gif",
+     "width": 1536,
+     "height": 1281
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market.gif",
+     "width": 2977,
+     "height": 2482
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/may-25-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2612,
+   "title": "ccm-june-2025-affineur-market",
+   "date": "2025-06-05T09:17:15Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market.gif",
+   "width": 1024,
+   "height": 853,
+   "bytes": 3361265,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market.gif",
+     "width": 1024,
+     "height": 853
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/ccm-june-2025-affineur-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2717,
+   "title": "July-feta-cheese-market",
+   "date": "2025-06-18T08:40:16Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 1253766,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/july-feta-cheese-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2741,
+   "title": "august-cornish-market-2025",
+   "date": "2025-07-23T10:10:24Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 2132846,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/august-cornish-market-2025/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2754,
+   "title": "ccm-september-2025",
+   "date": "2025-08-18T10:15:07Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 4706270,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/ccm-september-2025/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2787,
+   "title": "cheese-market-oct-25",
+   "date": "2025-09-29T09:58:16Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 2649654,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/cheese-market-oct-25/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2790,
+   "title": "CCM-Nov-2025",
+   "date": "2025-10-22T14:23:57Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 2153119,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/ccm-nov-2025/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2802,
+   "title": "chiswick-cheese-market-november-2025",
+   "date": "2025-11-18T16:55:11Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 1916578,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/chiswick-cheese-market-november-2025/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2816,
+   "title": "New-Cheese-market-January-2026",
+   "date": "2026-01-05T12:06:39Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 1031865,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/new-cheese-market-january-2026/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2884,
+   "title": "chiswick-cheese-market-february-2026",
+   "date": "2026-02-02T11:49:29Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026.gif",
+   "width": 1024,
+   "height": 854,
+   "bytes": 836282,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026.gif",
+     "width": 1024,
+     "height": 854
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/chiswick-cheese-market-february-2026/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2966,
+   "title": "Apr-26-market",
+   "date": "2026-03-16T11:26:44Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market.gif",
+   "width": 2977,
+   "height": 2482,
+   "bytes": 14006996,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-1536x1281.gif",
+     "width": 1536,
+     "height": 1281
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market.gif",
+     "width": 2977,
+     "height": 2482
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/apr-26-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 2987,
+   "title": "May-26-market",
+   "date": "2026-04-19T15:32:47Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market.gif",
+   "width": 2977,
+   "height": 2482,
+   "bytes": 14764705,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-1536x1281.gif",
+     "width": 1536,
+     "height": 1281
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market.gif",
+     "width": 2977,
+     "height": 2482
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/may-26-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 3027,
+   "title": "June-Affineur-market-2026",
+   "date": "2026-05-17T15:44:51Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026.gif",
+   "width": 2977,
+   "height": 2482,
+   "bytes": 15023539,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-1536x1281.gif",
+     "width": 1536,
+     "height": 1281
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026.gif",
+     "width": 2977,
+     "height": 2482
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/june-affineur-market-2026/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 3036,
+   "title": "July-2026-market",
+   "date": "2026-06-23T14:05:17Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market.gif",
+   "width": 2977,
+   "height": 2482,
+   "bytes": 19746344,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-1536x1281.gif",
+     "width": 1536,
+     "height": 1281
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market.gif",
+     "width": 2977,
+     "height": 2482
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/july-2026-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 3062,
+   "title": "August-Summer-market",
+   "date": "2026-07-31T14:39:12Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market.gif",
+   "width": 2977,
+   "height": 2482,
+   "bytes": 6153040,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-1536x1281.gif",
+     "width": 1536,
+     "height": 1281
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market.gif",
+     "width": 2977,
+     "height": 2482
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/august-summer-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 3079,
+   "title": "September-2026-market",
+   "date": "2026-08-23T10:57:27Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market.gif",
+   "width": 2977,
+   "height": 2482,
+   "bytes": 7129381,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-768x640.gif",
+     "width": 768,
+     "height": 640
+    },
+    "1536x1536": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-1536x1281.gif",
+     "width": 1536,
+     "height": 1281
+    },
+    "2048x2048": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-2048x1707.gif",
+     "width": 2048,
+     "height": 1707
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market.gif",
+     "width": 2977,
+     "height": 2482
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/september-2026-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  },
+  {
+   "id": 3209,
+   "title": "2026-Dec-market",
+   "date": "2026-11-16T15:35:20Z",
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market.gif",
+   "width": 1440,
+   "height": 1201,
+   "bytes": 549609,
+   "sizes": {
+    "medium": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market-300x250.gif",
+     "width": 300,
+     "height": 250
+    },
+    "large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market-1024x854.gif",
+     "width": 1024,
+     "height": 854
+    },
+    "thumbnail": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market-150x150.gif",
+     "width": 150,
+     "height": 150
+    },
+    "medium_large": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market-768x641.gif",
+     "width": 768,
+     "height": 641
+    },
+    "uncode_woocommerce_nav_thumbnail_regular": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market-350x292.gif",
+     "width": 350,
+     "height": 292
+    },
+    "uncode_woocommerce_nav_thumbnail_crop": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market-348x348.gif",
+     "width": 348,
+     "height": 348
+    },
+    "full": {
+     "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market.gif",
+     "width": 1440,
+     "height": 1201
+    }
+   },
+   "page_url": "https://www.chiswickcheesemarket.uk/home/2026-dec-market/",
+   "credit": "Image: Chiswick Cheese Market (chiswickcheesemarket.uk)"
+  }
+ ]
+}
