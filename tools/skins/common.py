@@ -214,17 +214,20 @@ def demo_strip(ctx, skin_routes=None):
         route = ctx.route if (d != "6" and ctx.design != "6") else ""
         here = ' aria-current="page"' if d == ctx.design else ""
         opts.append(f'<a href="{ctx.link(route, d)}"{here}><b>{d}</b> {esc(name)}</a>')
-    return (f'<div class="demo-strip" role="note"><p class="demo-line">{esc(DISCLAIMER)} '
-            f'The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. '
-            f'Content snapshot {esc(ctx.c.snap_label)}.</p>'
+    return (f'<aside class="demo-strip" aria-label="About this demonstration"><div class="demo-line">{esc(DISCLAIMER)} '
+            f'The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>.'
+            f'<details class="demo-more"><summary>More</summary>Content snapshot {esc(ctx.c.snap_label)}. Pictures and video load from chiswickcheesemarket.uk, the market\'s own site.</details></div>'
             f'<div class="demo-actions"><details class="demo-choose"><summary>Choose a design</summary><nav aria-label="Choose a design">{"".join(opts)}</nav></details>'
-            f'<a class="demo-admin" href="{ctx.up()}admin/index.html">Admin</a></div></div>')
+            f'<a class="demo-admin" href="{ctx.up()}admin/index.html">Admin</a></div></aside>')
 
 
 DEMO_CSS = """
 .demo-strip{font:13px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:#111;color:#f3f3f3;display:flex;flex-wrap:wrap;gap:4px 16px;align-items:center;justify-content:space-between;padding:6px 16px;position:relative;z-index:50}
 .demo-strip a{color:#ffd65a;text-decoration:underline}
 .demo-line{margin:0;flex:1 1 420px}
+.demo-more{display:inline}.demo-more summary{display:inline;cursor:pointer;text-decoration:underline;margin-left:6px;color:#ffd65a}
+.demo-more[open]{display:block;margin-top:4px}
+@media (max-width:600px){.demo-strip{font-size:12px;padding:5px 12px}.demo-line{flex-basis:100%;white-space:normal}.demo-strip .demo-actions{width:100%;justify-content:flex-start}}
 .demo-choose{position:relative}
 .dead{text-decoration:line-through;text-decoration-thickness:1px}.dead small{text-decoration:none;display:inline-block;opacity:.7;font-size:.8em}
 .demo-actions{display:flex;gap:10px;align-items:center}
@@ -283,6 +286,10 @@ def render_blocks(ctx, blocks, skin, depth=0):
             lvl = lvl if lvl in ("h1", "h2", "h3", "h4", "h5", "h6") else "h2"
             if lvl == "h6":
                 lvl = "h3"
+            if getattr(ctx, "need_h1", False) and b.get("style") != "vertical" and b.get("text"):
+                lvl, ctx.need_h1 = "h1", False
+            elif lvl == "h1":
+                lvl = "h2"
             cls = ' class="vertical"' if b.get("style") == "vertical" else ""
             out.append(f"<{lvl}{cls}>{esc(b['text'])}</{lvl}>")
         elif t in ("text", "html"):

@@ -83,6 +83,11 @@ def chooser(c):
     title = "Chiswick Cheese Market, six ways: a demonstration"
     desc = "A demonstration by Sovereign Website: the market's own content, read from its WordPress site, drawn six ways. Not the official site."
     hh = (c.site.get("home_header") or {}).get("image_url") or ""
+    nm = c.next_market()
+    import re as _re
+    import html as _html
+    where = _html.unescape(_re.sub(r"<[^>]+>", "", (f["intro"] or [""])[0])).strip()
+    nm_html = (f'<p class="nextm"><b>Next market: Sunday {nm.day} {nm:%B %Y}</b><span>{esc(where)}</span></p>' if nm else "")
     return f"""<!doctype html><html lang="en-GB"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
 <title>{esc(title)}</title><meta name="description" content="{esc(desc)}"><meta name="robots" content="noindex, nofollow">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Chiswick Cheese Market, a demonstration"><meta property="og:locale" content="en_GB">
@@ -91,8 +96,8 @@ def chooser(c):
 <meta property="og:image:alt" content="{esc(title)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{url}assets/share/card-1200x630.jpg">
 <link rel="stylesheet" href="assets/css/demo.css"><link rel="stylesheet" href="assets/css/home.css"></head>
-<body><div class="demo-strip" role="note"><p class="demo-line">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>.</p></div>
-<header class="door" style="background-image:url('{esc(hh)}')"><div class="veil"><p class="k">A demonstration for the organisers</p>
+<body><aside class="demo-strip" aria-label="About this demonstration"><p class="demo-line">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. Pictures load from the market's own site.</p></aside>
+<header class="door" style="background-image:url('{esc(hh)}')"><div class="veil">{nm_html}<p class="k">A demonstration for the organisers</p>
 <h1>Chiswick Cheese Market, six ways</h1><p>The market's own words and pictures, read from its WordPress site ({esc(c.snap_label)}) and drawn six ways.
 WordPress stays exactly as it is; these are new front ends on the same content.</p></div></header>
 <main><ul class="designs">{items}<li><a href="buttercup/index.html" class="adm"><span class="n">&#128004;</span><b>Buttercup</b><span class="t">The market's cow in its own pictures and journal: every outfit we could find</span></a></li><li><a href="admin/index.html" class="adm"><span class="n">&#9881;</span><b>Admin</b><span class="t">The WordPress viewer and parser: everything the API gives, raw and parsed</span></a></li></ul>
@@ -115,7 +120,7 @@ def buttercup(c):
 <title>{esc(title)} | Chiswick Cheese Market, a demonstration</title><meta name="description" content="Buttercup the cow in the market's own pictures and journal."><meta name="robots" content="noindex, nofollow">
 {og_tags("buttercup/", title, "Buttercup the cow in the market's own pictures and journal.")}
 <link rel="stylesheet" href="../assets/css/demo.css"><link rel="stylesheet" href="../assets/css/home.css"><link rel="stylesheet" href="../assets/css/buttercup.css"></head>
-<body><div class="demo-strip" role="note"><p class="demo-line">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. <a href="../index.html">All six designs</a>.</p></div>
+<body><aside class="demo-strip" aria-label="About this demonstration"><p class="demo-line">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. <a href="../index.html">All six designs</a>.</p></aside>
 <main class="cow"><p class="k">From the market's own media library and journal</p><h1>{esc(title)}</h1>
 <p class="lede">{esc(d["about"])}</p>
 {f'<figure class="anim"><img src="{esc(dec)}" alt="The December 2026 market banner: Buttercup in Christmas tinsel, with cheeses sliding in beside her" loading="lazy"><figcaption>The animated banner on the home page now (December 2026 market).</figcaption></figure>' if dec else ""}

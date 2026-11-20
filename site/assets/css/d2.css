@@ -110,3 +110,4 @@ main{max-width:1240px;margin:0 auto;padding:0 24px}
   .sections .has-sub ul{position:static;transform:none;border:0;background:none;padding:4px 0;text-align:center}
 }
 @media (max-width:480px){.ex-row{grid-template-columns:84px 1fr}.ex-row img{width:84px;height:84px}.dateline{justify-content:center}}
+.title-h{margin:0;font:inherit}

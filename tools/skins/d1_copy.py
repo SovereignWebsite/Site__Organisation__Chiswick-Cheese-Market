@@ -67,6 +67,7 @@ class Copy(Skin):
         return f'<div class="ex-list"><p class="chips-label">Categories</p><nav class="chips" aria-label="Categories">{chips}</nav>{groups}</div>'
 
     def page(self, ctx, p, listing_override=None):
+        ctx.need_h1 = True
         hero = self.page_hero(ctx, p)
         body = render_blocks(ctx, p["blocks"], self)
         return self.layout(ctx, p["title"] if p["slug"] != "home" else "", f'{hero}<div class="blocks">{body}</div>{page_sourced(ctx, p["source_url"])}')
@@ -77,9 +78,10 @@ class Copy(Skin):
         hero = ""
         if hh.get("image_url"):
             poster = hh["image_url"]
-            video = (f'<video autoplay muted loop playsinline poster="{esc(poster)}" src="{esc(hh["video_url"])}" aria-hidden="true"></video>'
+            video = (f'<video autoplay muted loop playsinline preload="none" poster="{esc(poster)}" src="{esc(hh["video_url"])}" aria-hidden="true"></video>'
                      if hh.get("video_url") else "")
             hero = f'<div class="home-hero" style="background-image:url(\'{poster}\')">{video}</div>'
+        ctx.need_h1 = True
         body = render_blocks(ctx, p["blocks"], self)
         return self.layout(ctx, "", f'{hero}<div class="blocks home">{body}</div>{page_sourced(ctx, p["source_url"])}')
 

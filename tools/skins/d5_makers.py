@@ -47,13 +47,13 @@ class Makers(Skin):
                 f'<h3>{esc(e["name"])}</h3><p>{esc(first[:150])}{"…" if len(first) > 150 else ""}</p>'
                 f'{f"<p class=mentions>In the journal: {n} post{"s" if n != 1 else ""}</p>" if n else ""}</div></a></li>')
 
-    def finder(self, ctx, title):
+    def finder(self, ctx, title, tag="h2"):
         c = ctx.c
         chips = '<button type="button" class="f-chip" data-cat="" aria-pressed="true">All</button>' + "".join(
             f'<button type="button" class="f-chip t{x["id"] % 6}" data-cat="c{x["id"]}" aria-pressed="false">{esc(x["name"])} <small>{len(c.ex_in(x["id"]))}</small></button>'
             for x in c.ex_cats if c.ex_in(x["id"]))
         cards = "".join(self.card(ctx, e) for e in c.exhibitors)
-        return (f'<section class="finder"><div class="finder-head"><h2>{title}</h2><p id="count" aria-live="polite"></p></div>'
+        return (f'<section class="finder"><div class="finder-head"><{tag}>{title}</{tag}><p id="count" aria-live="polite"></p></div>'
                 f'<label class="search"><span>Search the stalls</span><input id="q" type="search" placeholder="Try: goat, bread, Alpine, honey" autocomplete="off"></label>'
                 f'<div class="chips" role="group" aria-label="Kind of stall">{chips}</div><ul class="cards">{cards}</ul></section><script>{FILTER_JS}</script>')
 
@@ -76,7 +76,7 @@ class Makers(Skin):
         return self.layout(ctx, "", body)
 
     def stallholders(self, ctx):
-        return self.layout(ctx, "Meet the stallholders", f'<div class="pad">{self.finder(ctx, "All the stallholders")}</div>')
+        return self.layout(ctx, "Meet the stallholders", f'<div class="pad">{self.finder(ctx, "All the stallholders", "h1")}</div>')
 
     def stallholder(self, ctx, e, prev, nxt):
         c = ctx.c

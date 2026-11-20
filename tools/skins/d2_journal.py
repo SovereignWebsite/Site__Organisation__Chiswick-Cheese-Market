@@ -11,8 +11,10 @@ class Journal(Skin):
         c = ctx.c
         nm = c.next_market()
         when = f"Next market: Sunday {ordinal(nm.day)} {nm:%B %Y}" if nm else ""
-        return (f'<header class="mast"><p class="dateline"><span>{esc(c.site["tagline"])}</span><span>{esc(when)}</span></p>'
-                f'<a class="title" href="{ctx.link("")}">{esc(c.site["name"])}</a>'
+        title = f'<a class="title" href="{ctx.link("")}">{esc(c.site["name"])}</a>'
+        if ctx.route == "":
+            title = f'<h1 class="title-h">{title}</h1>'
+        return (f'<header class="mast"><p class="dateline"><span>{esc(c.site["tagline"])}</span><span>{esc(when)}</span></p>{title}'
                 f'<nav class="sections" aria-label="Main"><ul>{self.nav_items(ctx)}</ul></nav></header>')
 
     def footer(self, ctx):
