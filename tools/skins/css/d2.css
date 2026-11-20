@@ -111,3 +111,28 @@ main{max-width:1240px;margin:0 auto;padding:0 24px}
 }
 @media (max-width:480px){.ex-row{grid-template-columns:84px 1fr}.ex-row img{width:84px;height:84px}.dateline{justify-content:center}}
 .title-h{margin:0;font:inherit}
+/* Pass 1: the Market Paper */
+.mast{animation:paper .45s ease-out both}
+@keyframes paper{from{transform:translateY(-10px)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.mast{animation:none}}
+.front{grid-template-columns:minmax(0,2fr) minmax(0,1fr) minmax(0,.9fr)}
+.front .sunday{order:3}
+.sunday{border:3px double var(--rule);padding:16px;align-self:start;background:var(--card);text-align:center}
+.big-date{font:600 96px/.9 'Fraunces',serif;margin:6px 0 0}
+.big-date span{display:block;font-size:28px;font-style:italic;font-weight:400}
+.sunday .day{text-transform:uppercase;letter-spacing:.12em;font-size:12px;margin:4px 0 12px}
+.cols.dropcap{columns:2 280px;column-gap:36px}
+.cols.dropcap .txt:first-child p:first-of-type::first-letter{float:left;font:600 74px/.8 'Fraunces',serif;padding:6px 10px 0 0;color:var(--accent)}
+.listings{padding:32px 0}
+.list-box{list-style:none;margin:0;padding:12px 18px;border:1px solid var(--rule);columns:3 200px;background:var(--card)}
+.list-box li{padding:4px 0;border-bottom:1px dotted color-mix(in srgb,var(--rule) 40%,transparent);break-inside:avoid}
+.list-box span{font-size:12px;text-transform:uppercase;letter-spacing:.08em;color:var(--soft)}
+.list-box .past{color:var(--soft)}.list-box .past b{text-decoration:line-through;font-weight:400}
+.list-box .next b{color:var(--accent)}
+.classifieds{columns:3 260px;column-gap:28px;column-rule:1px solid color-mix(in srgb,var(--rule) 30%,transparent)}
+.cl{break-inside:avoid-column;margin-bottom:18px}
+.cl h3{font:600 12px 'Inter',sans-serif;text-transform:uppercase;letter-spacing:.14em;border-bottom:2px solid var(--rule);padding-bottom:4px}
+.cl ul{list-style:none;margin:0;padding:0}
+.cl li{font-size:14px;line-height:1.45;padding:5px 0;border-bottom:1px dotted color-mix(in srgb,var(--rule) 30%,transparent)}
+.cl b{font:600 15px 'Fraunces',serif}
+@media (max-width:860px){.front{grid-template-columns:1fr}.front .sunday{order:-1}}

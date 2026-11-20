@@ -115,3 +115,27 @@ h1,h2,h3,.mark,.huge{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;
   .generic .w-1-2,.generic .w-1-3{flex-basis:100%}.generic .w-1-4{flex-basis:calc(50% - 12px)}
 }
 @media (max-width:60rem){.poster-img{aspect-ratio:auto;object-fit:contain;background:#000}}
+/* Pass 1: the Poster Wall */
+.date-hero{padding:clamp(20px,4vw,48px) clamp(16px,3vw,40px);border-bottom:6px solid var(--line);animation:slam .5s ease-out both}
+.date-hero h1{display:flex;flex-wrap:wrap;align-items:baseline;gap:0 .15em;line-height:.8}
+.date-hero .d{font-size:clamp(120px,32vw,320px)}
+.date-hero .m{font-size:clamp(80px,20vw,220px);background:var(--hl);color:#111;padding:0 .08em;text-transform:uppercase}
+.when{font:700 clamp(17px,2.2vw,24px)/1.35 'Work Sans',sans-serif;max-width:40ch}
+@keyframes slam{from{transform:translateY(16px) scale(.98)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.date-hero{animation:none}}
+.paste{margin:0;position:relative;background:#fff;padding:10px 10px 8px;box-shadow:0 8px 24px rgba(0,0,0,.25)}
+.paste img{width:100%;height:auto;object-fit:contain;display:block}
+.paste::before{content:"";position:absolute;top:-10px;left:50%;width:110px;height:24px;transform:translateX(-50%) rotate(-3deg);background:rgba(255,236,170,.8);box-shadow:0 1px 2px rgba(0,0,0,.15)}
+.paste figcaption{font:400 26px/1.1 'Bebas Neue',sans-serif;color:#111;padding-top:8px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+.big-poster{max-width:900px;margin:0 auto 24px;scroll-snap-align:start}
+.big-poster .paste{transform:rotate(-1deg)}
+.acts{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin-top:18px}
+.gif{font:700 13px 'Work Sans',sans-serif;color:inherit}
+.paste .gif{color:#111}
+.wall{display:grid;grid-template-columns:repeat(2,1fr);gap:40px 32px}
+.t0{transform:rotate(-1.5deg)}.t1{transform:rotate(1.2deg)}.t2{transform:rotate(.6deg)}.t3{transform:rotate(-.8deg)}
+.past-strip{display:grid;grid-template-columns:repeat(auto-fill,minmax(130px,1fr));gap:12px}
+.past-strip figure{margin:0}.past-strip img{width:100%;height:auto;filter:grayscale(.6)}
+.past-strip figcaption{font:700 12px 'Work Sans',sans-serif;margin-top:4px}
+.idea{font:700 14px 'Work Sans',sans-serif;color:var(--hl)}
+@media (max-width:700px){.wall{grid-template-columns:1fr}html{scroll-snap-type:y proximity}.paste::before{width:80px}}

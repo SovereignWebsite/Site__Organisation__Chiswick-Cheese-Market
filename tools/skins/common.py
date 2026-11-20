@@ -39,8 +39,10 @@ def og_tags(abs_path, title, desc):
 
 def load(root):
     d = lambda n: json.load(open(os.path.join(root, "data", n)))
+    posters = d("posters.json")["items"] if os.path.exists(os.path.join(root, "data", "posters.json")) else []
     site, pages, posts, ex, cats, media = (d(n) for n in ("site.json", "pages.json", "posts.json", "exhibitors.json", "categories.json", "media.json"))
     c = Content(site, pages, posts, ex, cats, media, d("index.json"))
+    c.posters = posters
     dl = os.path.join(root, "data", "dead-links.json")
     c.dead = {x["url"] for x in json.load(open(dl))["items"]} if os.path.exists(dl) else set()
     bj = os.path.join(root, "data", "buttercup.json")
@@ -370,3 +372,52 @@ def home_facts(c):
 def intro_text(c):
     import re as _re
     return [_re.sub(r"<[^>]+>", "", h) for h in home_facts(c)["intro"]]
+
+
+def market_facts(c):
+    """When and where, from the home page's own words (never invented): hours and address, if the text has them."""
+    import re as _re
+    words = " ".join(_re.sub(r"<[^>]+>", "", h) for h in home_facts(c)["intro"])
+    words = html.unescape(words)
+    hours = _re.search(r"between\s+(\d{1,2})[.:](\d{2})\s*am\s+and\s+(\d{1,2})[.:](\d{2})\s*pm", words)
+    place = _re.search(r"at\s+(The Old Market Place[^.]*?W4\s*2DR)", words)
+    f = {"sentence": (_re.split(r"(?<=\.)\s", words.strip(), maxsplit=1) or [""])[0]}
+    if hours:
+        f["start"] = (int(hours.group(1)), int(hours.group(2)))
+        f["end"] = (int(hours.group(3)) + 12, int(hours.group(4)))
+        f["hours"] = f"{hours.group(1)}.{hours.group(2)} am to {hours.group(3)}.{hours.group(4)} pm"
+    if place:
+        f["place"] = place.group(1).strip()
+    return f
+
+
+def ics(c, d):
+    """A calendar file for one market day, from the site's own date, hours and address."""
+    f = market_facts(c)
+    if "start" not in f:
+        return None
+    st = f"{d:%Y%m%d}T{f['start'][0]:02d}{f['start'][1]:02d}00"
+    en = f"{d:%Y%m%d}T{f['end'][0]:02d}{f['end'][1]:02d}00"
+    loc = (f.get("place") or "Chiswick").replace(",", "\\,")
+    return "\r\n".join(["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Sovereign Website//Chiswick Cheese Market demonstration//EN", "BEGIN:VEVENT",
+                         f"UID:ccm-{d:%Y%m%d}@chiswick-cheese-market.organisation.sovereignweb.site", f"DTSTAMP:{c.snap_date:%Y%m%d}T000000Z",
+                         f"DTSTART;TZID=Europe/London:{st}", f"DTEND;TZID=Europe/London:{en}", "SUMMARY:Chiswick Cheese Market",
+                         f"LOCATION:{loc}", f"URL:{OFFICIAL}/", "END:VEVENT", "END:VCALENDAR", ""])
+
+
+MONTH_WORDS = {m[:3]: i for m, i in MONTHS.items()}
+
+
+def poster_month(p):
+    """Which market a poster announces, from its own title (e.g. '2026-Dec-market', 'ccm-september-2025', 'Jan-25-market').
+    The year is the 4-digit one in the title, else a 2-digit token, else the upload year."""
+    toks = p["title"].lower().replace("_", "-").replace(" ", "-").split("-")
+    mon = None
+    for t in toks:
+        for name, i in MONTHS.items():
+            if t == name or t == name[:3] or (len(t) >= 4 and name.startswith(t)):
+                mon = mon or i
+    y4 = [int(t) for t in toks if t.isdigit() and len(t) == 4]
+    y2 = [2000 + int(t) for t in toks if t.isdigit() and len(t) == 2]
+    y = (y4 or y2 or [int(p["date"][:4])])[0]
+    return (y, mon) if mon else None

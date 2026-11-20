@@ -1,7 +1,7 @@
 """Design 3: Poster. Bold market-poster typography: huge condensed type, a calendar of the year's
 market days, stallholders as a big type index. Bebas Neue and Work Sans (SIL OFL)."""
 from .base import Skin
-from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced
+from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts, ics, poster_month, pick_size_url
 
 
 class Poster(Skin):
@@ -13,32 +13,76 @@ class Poster(Skin):
 
     def footer(self, ctx):
         c = ctx.c
-        return (f'<footer class="foot"><p class="huge">#Cheesewick</p><p>{esc(c.site.get("copyright") or "")}</p>'
+        return (f'<footer class="foot"><p class="huge">#Cheesewick</p><p class="idea">Design 3, the Poster Wall: the next market as an event, on the market\'s own posters.</p><p>{esc(c.site.get("copyright") or "")}</p>'
                 f'<p class="small">All words and images: Chiswick Cheese Market, chiswickcheesemarket.uk, snapshot {esc(c.snap_label)}. '
                 f'Type: Bebas Neue and Work Sans (SIL Open Font License).</p></footer>')
 
+    def extra_files(self, c):
+        """A calendar file per upcoming market day, from the site's own dates, hours and address."""
+        out = {}
+        for d in c.market_dates:
+            if d >= c.snap_date:
+                body = ics(c, d)
+                if body:
+                    out[f"calendar/{d:%Y-%m-%d}.ics"] = body
+        return out
+
+    def poster_img(self, ctx, p, eager=False, size=900):
+        sz = sorted((v for k, v in p["sizes"].items() if v.get("url") and v.get("width") and "woocommerce" not in k and k != "full"), key=lambda v: v["width"])
+        pick = next((v for v in sz if v["width"] >= size), sz[-1] if sz else {"url": p["url"], "width": p["width"], "height": p["height"]})
+        ym = poster_month(p)
+        label = f"{['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][ym[1]]} {ym[0]}" if ym else p["title"]
+        return (f'<img src="{esc(pick["url"])}" width="{pick.get("width") or ""}" height="{pick.get("height") or ""}" alt="Chiswick Cheese Market poster, {esc(label)}"'
+                f'{"" if eager else " loading=lazy"}>'), label
+
+    def gif_link(self, p):
+        mb = (p.get("bytes") or 0) / 1e6
+        return f'<a class="gif" href="{esc(p["url"])}">Animated poster (GIF, {mb:.1f} MB)</a>' if mb else f'<a class="gif" href="{esc(p["url"])}">Animated poster (GIF)</a>'
+
     def home(self, ctx):
         c = ctx.c
-        f = home_facts(c)
+        mf = market_facts(c)
         nm = c.next_market()
-        hero_img = ctx.image(f.get("hero_side") or (c.posts[0]["image"]), "poster-img", False, "")
-        big_date = (f'<p class="next"><span>Next market</span><b>{nm:%d}</b><i>{nm:%b}</i><span>Sunday {ordinal(nm.day)} {nm:%B %Y}</span></p>' if nm else "")
-        intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"])
+        by_month = {}
+        for p in c.posters:
+            ym = poster_month(p)
+            if ym:
+                by_month.setdefault(ym, p)  # the first poster for a month
+        hero = ""
+        if nm:
+            cal = f'<a class="btn" href="calendar/{nm:%Y-%m-%d}.ics">Add to calendar</a>' if "start" in mf else ""
+            hero = (f'<section class="date-hero"><h1><span class="d">{nm.day}</span><span class="m">{nm:%b}</span></h1>'
+                    f'<p class="when">Next market: Sunday {ordinal(nm.day)} {nm:%B %Y}{", " + esc(mf["hours"]) if mf.get("hours") else ""}{", " + esc(mf["place"]) if mf.get("place") else ""}.</p>'
+                    f'<p><a class="btn" href="{ctx.link("visit-us/")}">Getting here</a> {cal}</p></section>')
+        upcoming = []
+        for d in [d for d in c.market_dates if d >= c.snap_date]:
+            p = by_month.get((d.year, d.month))
+            if not p:
+                continue
+            img, label = self.poster_img(ctx, p, eager=True, size=1200)
+            upcoming.append(f'<article class="big-poster"><figure class="paste">{img}<figcaption>Sunday {ordinal(d.day)} {d:%B %Y}</figcaption></figure>'
+                            f'<p class="acts"><a class="btn" href="calendar/{d:%Y-%m-%d}.ics">Add to calendar</a> {self.gif_link(p)}</p></article>')
+        shown = {(d.year, d.month) for d in c.market_dates if d >= c.snap_date}
+        this_year = [p for ym, p in sorted(by_month.items()) if ym[0] == c.snap_date.year and ym not in shown]
+        older = [p for ym, p in sorted(by_month.items()) if ym[0] < c.snap_date.year]
+        wall = ""
+        for k, p in enumerate(this_year):
+            img, label = self.poster_img(ctx, p)
+            wall += f'<figure class="paste t{k % 4}">{img}<figcaption>{esc(label)} {self.gif_link(p)}</figcaption></figure>'
+        strip = ""
+        for p in older:
+            img, label = self.poster_img(ctx, p, size=400)
+            strip += f'<figure>{img}<figcaption>{esc(label)}</figcaption></figure>'
         cal = "".join(f'<li class="{"past" if d < c.snap_date else ("next" if d == nm else "")}"><b>{d:%d}</b><span>{d:%b}</span></li>' for d in c.market_dates)
         cats = "".join(f'<li><a href="{ctx.link("stallholders/")}#{esc(x["slug"])}"><b>{len(c.ex_in(x["id"]))}</b>{esc(x["name"])}</a></li>'
                        for x in c.ex_cats if c.ex_in(x["id"]))
-        names = " ".join(f'<a href="{ctx.link("stallholders/" + e["slug"] + "/")}">{esc(e["name"])}</a><span aria-hidden="true">/</span>' for e in c.exhibitors)
-        feats = "".join(f'<section class="band"><h2>{esc(g["title"])}</h2><ol class="feats">' + "".join(
-            f'<li>{ctx.image(i["image"], "", True, "")}<b>{esc(i["title"])}</b></li>' for i in g["items"]) + "</ol></section>" for g in f["features"])
         news = "".join(f'<li><a href="{ctx.link("journal/" + p["slug"] + "/")}"><span>{fmt_date(p["date"], "%d.%m.%y")}</span>{esc(p["title"])}</a></li>' for p in c.posts[:8])
-        words = "".join(f'<span class="hl">{esc(w)}</span> ' if w.lower() == "cheese" else f"<span>{esc(w)}</span> " for w in c.site["tagline"].split())
-        body = (f'<section class="hero"><h1>{words}</h1>'
-                f'<div class="hero-side">{hero_img}{big_date}</div></section>'
-                f'<section class="band yellow"><div class="two"><h2>{esc(f["tagline"] or "")}</h2><div>{intro}'
-                f'<p><a class="btn" href="{ctx.link("visit-us/")}">{esc(f["button"]["text"]) if f.get("button") else "Visit us"}</a></p></div></div></section>'
+        body = (f'{hero}<section class="band" aria-label="Upcoming">{"".join(upcoming)}</section>'
+                f'{f"<section class=band><h2>{c.snap_date.year} on the wall</h2><div class=wall>{wall}</div></section>" if wall else ""}'
+                f'{f"<section class=band><h2>Past posters</h2><div class=past-strip>{strip}</div></section>" if strip else ""}'
                 f'<section class="band"><h2>{c.market_dates[0].year if c.market_dates else ""} market days</h2><ol class="cal">{cal}</ol></section>'
-                f'<section class="band black"><h2>Stalls by kind</h2><ol class="cats">{cats}</ol><p class="names">{names}</p></section>'
-                f'{feats}<section class="band"><h2>Journal</h2><ol class="news">{news}</ol><p><a class="btn" href="{ctx.link("journal/")}">Read the journal</a></p></section>')
+                f'<section class="band black"><h2>Stalls by kind</h2><ol class="cats">{cats}</ol></section>'
+                f'<section class="band"><h2>Journal</h2><ol class="news">{news}</ol><p><a class="btn" href="{ctx.link("journal/")}">Read the journal</a></p></section>')
         return self.layout(ctx, "", body)
 
     def stallholders(self, ctx):

@@ -1,15 +1,30 @@
-# The six designs: how each one is laid out
+# The six designs
 
 All six are drawn from the same data (`data/`) by one generator (`tools/build.py`), with the same routes, so
-"Choose a design" keeps your place. What differs is the layout of each page type, not only colour and type.
+"Choose a design" keeps your place. Dinis Cruz, 20 Nov 2026: each extra design needs "its own centre of gravity,
+focus, UX and design". Pass 1 of the design rounds (design.b.rounds, with design.b) set these.
 
-| Design | The idea | Home | Stallholders | One stallholder |
-|---|---|---|---|---|
-| 1 The current site | A faithful copy of chiswickcheesemarket.uk, from its own data | The live site's builder rows, in its palette: video header, tilted marquee band, cards, market dates | Category chips, then a grid per category | Yellow text half beside the photograph, previous and next with round thumbnails |
-| 2 Journal | A newspaper front page | Masthead with dateline and next market; lead story and a "Latest" column; the market's words set as a feature; a calendar strip; an A to Z index of stallholders | A contents line, then rows per category: thumbnail, name, first lines | A long-read: kicker, headline, photograph, drop cap |
-| 3 Poster | One long stacked market poster | The site's tagline in giant condensed type beside a rotated "next market" sticker; a 12-box year calendar with past dates struck through; stalls by kind as big counted boxes and a run-on list of every name; numbered features; the journal as a type list | A giant type index per category, photos in greyscale until hovered | Split poster: photograph against a huge name |
-| 4 Cellar | A tasting menu in a cheese cave | Full-bleed photograph with a veil; a short centred welcome; chapters numbered I, II with photo mosaics; makers as portrait cards; market days as a two-column list | Chapters per category with portrait cards | A full-height portrait beside the text |
-| 5 The makers | An app built around the stallholders | Next-market pill, the counts, the most recently added stalls; a live finder (search box and category chips, no page reload); a note on what the data does not hold yet | The same finder | Their photograph and card, every journal post that mentions them (found in the data), similar stalls; a bottom tab bar on phones |
-| 6 The data | The data itself | Hero numbers, a query tool that shows the same question as a live API address, inline SVG charts with tables | (links to Design 1) | (links to Design 1) |
+## 1 The current site
+- Centre: the market as it presents itself today. Focus: the video header and "The UK's only specialist cheese market". Primary action: Getting here.
+- A faithful copy of chiswickcheesemarket.uk from its own data; only accessibility fixes.
+
+## 2 The Market Paper
+- Centre: the news. Focus: the lead story. Primary action: read the lead (and, beside it, "The next market" box with date, hours, address and Getting here).
+- Masthead between rules with a dateline naming the next market; a three-column front (lead, Latest, the next market); the market's words in two columns with a drop cap; market days as a listings box; the stallholders as classifieds. On phones the next market box comes straight after the masthead.
+
+## 3 The Poster Wall
+- Centre: the next market as an event. Focus: the date, huge. Primary action: Add to calendar (a .ics file made at build time from the site's own date, hours and address).
+- Then the market's own posters (`data/posters.json`): the next market's poster full width, the year's posters pasted up whole and slightly turned, last year's as a small greyed strip. Still images on the wall; the animated GIF only on request, with its size. Then the year's calendar, the kinds of stall, the journal.
+
+## 4 The Cave
+- Centre: the cheese and the makers. Focus: the first shelf. Primary action: open a maker.
+- Dark in both modes. A welcome band with no photograph behind the text; then one shelf per kind of stall, every maker a round portrait with a gold label on a wooden ledge (on phones each shelf scrolls sideways, as its own labelled region); tasting notes as parchment cards. Each maker's page ends with "On the same shelf".
+
+## 5 The Makers (the organisers' favourite in the synthetic-user run)
+- Centre: the stallholders. Focus: the finder, in the first screen. Primary action: find a stall (search, or a counted kind of stall).
+- List or Map: the Map is rows by kind with the real counts, labelled "Drawn by category, not the real stall plan". Each maker's page lists every journal post that names them, and similar stalls. A bottom tab bar on phones.
+
+## 6 The data
+- Centre: the data itself. Focus: the numbers and the query tool. Primary action: ask the data (filter and search), with the same question shown as a live WordPress API address.
 
 Admin (`/admin/`) and Buttercup (`/buttercup/`) are shared by all six.

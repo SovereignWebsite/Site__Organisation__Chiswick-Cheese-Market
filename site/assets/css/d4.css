@@ -5,7 +5,7 @@
 @font-face{font-family:'Inter';src:url('../fonts/inter-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
 @font-face{font-family:'Inter';src:url('../fonts/inter-600-normal.woff2') format('woff2');font-weight:600;font-display:swap}
 :root{--bg:#15110e;--bg2:#1e1813;--fg:#eadfcd;--soft:#b5a58c;--gold:#d9a441;--line:rgba(217,164,65,.35);color-scheme:dark}
-@media (prefers-color-scheme:light){:root{--bg:#f3ead9;--bg2:#ebe0cb;--fg:#2a1f15;--soft:#6e5a43;--gold:#7a520b;--line:rgba(122,82,11,.4);color-scheme:light}}
+/* The Cave is dark in both modes (design round 2: dark first). */
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 17px/1.7 'Inter',system-ui,sans-serif;overflow-x:clip}
 img{max-width:100%;height:auto;display:block}
@@ -97,3 +97,28 @@ h2{font-size:clamp(36px,5vw,64px);font-style:italic;text-align:center}
 .veil{background:linear-gradient(to top,rgba(10,8,6,.96),rgba(10,8,6,.55) 60%,rgba(10,8,6,.15))}
 @media (max-width:700px){.cave-hero{min-height:0;display:block;padding-top:62vw;background-size:100% 62vw;background-repeat:no-repeat;background-position:top center}
 .cave-hero .veil{background:var(--bg);color:var(--fg);padding:24px 20px}}
+
+/* Pass 1: the Cave */
+.welcome{max-width:760px;margin:0 auto;padding:clamp(40px,8vw,100px) 20px 40px;text-align:center}
+.welcome h1{margin-bottom:12px}
+.welcome .txt{font-size:18px;color:var(--fg)}
+.welcome .when{font:400 22px 'Playfair Display',serif;color:var(--soft)}.welcome .when em{color:var(--gold)}
+.welcome-img{width:100%;max-height:56vh;object-fit:cover;display:block;filter:sepia(.15) brightness(.85)}
+.cave{padding:clamp(40px,6vw,80px) clamp(16px,4vw,48px)}
+.sub{color:var(--soft)}
+.shelf{max-width:1200px;margin:0 auto 34px}
+.shelf-name{font-size:clamp(26px,3vw,36px);text-align:left;margin:0 0 6px}
+.shelf-name small{font:600 13px 'Inter',sans-serif;color:var(--gold);letter-spacing:.1em;vertical-align:middle}
+.ledge{position:relative;padding:8px 4px 26px;overflow-x:auto}
+.ledge ul{list-style:none;margin:0;padding:0 6px 22px;display:flex;gap:18px;flex-wrap:wrap;min-width:min-content;
+  background:linear-gradient(#6b4a2b,#3e2a17) left bottom/100% 14px no-repeat;border-radius:0 0 3px 3px}
+.ledge li{width:132px;text-align:center;position:relative;z-index:1;animation:rise .5s ease-out both}
+.round{width:120px;height:120px;border-radius:50%;object-fit:cover;margin:0 auto;border:3px solid var(--gold);box-shadow:0 6px 14px rgba(0,0,0,.5)}
+.label{display:inline-block;margin-top:8px;background:var(--gold);color:#15110e;font:600 12px/1.25 'Inter',sans-serif;padding:4px 8px;border-radius:3px;max-width:132px}
+.ledge a:hover .round{filter:brightness(1.1)}
+@keyframes rise{from{transform:translateY(10px)}to{transform:none}}
+@media (prefers-reduced-motion:reduce){.ledge li{animation:none}}
+.notes{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:20px;max-width:1100px;margin:24px auto}
+.parchment a{display:block;background:#efe2c4;color:#2a1f15;padding:20px 22px;border-radius:4px;box-shadow:inset 0 0 40px rgba(120,80,20,.25),0 8px 20px rgba(0,0,0,.4);height:100%}
+.parchment h3{font-size:24px}.parchment .small{color:#5a4632}.parchment .ex{color:#3d2f20;margin:0}
+@media (max-width:700px){.ledge ul{flex-wrap:nowrap;width:max-content}.ledge li{flex:0 0 120px}}

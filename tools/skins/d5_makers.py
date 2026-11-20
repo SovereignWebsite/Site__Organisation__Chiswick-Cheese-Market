@@ -5,10 +5,13 @@ import re
 from .base import Skin
 from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced
 
-FILTER_JS = """(function(){var q=document.getElementById('q'),cards=[].slice.call(document.querySelectorAll('.mk')),
-chips=[].slice.call(document.querySelectorAll('.f-chip')),cat='',out=document.getElementById('count');
-function run(){var t=(q.value||'').toLowerCase().trim(),n=0;cards.forEach(function(c){var ok=(!cat||c.dataset.cats.split(' ').indexOf(cat)>=0)&&(!t||c.dataset.text.indexOf(t)>=0);c.hidden=!ok;if(ok)n++;});out.textContent=n+(n===1?' stall':' stalls');}
-q.addEventListener('input',run);chips.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;chips.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});run();})();"""
+FILTER_JS = """(function(){var q=document.getElementById('q'),items=[].slice.call(document.querySelectorAll('.mk,.tile')),
+chips=[].slice.call(document.querySelectorAll('.f-chip')),cat='',out=document.getElementById('count'),
+views=[].slice.call(document.querySelectorAll('.v-btn')),list=document.getElementById('v-list'),map=document.getElementById('v-map');
+function run(){var t=(q.value||'').toLowerCase().trim(),n=0;items.forEach(function(c){var ok=(!cat||c.dataset.cats.split(' ').indexOf(cat)>=0)&&(!t||c.dataset.text.indexOf(t)>=0);c.hidden=!ok;if(ok&&c.classList.contains('mk'))n++;});
+[].forEach.call(document.querySelectorAll('.row-kind'),function(r){r.hidden=!r.querySelector('.tile:not([hidden])')});out.textContent=n+(n===1?' stall':' stalls');}
+q.addEventListener('input',run);chips.forEach(function(b){b.addEventListener('click',function(){cat=b.dataset.cat;chips.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false');});run();});});
+views.forEach(function(b){b.addEventListener('click',function(){var m=b.dataset.view==='map';list.hidden=m;map.hidden=!m;views.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')})})});run();})();"""
 
 
 class Makers(Skin):
@@ -54,26 +57,30 @@ class Makers(Skin):
             f'<button type="button" class="f-chip t{x["id"] % 6}" data-cat="c{x["id"]}" aria-pressed="false">{esc(x["name"])} <small>{len(c.ex_in(x["id"]))}</small></button>'
             for x in c.ex_cats if c.ex_in(x["id"]))
         cards = "".join(self.card(ctx, e) for e in c.exhibitors)
+        rows = "".join(f'<div class="row-kind"><p class="row-name"><b>{len(c.ex_in(x["id"]))}</b> {esc(x["name"])}</p><ul class="row-tiles">' + "".join(
+            f'<li class="tile" data-cats="{" ".join(f"c{i}" for i in e["categories"])}" data-text="{esc((e["name"] + " " + e["description_text"]).lower())}">'
+            f'<a href="{ctx.link("stallholders/" + e["slug"] + "/")}" title="{esc(e["name"])}">{ctx.image(e["image"], "", True, "")}<span>{esc(e["name"])}</span></a></li>'
+            for e in c.ex_in(x["id"])) + "</ul></div>" for x in c.ex_cats if c.ex_in(x["id"]))
         return (f'<section class="finder"><div class="finder-head"><{tag}>{title}</{tag}><p id="count" aria-live="polite"></p></div>'
                 f'<label class="search"><span>Search the stalls</span><input id="q" type="search" placeholder="Try: goat, bread, Alpine, honey" autocomplete="off"></label>'
-                f'<div class="chips" role="group" aria-label="Kind of stall">{chips}</div><ul class="cards">{cards}</ul></section><script>{FILTER_JS}</script>')
+                f'<div class="chips" role="group" aria-label="Kind of stall">{chips}</div>'
+                f'<div class="views" role="group" aria-label="View"><button type="button" class="v-btn" data-view="list" aria-pressed="true">List</button>'
+                f'<button type="button" class="v-btn" data-view="map" aria-pressed="false">Map</button></div>'
+                f'<ul class="cards" id="v-list">{cards}</ul>'
+                f'<div id="v-map" class="map" hidden><p class="map-note">Drawn by category, not the real stall plan.</p>{rows}</div></section><script>{FILTER_JS}</script>')
 
     def home(self, ctx):
         c = ctx.c
-        f = home_facts(c)
         nm = c.next_market()
-        kinds = len([x for x in c.ex_cats if c.ex_in(x["id"])])
         newest = sorted(c.exhibitors, key=lambda e: e["date"], reverse=True)[:4]
         new_html = "".join(f'<a class="new" href="{ctx.link("stallholders/" + e["slug"] + "/")}">{ctx.image(e["image"], "", True, "")}<span>{esc(e["name"])}</span></a>' for e in newest)
-        intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"][:1])
-        body = (f'<section class="hello"><div><p class="pill-next">{f"Next market · Sunday {ordinal(nm.day)} {nm:%B}" if nm else ""}</p>'
-                f'<h1>Meet the {len(c.exhibitors)} stallholders of Chiswick Cheese Market</h1>{intro}'
-                f'<p class="stats"><span><b>{len(c.exhibitors)}</b> stalls</span><span><b>{kinds}</b> kinds</span><span><b>{len(c.posts)}</b> journal posts</span></p></div>'
-                f'<div class="new-wrap"><p class="lbl">Most recently added to the site</p><div class="news">{new_html}</div></div></section>'
+        body = (f'<section class="hello"><div><p class="pill-next">{f"Next market \u00b7 Sunday {ordinal(nm.day)} {nm:%B}" if nm else ""}</p>'
+                f'<h1>Meet the {len(c.exhibitors)} stallholders of Chiswick Cheese Market</h1></div></section>'
                 f'{self.finder(ctx, "Find a stall")}'
+                f'<section class="pad"><h2>Most recently added to the site</h2><div class="news">{new_html}</div></section>'
                 f'<section class="gap"><h2>What the data does not have yet</h2><p>The market\'s site keeps a description and a photograph for each stallholder, '
-                f'but no link to their own website or social accounts. One extra field in WordPress, filled in once per stall, would let every design here '
-                f'send visitors straight to the makers, and later show their own news beside the market\'s.</p></section>')
+                f'but no link to their own website or social accounts, and no stall position. One extra field in WordPress, filled in once per stall, would let every design here '
+                f'send visitors straight to the makers, and a stall number would turn the Map into the real plan.</p></section>')
         return self.layout(ctx, "", body)
 
     def stallholders(self, ctx):

@@ -1,0 +1,13 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Sovereign Website//Chiswick Cheese Market demonstration//EN
+BEGIN:VEVENT
+UID:ccm-20261220@chiswick-cheese-market.organisation.sovereignweb.site
+DTSTAMP:20261120T000000Z
+DTSTART;TZID=Europe/London:20261220T093000
+DTEND;TZID=Europe/London:20261220T150000
+SUMMARY:Chiswick Cheese Market
+LOCATION:The Old Market Place\, Chiswick High Road (opposite M&S)\, W4 2DR
+URL:https://www.chiswickcheesemarket.uk/
+END:VEVENT
+END:VCALENDAR

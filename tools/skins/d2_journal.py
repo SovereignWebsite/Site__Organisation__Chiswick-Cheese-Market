@@ -1,7 +1,7 @@
 """Design 2: Journal. An editorial, magazine-style site: a masthead, a lead story, the market's
 words set like a newspaper, the stallholders as an index. Fraunces and Inter (SIL OFL)."""
 from .base import Skin
-from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced
+from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts
 
 
 class Journal(Skin):
@@ -10,7 +10,7 @@ class Journal(Skin):
     def header(self, ctx):
         c = ctx.c
         nm = c.next_market()
-        when = f"Next market: Sunday {ordinal(nm.day)} {nm:%B %Y}" if nm else ""
+        when = f"Sunday {ordinal(nm.day)} {nm:%B %Y}: the next market" if nm else ""
         title = f'<a class="title" href="{ctx.link("")}">{esc(c.site["name"])}</a>'
         if ctx.route == "":
             title = f'<h1 class="title-h">{title}</h1>'
@@ -19,31 +19,40 @@ class Journal(Skin):
 
     def footer(self, ctx):
         c = ctx.c
-        return (f'<footer class="colophon"><p class="title">{esc(c.site["name"])}</p><p>{esc(c.site.get("copyright") or "")}</p>'
+        return (f'<footer class="colophon"><p class="title">{esc(c.site["name"])}</p><p>Design 2, the Market Paper: the market\'s news, set as a broadsheet.</p><p>{esc(c.site.get("copyright") or "")}</p>'
                 f'<p class="credit">Every word and picture: Chiswick Cheese Market, from chiswickcheesemarket.uk, snapshot {esc(c.snap_label)}. '
                 f'Set in Fraunces and Inter (SIL Open Font License).</p></footer>')
 
     def home(self, ctx):
         c = ctx.c
         f = home_facts(c)
+        mf = market_facts(c)
+        nm = c.next_market()
         lead, rest = c.posts[0], c.posts[1:7]
         lead_html = (f'<article class="lead"><a href="{ctx.link("journal/" + lead["slug"] + "/")}">{ctx.image(lead["image"], "lead-img", False, "")}'
                      f'<p class="kicker">{esc(" / ".join(c.post_cat_names(lead)))}</p><h2>{esc(lead["title"])}</h2></a>'
                      f'<p class="standfirst">{esc(lead["excerpt"])}</p><p class="byline">{fmt_date(lead["date"])}</p></article>')
         side = "".join(f'<article class="brief"><a href="{ctx.link("journal/" + p["slug"] + "/")}"><p class="kicker">{esc(" / ".join(c.post_cat_names(p)[:2]))}</p>'
                        f'<h3>{esc(p["title"])}</h3></a><p class="byline">{fmt_date(p["date"])}</p></article>' for p in rest)
+        hours_html = f"<p><b>{esc(mf['hours'])}</b></p>" if mf.get("hours") else ""
+        place_html = f"<p>{esc(mf['place'])}</p>" if mf.get("place") else ""
+        sunday = (f'<aside class="sunday" aria-label="This Sunday"><p class="rule">{"This Sunday" if nm and (nm - c.snap_date).days < 7 else "The next market"}</p>'
+                  f'<p class="big-date">{nm.day}<span>{nm:%B}</span></p><p class="day">Sunday {nm.year}</p>'
+                  f'{hours_html}{place_html}'
+                  f'<p><a class="more" href="{ctx.link("visit-us/")}">Getting here &rarr;</a></p></aside>') if nm else ""
         intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"])
-        btn = f'<p><a class="more" href="{ctx.link("visit-us/")}">{esc(f["button"]["text"])} &rarr;</a></p>' if f.get("button") else ""
-        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}"><span>{d:%b}</span><b>{d.day}</b></li>' for d in c.market_dates)
+        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}"><span>Sunday</span> <b>{ordinal(d.day)} {d:%B}</b></li>' for d in c.market_dates)
         feats = "".join(f'<section class="feature"><h2 class="rule">{esc(g["title"])}</h2><div class="feat-grid">' + "".join(
             f'<figure>{ctx.image(i["image"], "", True, "")}<figcaption>{esc(i["title"])}</figcaption></figure>' for i in g["items"]) + "</div></section>"
             for g in f["features"])
-        stalls = "".join(f'<li><a href="{ctx.link("stallholders/" + e["slug"] + "/")}">{esc(e["name"])}</a><span>{esc(", ".join(self.cats_of(ctx, e)))}</span></li>' for e in c.exhibitors)
-        body = (f'<div class="front"><div class="col-main">{lead_html}</div><aside class="col-side"><h2 class="rule">Latest</h2>{side}'
+        classifieds = "".join(f'<section class="cl"><h3>{esc(x["name"])}</h3><ul>' + "".join(
+            f'<li><a href="{ctx.link("stallholders/" + e["slug"] + "/")}"><b>{esc(e["name"])}</b></a> {esc(e["description_text"][:90].rsplit(" ", 1)[0])}&hellip;</li>'
+            for e in c.ex_in(x["id"])) + "</ul></section>" for x in c.ex_cats if c.ex_in(x["id"]))
+        body = (f'<div class="front">{sunday}<div class="col-main">{lead_html}</div><aside class="col-side" aria-label="Latest"><h2 class="rule">Latest</h2>{side}'
                 f'<p><a class="more" href="{ctx.link("journal/")}">The whole journal &rarr;</a></p></aside></div>'
-                f'<section class="about-market"><h2 class="big">{esc(f["tagline"] or "")}</h2><div class="cols">{intro}{btn}</div></section>'
-                f'<section class="dates"><h2 class="rule">Market days, {c.market_dates[0].year if c.market_dates else ""}</h2><ol class="cal">{dates}</ol></section>'
-                f'{feats}<section class="index"><h2 class="rule">The stallholders, A to Z</h2><ul class="az">{stalls}</ul></section>')
+                f'<section class="about-market"><h2 class="big">{esc(f["tagline"] or "")}</h2><div class="cols dropcap">{intro}</div></section>'
+                f'<section class="listings"><h2 class="rule">Listings: market days {c.market_dates[0].year if c.market_dates else ""}</h2><ol class="list-box">{dates}</ol></section>'
+                f'{feats}<section class="index"><h2 class="rule">Classifieds: the stallholders</h2><div class="classifieds">{classifieds}</div></section>')
         return self.layout(ctx, "", body)
 
     def stallholders(self, ctx):

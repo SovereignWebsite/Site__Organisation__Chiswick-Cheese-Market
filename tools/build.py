@@ -43,6 +43,8 @@ def build_skin(skin, c, out):
     def emit(route, html):
         nonlocal n
         write(out, f"designs/{skin.folder}/{route}index.html", html); n += 1
+    for rel, body in (skin.extra_files(c) if hasattr(skin, "extra_files") else {}).items():  # e.g. calendar files
+        write(out, f"designs/{skin.folder}/{rel}", body)
     emit("", skin.home(Ctx(c, skin.folder, "")))
     emit("stallholders/", skin.stallholders(Ctx(c, skin.folder, "stallholders/")))
     ex = c.exhibitors
