@@ -3,7 +3,7 @@ each maker's page, every journal post that mentions them (found in the data, not
 Friendly, rounded, app-like on a phone. Space Grotesk and Inter (SIL OFL)."""
 import re
 from .base import Skin
-from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced
+from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts
 
 FILTER_JS = """(function(){var q=document.getElementById('q'),items=[].slice.call(document.querySelectorAll('.mk,.tile')),
 chips=[].slice.call(document.querySelectorAll('.f-chip')),cat='',out=document.getElementById('count'),
@@ -65,8 +65,8 @@ class Makers(Skin):
                 f'<label class="search"><span>Search the stalls</span><input id="q" type="search" placeholder="Try: goat, bread, Alpine, honey" autocomplete="off"></label>'
                 f'<div class="chips" role="group" aria-label="Kind of stall">{chips}</div>'
                 f'<div class="views" role="group" aria-label="View"><button type="button" class="v-btn" data-view="list" aria-pressed="true">List</button>'
-                f'<button type="button" class="v-btn" data-view="map" aria-pressed="false">Map</button></div>'
-                f'<ul class="cards" id="v-list">{cards}</ul>'
+                f'<button type="button" class="v-btn" data-view="map" aria-pressed="false">By kind</button></div>'
+                f'{"<h2 class=sr>Stalls</h2>" if tag == "h1" else ""}<ul class="cards" id="v-list">{cards}</ul>'
                 f'<div id="v-map" class="map" hidden><p class="map-note">Drawn by category, not the real stall plan.</p>{rows}</div></section><script>{FILTER_JS}</script>')
 
     def home(self, ctx):
@@ -74,13 +74,17 @@ class Makers(Skin):
         nm = c.next_market()
         newest = sorted(c.exhibitors, key=lambda e: e["date"], reverse=True)[:4]
         new_html = "".join(f'<a class="new" href="{ctx.link("stallholders/" + e["slug"] + "/")}">{ctx.image(e["image"], "", True, "")}<span>{esc(e["name"])}</span></a>' for e in newest)
+        mf = market_facts(c)
+        where = " \u00b7 ".join(x for x in (mf.get("hours"), (mf.get("place") or "").split(" (")[0]) if x)
         body = (f'<section class="hello"><div><p class="pill-next">{f"Next market \u00b7 Sunday {ordinal(nm.day)} {nm:%B}" if nm else ""}</p>'
+                f'{f"<p class=where>{esc(where)}</p>" if where else ""}'
                 f'<h1>Meet the {len(c.exhibitors)} stallholders of Chiswick Cheese Market</h1></div></section>'
                 f'{self.finder(ctx, "Find a stall")}'
                 f'<section class="pad"><h2>Most recently added to the site</h2><div class="news">{new_html}</div></section>'
                 f'<section class="gap"><h2>What the data does not have yet</h2><p>The market\'s site keeps a description and a photograph for each stallholder, '
-                f'but no link to their own website or social accounts, and no stall position. One extra field in WordPress, filled in once per stall, would let every design here '
-                f'send visitors straight to the makers, and a stall number would turn the Map into the real plan.</p></section>')
+                f'but no link to their own website or social accounts, no stall position, and no record of which stalls come to which market. '
+                f'A few extra fields in WordPress, filled in once per stall, would let every design here send visitors straight to the makers, '
+                f'show "who is here this Sunday", and turn "By kind" into the real stall plan.</p></section>')
         return self.layout(ctx, "", body)
 
     def stallholders(self, ctx):

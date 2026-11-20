@@ -12,12 +12,12 @@ HOST_RE = re.compile(r"^https?://(?:www\.)?chiswickcheesemarket\.uk")
 DISCLAIMER = "A demonstration by Sovereign Website for Chiswick Cheese Market. Not the official site."
 
 DESIGNS = [  # folder, short name, one line
-    ("1", "The current site", "A close copy of chiswickcheesemarket.uk, built from its own data"),
-    ("2", "Journal", "An editorial, magazine-style front page"),
-    ("3", "Poster", "Bold market-poster typography"),
-    ("4", "Cellar", "Dark and warm, like a cheese cave"),
-    ("5", "The makers", "Built around the stallholders and their own sites"),
-    ("6", "The data", "The open JSON behind every design, with a query tool and charts"),
+    ("1", "The current site", "A close copy of chiswickcheesemarket.uk, built from its own data."),
+    ("2", "The Market Paper", "The news, as a broadsheet dated by the next market."),
+    ("3", "The Poster Wall", "The next market as an event, on the market's own posters."),
+    ("4", "The Cave", "A tasting menu of makers, one course per kind of stall."),
+    ("5", "The makers", "The stallholders first: find a stall, by name or by kind."),
+    ("6", "The data", "The open JSON behind every design, with a query tool and charts."),
 ]
 
 esc = html.escape
@@ -206,12 +206,25 @@ class Ctx:
             return f'<img src="{self.media_src(rec)}" alt="{alt.group(1) if alt else ""}" loading="lazy">'
         return re.sub(r"<img [^>]+>", img, h)
 
-    def image(self, mid, cls="", thumb=False, alt=None):
+    def image(self, mid, cls="", thumb=False, alt=None, eager=False):
+        """An <img> of the market's own picture, with srcset over the sizes WordPress made, so phones load small copies.
+        thumb=True: card-sized; thumb="round": the 150 px thumbnail."""
         m = self.c.img(mid)
         if not m:
             return ""
         a = alt if alt is not None else (m.get("alt") or "")
-        return f'<img class="{cls}" src="{self.media_src(m, thumb)}" alt="{esc(a)}" loading="lazy">'
+        sizes = {k: v for k, v in (m.get("sizes") or {}).items() if v.get("url") and v.get("width") and "woocommerce" not in k}
+        lazy = "" if eager else ' loading="lazy"'
+        if thumb == "round" and "thumbnail" in sizes:
+            t = sizes["thumbnail"]
+            return f'<img class="{cls}" src="{esc(t["url"])}" width="{t["width"]}" height="{t.get("height") or t["width"]}" alt="{esc(a)}"{lazy}>'
+        if thumb == "round":
+            thumb = True
+        want = [k for k in (("medium", "medium_large", "large") if thumb else ("medium_large", "large", "1536x1536")) if k in sizes]
+        srcset = ", ".join(f'{esc(sizes[k]["url"])} {sizes[k]["width"]}w' for k in want)
+        sz = "(max-width: 700px) 50vw, 320px" if thumb else "(max-width: 700px) 100vw, 900px"
+        extra = f' srcset="{srcset}" sizes="{sz}"' if len(want) > 1 else ""
+        return f'<img class="{cls}" src="{self.media_src(m, thumb)}"{extra} alt="{esc(a)}"{lazy}>'
 
 
 def demo_strip(ctx, skin_routes=None):
@@ -221,9 +234,9 @@ def demo_strip(ctx, skin_routes=None):
         route = ctx.route if (d != "6" and ctx.design != "6") else ""
         here = ' aria-current="page"' if d == ctx.design else ""
         opts.append(f'<a href="{ctx.link(route, d)}"{here}><b>{d}</b> {esc(name)}</a>')
-    return (f'<aside class="demo-strip" aria-label="About this demonstration"><div class="demo-line">{esc(DISCLAIMER)} '
-            f'The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>.'
-            f'<details class="demo-more"><summary>More</summary>Content snapshot {esc(ctx.c.snap_label)}. Pictures and video load from chiswickcheesemarket.uk, the market\'s own site. <a href="{ctx.up()}admin/index.html">Admin: the WordPress viewer and parser</a>.</details></div>'
+    return (f'<aside class="demo-strip" aria-label="About this demonstration"><div class="demo-line"><span class="short">Demonstration, not the official site.</span><span class="long">{esc(DISCLAIMER)} '
+            f'The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>.</span>'
+            f'<details class="demo-more"><summary>More</summary><span class="short">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. </span>Content snapshot {esc(ctx.c.snap_label)}. Pictures and video load from chiswickcheesemarket.uk, the market\'s own site. <a href="{ctx.up()}admin/index.html">Admin: the WordPress viewer and parser</a>.</details></div>'
             f'<div class="demo-actions"><details class="demo-choose"><summary>Choose a design</summary><nav aria-label="Choose a design">{"".join(opts)}</nav></details>'
             f'</div></aside>')
 
@@ -234,7 +247,10 @@ DEMO_CSS = """
 .demo-line{margin:0;flex:1 1 420px}
 .demo-more{display:inline}.demo-more summary{display:inline;cursor:pointer;text-decoration:underline;margin-left:6px;color:#ffd65a}
 .demo-more[open]{display:block;margin-top:4px}
-@media (max-width:600px){.demo-strip{font-size:12px;padding:5px 12px}.demo-line{flex-basis:100%;white-space:normal}.demo-strip .demo-actions{width:100%;justify-content:flex-start}}
+.demo-line .short{display:none}
+footer .sws-version{opacity:1}
+@media (max-width:600px){.demo-strip{font-size:12px;padding:5px 12px;flex-wrap:nowrap}.demo-line{flex:1 1 auto}.demo-line .long{display:none}.demo-line .short{display:inline}
+.demo-more[open]{position:absolute;left:0;right:0;top:100%;background:#111;padding:8px 12px;z-index:60}.demo-choose summary{padding:3px 10px}}
 .demo-choose{position:relative}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .dead{text-decoration:line-through;text-decoration-thickness:1px}.dead small{text-decoration:none;display:inline-block;opacity:.7;font-size:.8em}

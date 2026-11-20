@@ -20,27 +20,49 @@ class Cellar(Skin):
                 f'Type: Playfair Display and Inter (SIL Open Font License).</p></footer>')
 
     def shelf(self, ctx, x, es):
-        rounds = "".join(f'<li><a href="{ctx.link("stallholders/" + e["slug"] + "/")}">{ctx.image(e["image"], "round", True, "")}<span class="label">{esc(e["name"])}</span></a></li>' for e in es)
+        rounds = "".join(f'<li><a href="{ctx.link("stallholders/" + e["slug"] + "/")}">{ctx.image(e["image"], "round", "round", "")}<span class="label">{esc(e["name"])}</span></a></li>' for e in es)
         return (f'<section class="shelf" id="{esc(x["slug"])}"><h2 class="shelf-name">{esc(x["name"])} <small>{len(es)}</small></h2>'
                 f'<div class="ledge" tabindex="0" role="region" aria-label="{esc(x["name"])}, {len(es)}"><ul>{rounds}</ul></div></section>')
 
     def home(self, ctx):
+        """A tasting menu: one course per kind of stall, each featuring one maker (the first alphabetically
+        not already on another course, filling the smallest kinds first), closing with the newest tasting note. The full shelves are on the stallholders page."""
         c = ctx.c
         f = home_facts(c)
-        hh = c.site.get("home_header") or {}
         nm = c.next_market()
-        intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"])
-        shelves = "".join(self.shelf(ctx, x, c.ex_in(x["id"])) for x in c.ex_cats if c.ex_in(x["id"]))
-        tasting = [p for p in c.posts if {"Tasting Notes", "Lucy's Cheese of the Month"} & set(c.post_cat_names(p))][:6]
-        notes = "".join(f'<article class="parchment"><a href="{ctx.link("journal/" + p["slug"] + "/")}"><p class="small">{fmt_date(p["date"])}</p>'
-                        f'<h3>{esc(p["title"])}</h3>{f"<p class=ex>{esc(p["excerpt"])}</p>" if p["excerpt"] else ""}</a></article>' for p in tasting)
-        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}">Sunday {ordinal(d.day)} {d:%B}</li>' for d in c.market_dates)
-        photo = f'<img class="welcome-img" src="{esc(hh["image_url"])}" alt="" width="1600" height="900">' if hh.get("image_url") else ""
-        body = (f'<section class="welcome"><p class="eyebrow">{esc(c.site["tagline"])}</p><h1>{esc(f["tagline"] or c.site["name"])}</h1>'
-                f'{f"<p class=when>Next market <em>Sunday {ordinal(nm.day)} {nm:%B}</em></p>" if nm else ""}{intro}'
-                f'<p><a class="gold" href="{ctx.link("visit-us/")}">{esc(f["button"]["text"]) if f.get("button") else "Visit us"}</a></p></section>'
-                f'{photo}<section class="cave"><p class="num">&#10022;</p><h2>The shelves</h2><p class="centre sub">Every stallholder, one shelf per kind of stall.</p>{shelves}</section>'
-                f'{f"<section class=chapter><p class=num>&#10022;</p><h2>Tasting notes</h2><div class=notes>{notes}</div></section>" if notes else ""}'
+        roman = ["I", "II", "III", "IV", "V", "VI", "VII", "VIII"]
+        kinds = [x for x in c.ex_cats if c.ex_in(x["id"])]
+        pick, served = {}, set()
+        for x in sorted(kinds, key=lambda x: len(c.ex_in(x["id"]))):  # smallest kind first, so every course gets its own maker
+            es = c.ex_in(x["id"])
+            e = next((e for e in es if e["id"] not in served), es[0])
+            pick[x["id"]] = e; served.add(e["id"])
+        courses = []
+        for x in kinds:
+            es = c.ex_in(x["id"])
+            e = pick[x["id"]]
+            t = (e["description_text"] or "").strip()
+            first = t.split(". ")[0] if ". " in t[:200] else t
+            first = first if len(first) <= 170 else first[:170].rsplit(" ", 1)[0] + "\u2026"
+            first = first if first.endswith((".", "\u2026", "!")) else first + "."
+            more = len(es) - 1
+            shelf_url = ctx.link("stallholders/") + "#" + x["slug"]
+            more_html = f'<p class="more-on"><a href="{esc(shelf_url)}">and {more} more on the shelf</a></p>' if more else ""
+            courses.append(f'<li class="course"><p class="course-no">Course {roman[len(courses)]}</p><h2 class="course-name">{esc(x["name"])}</h2>'
+                           f'<a class="dish" href="{ctx.link("stallholders/" + e["slug"] + "/")}">{ctx.image(e["image"], "round", "round", "")}'
+                           f'<span><b>{esc(e["name"])}</b><em>{esc(first)}</em></span></a>'
+                           f'{more_html}</li>')
+        note = next((p for p in c.posts if "Tasting Notes" in c.post_cat_names(p)), None) or next((p for p in c.posts if "Lucy's Cheese of the Month" in c.post_cat_names(p)), None)
+        close = (f'<li class="course last"><p class="course-no">To finish</p><h2 class="course-name">Tasting notes</h2>'
+                 f'<a class="dish" href="{ctx.link("journal/" + note["slug"] + "/")}">{ctx.image(note["image"], "round", "round", "")}'
+                 f'<span><b>{esc(note["title"])}</b><em>{esc(note["excerpt"])}</em></span></a></li>') if note else ""
+        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}">Sunday {ordinal(d.day)} {d:%B}{"<span class=sr> (past)</span>" if d < c.snap_date else ""}</li>' for d in c.market_dates)
+        intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"][:1])
+        body = (f'<section class="menu-wrap"><div class="menu"><p class="eyebrow">Tasting menu</p><h1>{esc(f["tagline"] or c.site["name"])}</h1>'
+                f'{f"<p class=when>Served on <em>Sunday {ordinal(nm.day)} {nm:%B %Y}</em></p>" if nm else ""}{intro}'
+                f'<ol class="courses">{"".join(courses)}{close}</ol>'
+                f'<p class="menu-foot"><a class="gold" href="{ctx.link("stallholders/")}">All {len(c.exhibitors)} makers, shelf by shelf</a> '
+                f'<a class="gold" href="{ctx.link("visit-us/")}">Getting here</a></p></div></section>'
                 f'<section class="chapter dates"><p class="num">&#10022;</p><h2>Market days</h2><ol>{dates}</ol></section>')
         return self.layout(ctx, "", body)
 

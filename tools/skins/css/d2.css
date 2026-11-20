@@ -136,3 +136,4 @@ main{max-width:1240px;margin:0 auto;padding:0 24px}
 .cl li{font-size:14px;line-height:1.45;padding:5px 0;border-bottom:1px dotted color-mix(in srgb,var(--rule) 30%,transparent)}
 .cl b{font:600 15px 'Fraunces',serif}
 @media (max-width:860px){.front{grid-template-columns:1fr}.front .sunday{order:-1}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}

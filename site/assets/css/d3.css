@@ -139,3 +139,8 @@ h1,h2,h3,.mark,.huge{font-family:'Bebas Neue',Impact,sans-serif;font-weight:400;
 .past-strip figcaption{font:700 12px 'Work Sans',sans-serif;margin-top:4px}
 .idea{font:700 14px 'Work Sans',sans-serif;color:var(--hl)}
 @media (max-width:700px){.wall{grid-template-columns:1fr}html{scroll-snap-type:y proximity}.paste::before{width:80px}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.date-hero.with-poster{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:clamp(20px,4vw,56px);align-items:center}
+.hero-poster{transform:rotate(2deg);max-width:620px;justify-self:end}
+.missing{font:700 14px 'Work Sans',sans-serif;margin-top:28px;color:var(--muted)}
+@media (max-width:820px){.date-hero.with-poster{grid-template-columns:1fr}.hero-poster{justify-self:stretch;transform:rotate(1deg)}}

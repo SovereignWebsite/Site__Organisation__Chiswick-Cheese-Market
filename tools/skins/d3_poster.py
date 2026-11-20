@@ -49,13 +49,18 @@ class Poster(Skin):
             if ym:
                 by_month.setdefault(ym, p)  # the first poster for a month
         hero = ""
+        first_poster = by_month.get((nm.year, nm.month)) if nm else None
         if nm:
             cal = f'<a class="btn" href="calendar/{nm:%Y-%m-%d}.ics">Add to calendar</a>' if "start" in mf else ""
-            hero = (f'<section class="date-hero"><h1><span class="d">{nm.day}</span><span class="m">{nm:%b}</span></h1>'
+            side = ""
+            if first_poster:
+                img, label = self.poster_img(ctx, first_poster, eager=True, size=1000)
+                side = f'<figure class="paste hero-poster">{img}<figcaption>{esc(label)} {self.gif_link(first_poster)}</figcaption></figure>'
+            hero = (f'<section class="date-hero{" with-poster" if side else ""}"><div class="dh-text"><h1><span class="d">{nm.day}</span><span class="m">{nm:%b}</span></h1>'
                     f'<p class="when">Next market: Sunday {ordinal(nm.day)} {nm:%B %Y}{", " + esc(mf["hours"]) if mf.get("hours") else ""}{", " + esc(mf["place"]) if mf.get("place") else ""}.</p>'
-                    f'<p><a class="btn" href="{ctx.link("visit-us/")}">Getting here</a> {cal}</p></section>')
+                    f'<p><a class="btn" href="{ctx.link("visit-us/")}">Getting here</a> {cal}</p></div>{side}</section>')
         upcoming = []
-        for d in [d for d in c.market_dates if d >= c.snap_date]:
+        for d in [d for d in c.market_dates if d >= c.snap_date and not (first_poster and d == nm)]:
             p = by_month.get((d.year, d.month))
             if not p:
                 continue
@@ -65,6 +70,12 @@ class Poster(Skin):
         shown = {(d.year, d.month) for d in c.market_dates if d >= c.snap_date}
         this_year = [p for ym, p in sorted(by_month.items()) if ym[0] == c.snap_date.year and ym not in shown]
         older = [p for ym, p in sorted(by_month.items()) if ym[0] < c.snap_date.year]
+        months = ["", "January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
+        missing = [months[d.month] for d in c.market_dates if d.year == c.snap_date.year and (d.year, d.month) not in by_month]
+        missing_note = ""
+        if missing:
+            names = missing[0] if len(missing) == 1 else ", ".join(missing[:-1]) + " and " + missing[-1]
+            missing_note = f'<p class="missing">No poster on the market\'s site for {esc(names)} {c.snap_date.year}.</p>'
         wall = ""
         for k, p in enumerate(this_year):
             img, label = self.poster_img(ctx, p)
@@ -73,12 +84,13 @@ class Poster(Skin):
         for p in older:
             img, label = self.poster_img(ctx, p, size=400)
             strip += f'<figure>{img}<figcaption>{esc(label)}</figcaption></figure>'
-        cal = "".join(f'<li class="{"past" if d < c.snap_date else ("next" if d == nm else "")}"><b>{d:%d}</b><span>{d:%b}</span></li>' for d in c.market_dates)
+        cal = "".join(f'<li class="{"past" if d < c.snap_date else ("next" if d == nm else "")}"><b>{d:%d}</b><span>{d:%b}</span>{"<span class=sr> (past)</span>" if d < c.snap_date else ""}</li>' for d in c.market_dates)
         cats = "".join(f'<li><a href="{ctx.link("stallholders/")}#{esc(x["slug"])}"><b>{len(c.ex_in(x["id"]))}</b>{esc(x["name"])}</a></li>'
                        for x in c.ex_cats if c.ex_in(x["id"]))
         news = "".join(f'<li><a href="{ctx.link("journal/" + p["slug"] + "/")}"><span>{fmt_date(p["date"], "%d.%m.%y")}</span>{esc(p["title"])}</a></li>' for p in c.posts[:8])
-        body = (f'{hero}<section class="band" aria-label="Upcoming">{"".join(upcoming)}</section>'
-                f'{f"<section class=band><h2>{c.snap_date.year} on the wall</h2><div class=wall>{wall}</div></section>" if wall else ""}'
+        upcoming_html = f'<section class="band" aria-label="Upcoming">{"".join(upcoming)}</section>' if upcoming else ""
+        body = (f'{hero}{upcoming_html}'
+                f'{f"<section class=band><h2>{c.snap_date.year} on the wall</h2><div class=wall>{wall}</div>{missing_note}</section>" if wall else ""}'
                 f'{f"<section class=band><h2>Past posters</h2><div class=past-strip>{strip}</div></section>" if strip else ""}'
                 f'<section class="band"><h2>{c.market_dates[0].year if c.market_dates else ""} market days</h2><ol class="cal">{cal}</ol></section>'
                 f'<section class="band black"><h2>Stalls by kind</h2><ol class="cats">{cats}</ol></section>'

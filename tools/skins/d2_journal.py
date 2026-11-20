@@ -41,7 +41,7 @@ class Journal(Skin):
                   f'{hours_html}{place_html}'
                   f'<p><a class="more" href="{ctx.link("visit-us/")}">Getting here &rarr;</a></p></aside>') if nm else ""
         intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"])
-        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}"><span>Sunday</span> <b>{ordinal(d.day)} {d:%B}</b></li>' for d in c.market_dates)
+        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}"><span>Sunday</span> <b>{ordinal(d.day)} {d:%B}</b>{"<span class=sr> (past)</span>" if d < c.snap_date else ""}</li>' for d in c.market_dates)
         feats = "".join(f'<section class="feature"><h2 class="rule">{esc(g["title"])}</h2><div class="feat-grid">' + "".join(
             f'<figure>{ctx.image(i["image"], "", True, "")}<figcaption>{esc(i["title"])}</figcaption></figure>' for i in g["items"]) + "</div></section>"
             for g in f["features"])

@@ -112,3 +112,6 @@ h1{font-size:clamp(34px,5.4vw,64px)}h2{font-size:clamp(26px,3.4vw,38px)}
 .row-tiles{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px}
 .tile a{display:flex;align-items:center;gap:8px;background:var(--bg);border-radius:999px;padding:4px 12px 4px 4px;font:600 13px 'Inter',sans-serif}
 .tile img{width:34px;height:34px;border-radius:50%;object-fit:cover}
+.where{font:600 15px 'Inter',sans-serif;color:var(--soft);margin:-6px 0 10px}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+@media (min-width:821px){.tabbar{display:none}body{padding-bottom:0}}

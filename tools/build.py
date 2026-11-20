@@ -103,8 +103,9 @@ def chooser(c):
 <header class="door" style="background-image:url('{esc(hh)}')"><div class="veil">{nm_html}<p class="k">A demonstration for the organisers</p>
 <h1>Chiswick Cheese Market, six ways</h1><p>The market's own words and pictures, read from its WordPress site ({esc(c.snap_label)}) and drawn six ways.
 WordPress stays exactly as it is; these are new front ends on the same content.</p></div></header>
-<main><ul class="designs">{items}<li><a href="buttercup/index.html" class="adm"><span class="n">&#128004;</span><b>Buttercup</b><span class="t">The market's cow in its own pictures and journal: every outfit we could find</span></a></li><li><a href="admin/index.html" class="adm"><span class="n">&#9881;</span><b>Admin</b><span class="t">The WordPress viewer and parser: everything the API gives, raw and parsed</span></a></li></ul>
-<p class="foot">Pictures load from chiswickcheesemarket.uk; nothing is copied. Data: <a href="data/index.json">data/index.json</a>.</p></main></body></html>"""
+<main><ul class="designs">{items}</ul>
+<h2 class="also">Also here</h2><ul class="designs also-list"><li><a href="buttercup/index.html" class="adm"><span class="n">&#128004;</span><b>Buttercup</b><span class="t">The market's cow in its own pictures and journal: every outfit we could find.</span></a></li><li><a href="admin/index.html" class="adm"><span class="n">&#9881;</span><b>Admin</b><span class="t">The WordPress viewer and parser: everything the API gives, raw and parsed.</span></a></li></ul>
+</main><footer class="foot"><p>Pictures load from chiswickcheesemarket.uk; nothing is copied. Data: <a href="data/index.json">data/index.json</a>.</p></footer></body></html>"""
 
 
 def buttercup(c):
@@ -131,7 +132,7 @@ def buttercup(c):
 <h2>What she wore</h2><ol class="outfits">{outfits}</ol>
 <h2>The monthly animated banners</h2><p>{len(d["animated_banners"])} animated GIFs announce each market, January 2025 to December 2026. Only the December one has been checked frame by frame; some are large (up to 20 MB), so they are linked, not shown.</p><ul class="gifs">{gifs}</ul>
 <h2>Earlier versions of the site</h2><p>{esc(d["wayback"]["note"])}</p><ul class="gifs">{snaps}</ul>
-</main></body></html>"""
+</main><footer class="foot"><p>Every picture belongs to Chiswick Cheese Market and loads from chiswickcheesemarket.uk.</p></footer></body></html>"""
 
 
 def main():

@@ -122,3 +122,22 @@ h2{font-size:clamp(36px,5vw,64px);font-style:italic;text-align:center}
 .parchment a{display:block;background:#efe2c4;color:#2a1f15;padding:20px 22px;border-radius:4px;box-shadow:inset 0 0 40px rgba(120,80,20,.25),0 8px 20px rgba(0,0,0,.4);height:100%}
 .parchment h3{font-size:24px}.parchment .small{color:#5a4632}.parchment .ex{color:#3d2f20;margin:0}
 @media (max-width:700px){.ledge ul{flex-wrap:nowrap;width:max-content}.ledge li{flex:0 0 120px}}
+/* Pass 2: the tasting menu */
+.menu-wrap{padding:clamp(28px,6vw,80px) 16px}
+.menu{max-width:680px;margin:0 auto;background:var(--bg2);border:1px solid var(--line);outline:1px solid var(--line);outline-offset:6px;padding:clamp(24px,5vw,56px);text-align:center;animation:rise .5s ease-out both}
+.menu h1{font-size:clamp(34px,6vw,60px)}
+.menu .when{font:400 20px 'Playfair Display',serif;color:var(--soft)}.menu .when em{color:var(--gold)}
+.menu .txt{color:var(--soft);font-size:16px}
+.courses{list-style:none;margin:32px 0 8px;padding:0}
+.course{padding:22px 0;border-top:1px solid var(--line)}
+.course-no{font:600 11px 'Inter',sans-serif;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin:0}
+.course-name{font-size:clamp(26px,4vw,34px);margin:4px 0 14px}
+.dish{display:flex;align-items:center;gap:18px;text-align:left;max-width:520px;margin:0 auto}
+.dish .round{width:96px;height:96px;flex:0 0 96px}
+.dish b{display:block;font:400 22px/1.2 'Playfair Display',serif;font-style:italic;color:var(--fg)}
+.dish em{display:block;font-style:normal;color:var(--soft);font-size:15px;line-height:1.5;margin-top:4px}
+.more-on{margin:12px 0 0;font:600 12px 'Inter',sans-serif;letter-spacing:.12em;text-transform:uppercase}
+.more-on a{color:var(--gold)}
+.menu-foot{margin-top:24px}
+.shelf-name{overflow-wrap:anywhere}
+@media (max-width:560px){.dish{flex-direction:column;text-align:center}.dish .round{width:110px;height:110px;flex-basis:auto}}
