@@ -26,7 +26,7 @@ class Copy(Skin):
         for u in ctx.c.site.get("social", []):
             lab = social_label(u)
             mono = next((v for k, v in SOCIAL_ICON.items() if k in u), "?")
-            items.append(f'<li><a href="{esc(u)}" aria-label="{esc(lab)}" title="{esc(lab)}">{esc(mono)}</a></li>')
+            items.append(f'<li><a href="{esc(u)}" title="{esc(lab)}"><span aria-hidden="true">{esc(mono)}</span><span class="sr">{esc(lab)}</span></a></li>')
         return f'<ul class="{cls}">{"".join(items)}</ul>'
 
     def header(self, ctx):

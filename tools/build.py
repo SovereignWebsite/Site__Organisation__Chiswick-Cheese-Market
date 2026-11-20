@@ -77,8 +77,9 @@ def chooser(c):
     def pic(i):
         m = c.img(pics[i % len(pics)]) if pics else None
         return f'<img src="{esc(pick_size_url(m, 480))}" alt="" loading="lazy">' if m else ""
-    items = "".join(f'<li><a href="designs/{d}/index.html">{pic(k)}<span class="n">{d}</span><b>{esc(n)}</b><span class="t">{esc(t)}</span></a></li>'
-                    for k, (d, n, t) in enumerate(DESIGNS))
+    order = sorted(enumerate(DESIGNS), key=lambda kv: kv[1][0] != "5")  # the organisers' favourite first
+    items = "".join(f'<li><a href="designs/{d}/index.html">{pic(k)}<span class="n">{d}</span><b>{esc(n)}</b><span class="t">{esc(t)}{" Start here." if d == "5" else ""}</span></a></li>'
+                    for k, (d, n, t) in order)
     url = "https://chiswick-cheese-market.organisation.sovereignweb.site/"
     title = "Chiswick Cheese Market, six ways: a demonstration"
     desc = "A demonstration by Sovereign Website: the market's own content, read from its WordPress site, drawn six ways. Not the official site."

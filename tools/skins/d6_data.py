@@ -132,7 +132,7 @@ Charts are inline SVG made when the site is built; the query tool is 40 lines of
             ("market days in " + str(c.market_dates[0].year) if c.market_dates else "market days", len(c.market_dates))))
         body = f"""
 <section class="intro"><h1>The market's content, as open data</h1>
-<p>Everything on the five designs comes from these files. They were read from Chiswick Cheese Market's own WordPress site through its public API
+<p>Everything in all six designs comes from these files. They were read from Chiswick Cheese Market's own WordPress site through its public API
 (GET requests only) on {esc(c.snap_label)}, cleaned, and saved as plain JSON. A nightly job can refresh them; every change is then a commit you can see and undo.</p>
 <div class="tiles">{tiles}</div>
 {f'<p class="next">Next market in the data: <b>Sunday {nm.day} {nm:%B %Y}</b> (from the market dates on the home page).</p>' if nm else ''}</section>

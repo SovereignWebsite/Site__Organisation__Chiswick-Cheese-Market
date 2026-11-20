@@ -6,6 +6,7 @@
 .demo-more[open]{display:block;margin-top:4px}
 @media (max-width:600px){.demo-strip{font-size:12px;padding:5px 12px}.demo-line{flex-basis:100%;white-space:normal}.demo-strip .demo-actions{width:100%;justify-content:flex-start}}
 .demo-choose{position:relative}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .dead{text-decoration:line-through;text-decoration-thickness:1px}.dead small{text-decoration:none;display:inline-block;opacity:.7;font-size:.8em}
 .demo-actions{display:flex;gap:10px;align-items:center}
 .demo-admin{border:1px solid #ffd65a;border-radius:999px;padding:2px 12px;text-decoration:none;font-weight:600}

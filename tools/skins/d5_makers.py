@@ -39,12 +39,13 @@ class Makers(Skin):
 
     def card(self, ctx, e):
         cats = " ".join(f"c{i}" for i in e["categories"])
-        first = re.split(r"(?<=[.!?])\s", e["description_text"].strip(), maxsplit=1)[0] if e["description_text"] else ""
+        t = (e["description_text"] or "").strip()
+        first = t if len(t) <= 150 else t[:150].rsplit(" ", 1)[0].rstrip(",;:") + "\u2026"
         tags = "".join(f'<span class="tag t{i % 6}">{esc(ctx.c.ex_cat[i]["name"])}</span>' for i in e["categories"] if i in ctx.c.ex_cat)
         n = len(self.mentions(ctx, e))
         return (f'<li class="mk" data-cats="{cats}" data-text="{esc((e["name"] + " " + e["description_text"]).lower())}">'
                 f'<a href="{ctx.link("stallholders/" + e["slug"] + "/")}">{ctx.image(e["image"], "", True, "")}<div class="mk-b"><div class="tags">{tags}</div>'
-                f'<h3>{esc(e["name"])}</h3><p>{esc(first[:150])}{"…" if len(first) > 150 else ""}</p>'
+                f'<h3>{esc(e["name"])}</h3><p>{esc(first)}</p>'
                 f'{f"<p class=mentions>In the journal: {n} post{"s" if n != 1 else ""}</p>" if n else ""}</div></a></li>')
 
     def finder(self, ctx, title, tag="h2"):
@@ -67,7 +68,7 @@ class Makers(Skin):
         intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"][:1])
         body = (f'<section class="hello"><div><p class="pill-next">{f"Next market · Sunday {ordinal(nm.day)} {nm:%B}" if nm else ""}</p>'
                 f'<h1>Meet the {len(c.exhibitors)} stallholders of Chiswick Cheese Market</h1>{intro}'
-                f'<p class="stats"><b>{len(c.exhibitors)}</b> stalls <b>{kinds}</b> kinds <b>{len(c.posts)}</b> journal posts</p></div>'
+                f'<p class="stats"><span><b>{len(c.exhibitors)}</b> stalls</span><span><b>{kinds}</b> kinds</span><span><b>{len(c.posts)}</b> journal posts</span></p></div>'
                 f'<div class="new-wrap"><p class="lbl">Most recently added to the site</p><div class="news">{new_html}</div></div></section>'
                 f'{self.finder(ctx, "Find a stall")}'
                 f'<section class="gap"><h2>What the data does not have yet</h2><p>The market\'s site keeps a description and a photograph for each stallholder, '

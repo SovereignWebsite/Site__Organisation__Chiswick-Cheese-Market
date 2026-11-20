@@ -173,3 +173,5 @@ h3{font-size:24px}
 @media (prefers-reduced-motion:reduce){.home-hero video{display:none}}
 body{overflow-x:clip}
 main{overflow-x:clip}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.col .txt.past{text-decoration:line-through;text-decoration-thickness:1px;color:var(--ink)}

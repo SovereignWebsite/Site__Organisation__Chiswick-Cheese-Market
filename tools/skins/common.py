@@ -43,6 +43,11 @@ def load(root):
     c = Content(site, pages, posts, ex, cats, media, d("index.json"))
     dl = os.path.join(root, "data", "dead-links.json")
     c.dead = {x["url"] for x in json.load(open(dl))["items"]} if os.path.exists(dl) else set()
+    bj = os.path.join(root, "data", "buttercup.json")
+    if os.path.exists(bj):  # pictures the public media API hides (for example the "Mascot Buttercup" tile), from data/buttercup.json
+        for i in json.load(open(bj))["images"]:
+            if i.get("media_id") and str(i["media_id"]) not in c.media:
+                c.media[str(i["media_id"])] = {"id": i["media_id"], "original_url": i["image_url"], "download_url": i["image_url"], "alt": "Buttercup, the market's cow", "sizes": {}}
     return c
 
 
@@ -216,9 +221,9 @@ def demo_strip(ctx, skin_routes=None):
         opts.append(f'<a href="{ctx.link(route, d)}"{here}><b>{d}</b> {esc(name)}</a>')
     return (f'<aside class="demo-strip" aria-label="About this demonstration"><div class="demo-line">{esc(DISCLAIMER)} '
             f'The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>.'
-            f'<details class="demo-more"><summary>More</summary>Content snapshot {esc(ctx.c.snap_label)}. Pictures and video load from chiswickcheesemarket.uk, the market\'s own site.</details></div>'
+            f'<details class="demo-more"><summary>More</summary>Content snapshot {esc(ctx.c.snap_label)}. Pictures and video load from chiswickcheesemarket.uk, the market\'s own site. <a href="{ctx.up()}admin/index.html">Admin: the WordPress viewer and parser</a>.</details></div>'
             f'<div class="demo-actions"><details class="demo-choose"><summary>Choose a design</summary><nav aria-label="Choose a design">{"".join(opts)}</nav></details>'
-            f'<a class="demo-admin" href="{ctx.up()}admin/index.html">Admin</a></div></aside>')
+            f'</div></aside>')
 
 
 DEMO_CSS = """
@@ -229,6 +234,7 @@ DEMO_CSS = """
 .demo-more[open]{display:block;margin-top:4px}
 @media (max-width:600px){.demo-strip{font-size:12px;padding:5px 12px}.demo-line{flex-basis:100%;white-space:normal}.demo-strip .demo-actions{width:100%;justify-content:flex-start}}
 .demo-choose{position:relative}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .dead{text-decoration:line-through;text-decoration-thickness:1px}.dead small{text-decoration:none;display:inline-block;opacity:.7;font-size:.8em}
 .demo-actions{display:flex;gap:10px;align-items:center}
 .demo-admin{border:1px solid #ffd65a;border-radius:999px;padding:2px 12px;text-decoration:none;font-weight:600}
@@ -293,7 +299,9 @@ def render_blocks(ctx, blocks, skin, depth=0):
             cls = ' class="vertical"' if b.get("style") == "vertical" else ""
             out.append(f"<{lvl}{cls}>{esc(b['text'])}</{lvl}>")
         elif t in ("text", "html"):
-            out.append(f'<div class="txt">{ctx.rewrite_html(b["html"])}</div>')
+            ds = market_dates({"blocks": [b]})
+            past = len(ds) == 1 and ds[0] < ctx.c.snap_date
+            out.append(f'<div class="txt{" past" if past else ""}">{ctx.rewrite_html(b["html"])}{"<span class=sr> (past)</span>" if past else ""}</div>')
         elif t == "button":
             if ctx.is_dead(b.get("url")):
                 out.append(f'<p class="btn-wrap"><span class="btn dead" title="This link no longer works">{esc(b["text"])}</span> <small>(link no longer works)</small></p>')
