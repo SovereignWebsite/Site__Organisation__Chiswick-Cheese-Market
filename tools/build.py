@@ -79,9 +79,8 @@ def chooser(c):
     def pic(i):
         m = c.img(pics[i % len(pics)]) if pics else None
         return f'<img src="{esc(pick_size_url(m, 480))}" alt="" loading="lazy">' if m else ""
-    order = sorted(enumerate(DESIGNS), key=lambda kv: kv[1][0] != "5")  # the organisers' favourite first
-    items = "".join(f'<li><a href="designs/{d}/index.html">{pic(k)}<span class="n">{d}</span><b>{esc(n)}</b><span class="t">{esc(t)}{" Start here." if d == "5" else ""}</span></a></li>'
-                    for k, (d, n, t) in order)
+    items = "".join(f'<li><a href="designs/{d}/index.html">{pic(k)}<span class="n">{d}</span><b>{esc(n)}</b><span class="t">{esc(t)}{" Start here." if d == "3" else ""}</span></a></li>'
+                    for k, (d, n, t) in enumerate(DESIGNS))
     url = "https://chiswick-cheese-market.organisation.sovereignweb.site/"
     title = "Chiswick Cheese Market, six ways: a demonstration"
     desc = "A demonstration by Sovereign Website: the market's own content, read from its WordPress site, drawn six ways. Not the official site."
@@ -99,13 +98,13 @@ def chooser(c):
 <meta property="og:image:alt" content="{esc(title)}"><meta name="twitter:card" content="summary_large_image"><meta name="twitter:title" content="{esc(title)}">
 <meta name="twitter:description" content="{esc(desc)}"><meta name="twitter:image" content="{url}assets/share/card-1200x630.jpg">
 <link rel="stylesheet" href="assets/css/demo.css"><link rel="stylesheet" href="assets/css/home.css"></head>
-<body><aside class="demo-strip" aria-label="About this demonstration"><p class="demo-line">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. Pictures load from the market's own site.</p></aside>
+<body><aside class="demo-strip" aria-label="About this demonstration"><p class="demo-line"><span class="short">Demonstration, not the official site (<a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>).</span><span class="long">{esc(DISCLAIMER)} The official site is <a href="{OFFICIAL}/">chiswickcheesemarket.uk</a>. Pictures load from the market's own site.</span></p></aside>
 <header class="door" style="background-image:url('{esc(hh)}')"><div class="veil">{nm_html}<p class="k">A demonstration for the organisers</p>
 <h1>Chiswick Cheese Market, six ways</h1><p>The market's own words and pictures, read from its WordPress site ({esc(c.snap_label)}) and drawn six ways.
 WordPress stays exactly as it is; these are new front ends on the same content.</p></div></header>
 <main><ul class="designs">{items}</ul>
 <h2 class="also">Also here</h2><ul class="designs also-list"><li><a href="buttercup/index.html" class="adm"><span class="n">&#128004;</span><b>Buttercup</b><span class="t">The market's cow in its own pictures and journal: every outfit we could find.</span></a></li><li><a href="admin/index.html" class="adm"><span class="n">&#9881;</span><b>Admin</b><span class="t">The WordPress viewer and parser: everything the API gives, raw and parsed.</span></a></li></ul>
-</main><footer class="foot"><p>Pictures load from chiswickcheesemarket.uk; nothing is copied. Data: <a href="data/index.json">data/index.json</a>.</p></footer></body></html>"""
+<p class="talk">What it would cost, and who keeps it up to date: to talk about.</p></main><footer class="foot"><p>Pictures load from chiswickcheesemarket.uk; nothing is copied. Data: <a href="data/index.json">data/index.json</a>.</p></footer></body></html>"""
 
 
 def buttercup(c):

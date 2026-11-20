@@ -304,7 +304,8 @@ def render_blocks(ctx, blocks, skin, depth=0):
                 icon = "".join(ctx.image(i, "mq-ic", True, "") for i in b.get("inline_images", [])[:1])
                 if txt:
                     unit = f"<span>{txt} {icon}</span>"
-                    out.append(f'<div class="marquee" role="marquee" aria-label="{txt}"><div class="mq-track" aria-hidden="true">{unit * 8}</div></div>')
+                    out.append(f'<div class="marquee" role="marquee" aria-label="{txt}"><label class="mq-pause"><input type="checkbox"><span>Pause</span></label>'
+                               f'<div class="mq-track" aria-hidden="true">{unit * 8}</div></div>')
                 continue
             lvl = b.get("level", "h2")
             lvl = lvl if lvl in ("h1", "h2", "h3", "h4", "h5", "h6") else "h2"

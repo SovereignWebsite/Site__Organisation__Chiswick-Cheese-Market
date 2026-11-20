@@ -175,3 +175,11 @@ body{overflow-x:clip}
 main{overflow-x:clip}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .col .txt.past{text-decoration:line-through;text-decoration-thickness:1px;color:var(--ink)}
+.marquee{position:relative}
+.marquee:hover .mq-track,.marquee:focus-within .mq-track,.marquee:has(input:checked) .mq-track{animation-play-state:paused}
+.mq-pause{position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:2;font:700 12px/1 system-ui,sans-serif;cursor:pointer}
+.mq-pause input{position:absolute;opacity:0;width:1px;height:1px}
+.mq-pause span{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px}
+.mq-pause input:checked+span::before{content:"Paused \b7  "}
+.mq-pause input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.mq-pause{display:none}}

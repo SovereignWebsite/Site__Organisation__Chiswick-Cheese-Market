@@ -28,11 +28,14 @@ class Poster(Skin):
         return out
 
     def poster_img(self, ctx, p, eager=False, size=900):
-        sz = sorted((v for k, v in p["sizes"].items() if v.get("url") and v.get("width") and "woocommerce" not in k and k != "full"), key=lambda v: v["width"])
+        sz = sorted((v for k, v in p["sizes"].items() if v.get("url") and v.get("width") and "woocommerce" not in k and k not in ("full", "thumbnail")), key=lambda v: v["width"])
         pick = next((v for v in sz if v["width"] >= size), sz[-1] if sz else {"url": p["url"], "width": p["width"], "height": p["height"]})
         ym = poster_month(p)
         label = f"{['', 'January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'][ym[1]]} {ym[0]}" if ym else p["title"]
-        return (f'<img src="{esc(pick["url"])}" width="{pick.get("width") or ""}" height="{pick.get("height") or ""}" alt="Chiswick Cheese Market poster, {esc(label)}"'
+        small = [v for v in sz if v["width"] <= pick["width"]][-3:]
+        srcset = ", ".join(f'{esc(v["url"])} {v["width"]}w' for v in small) if len(small) > 1 else ""
+        extra = f' srcset="{srcset}" sizes="(max-width: 700px) 92vw, {min(pick["width"], 640)}px"' if srcset else ""
+        return (f'<img src="{esc(pick["url"])}"{extra} width="{pick.get("width") or ""}" height="{pick.get("height") or ""}" alt="Chiswick Cheese Market poster, {esc(label)}"'
                 f'{"" if eager else " loading=lazy"}>'), label
 
     def gif_link(self, p):
@@ -78,7 +81,7 @@ class Poster(Skin):
             missing_note = f'<p class="missing">No poster on the market\'s site for {esc(names)} {c.snap_date.year}.</p>'
         wall = ""
         for k, p in enumerate(this_year):
-            img, label = self.poster_img(ctx, p)
+            img, label = self.poster_img(ctx, p, size=760)
             wall += f'<figure class="paste t{k % 4}">{img}<figcaption>{esc(label)} {self.gif_link(p)}</figcaption></figure>'
         strip = ""
         for p in older:

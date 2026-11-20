@@ -45,9 +45,13 @@ class Cellar(Skin):
             first = t.split(". ")[0] if ". " in t[:200] else t
             first = first if len(first) <= 170 else first[:170].rsplit(" ", 1)[0] + "\u2026"
             first = first if first.endswith((".", "\u2026", "!")) else first + "."
-            more = len(es) - 1
             shelf_url = ctx.link("stallholders/") + "#" + x["slug"]
-            more_html = f'<p class="more-on"><a href="{esc(shelf_url)}">and {more} more on the shelf</a></p>' if more else ""
+            def words(t, n=8):
+                w = (t or "").split()
+                return " ".join(w[:n]) + ("\u2026" if len(w) > n else "")
+            lines = "".join(f'<li><a href="{ctx.link("stallholders/" + o["slug"] + "/")}"><b>{esc(o["name"])}</b> <span>\u00b7 {esc(words(o["description_text"]))}</span></a></li>'
+                            for o in es if o["id"] != e["id"])
+            more_html = (f'<ul class="menu-lines">{lines}</ul><p class="more-on"><a href="{esc(shelf_url)}">See the {esc(x["name"].lower())} shelf</a></p>') if lines else ""
             courses.append(f'<li class="course"><p class="course-no">Course {roman[len(courses)]}</p><h2 class="course-name">{esc(x["name"])}</h2>'
                            f'<a class="dish" href="{ctx.link("stallholders/" + e["slug"] + "/")}">{ctx.image(e["image"], "round", "round", "")}'
                            f'<span><b>{esc(e["name"])}</b><em>{esc(first)}</em></span></a>'
@@ -56,7 +60,7 @@ class Cellar(Skin):
         close = (f'<li class="course last"><p class="course-no">To finish</p><h2 class="course-name">Tasting notes</h2>'
                  f'<a class="dish" href="{ctx.link("journal/" + note["slug"] + "/")}">{ctx.image(note["image"], "round", "round", "")}'
                  f'<span><b>{esc(note["title"])}</b><em>{esc(note["excerpt"])}</em></span></a></li>') if note else ""
-        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}">Sunday {ordinal(d.day)} {d:%B}{"<span class=sr> (past)</span>" if d < c.snap_date else ""}</li>' for d in c.market_dates)
+        dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}">Sunday {ordinal(d.day)} {d:%B}{" <small>(past)</small>" if d < c.snap_date else ""}</li>' for d in c.market_dates)
         intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"][:1])
         body = (f'<section class="menu-wrap"><div class="menu"><p class="eyebrow">Tasting menu</p><h1>{esc(f["tagline"] or c.site["name"])}</h1>'
                 f'{f"<p class=when>Served on <em>Sunday {ordinal(nm.day)} {nm:%B %Y}</em></p>" if nm else ""}{intro}'

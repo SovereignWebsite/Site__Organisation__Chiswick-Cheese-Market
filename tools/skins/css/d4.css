@@ -141,3 +141,13 @@ h2{font-size:clamp(36px,5vw,64px);font-style:italic;text-align:center}
 .menu-foot{margin-top:24px}
 .shelf-name{overflow-wrap:anywhere}
 @media (max-width:560px){.dish{flex-direction:column;text-align:center}.dish .round{width:110px;height:110px;flex-basis:auto}}
+.mq-pause{display:none}
+/* Pass 3: a fuller menu */
+.menu .txt,.dish em{color:var(--fg)}
+.menu-lines{list-style:none;margin:16px auto 0;padding:0;max-width:520px;text-align:left}
+.menu-lines li{padding:7px 0;border-bottom:1px dotted var(--line);font-size:15px;line-height:1.4}
+.menu-lines b{font:400 18px 'Playfair Display',serif;font-style:italic;color:var(--fg)}
+.menu-lines span{color:var(--fg);opacity:.85}
+.menu-lines a:hover b{color:var(--gold)}
+.dates .past{color:var(--fg);text-decoration:none;font-style:normal}
+.dates .past small{color:var(--soft);font:600 12px 'Inter',sans-serif;letter-spacing:.08em}
