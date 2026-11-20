@@ -34,7 +34,7 @@ class Copy(Skin):
         top = "".join(f'<li><a href="{esc(ctx.rewrite_url(i["url"]) if i.get("url") else ctx.link("newsletter/"))}">{esc(i["label"])}</a></li>'
                       for i in c.site.get("topbar", []))
         logo = f'<img src="{esc(c.site["logo_url"])}" alt="{esc(c.site["name"])}" width="120" height="120">' if c.site.get("logo_url") else esc(c.site["name"])
-        return (f'<div class="topbar"><ul class="top-menu">{top}</ul>{self.social(ctx)}</div>'
+        return (f'<nav class="topbar" aria-label="Top menu"><ul class="top-menu">{top}</ul>{self.social(ctx)}</nav>'
                 f'<header class="site-head"><a class="logo" href="{ctx.link("")}">{logo}</a>'
                 f'<details class="menu-toggle"><summary aria-label="Menu"><span></span></summary></details>'
                 f'<nav class="main-nav" aria-label="Main"><ul>{self.nav_items(ctx)}</ul></nav></header>')
