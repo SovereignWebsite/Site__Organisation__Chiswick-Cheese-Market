@@ -1,0 +1,711 @@
+{
+ "about": "Stallholders (WordPress post type 'portfolio', shown on the site as Stallholders).",
+ "snapshot": {
+  "snapshot_started": "2026-11-20T21:02:58Z",
+  "snapshot_finished": "2026-11-20T21:03:59Z",
+  "source": "https://www.chiswickcheesemarket.uk",
+  "api": "https://www.chiswickcheesemarket.uk/wp-json/",
+  "tool": "tools/fetch-wp.py (tools/wordpress)"
+ },
+ "fields": {
+  "id": "WordPress id",
+  "slug": "URL slug",
+  "name": "stall name",
+  "categories": "ids into categories.json exhibitor_categories",
+  "description_html": "cleaned HTML",
+  "description_text": "plain text",
+  "image": "id into media.json",
+  "links": "outbound links in the description (their own websites, Instagram)",
+  "date": "first published, UTC",
+  "source_url": "the stallholder's page on the official site"
+ },
+ "count": 40,
+ "items": [
+  {
+   "id": 3141,
+   "slug": "airelle-perrouin-for-etivaz-aop",
+   "date": "2026-10-17T12:51:29Z",
+   "modified": "2026-10-19T13:52:46Z",
+   "image": 3142,
+   "excerpt": "Etivaz is made only during the summer months in remote mountain chalets, every wheel of L’Etivaz AOP is crafted over…",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/airelle-perrouin-for-etivaz-aop/",
+   "name": "Airelle Perrouin for Etivaz AOP",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Etivaz is made only during the summer months in remote mountain chalets, every wheel of L&#8217;Etivaz AOP is crafted over traditional wood-fired copper vats using milk from cows grazing on wildflower-filled Alpine meadows. The cheese is beautifully complex with fruity, floral notes along with a delicate hint of smoke.</p>",
+   "description_text": "Etivaz is made only during the summer months in remote mountain chalets, every wheel of L’Etivaz AOP is crafted over traditional wood-fired copper vats using milk from cows grazing on wildflower-filled Alpine meadows. The cheese is beautifully complex with fruity, floral notes along with a delicate hint of smoke."
+  },
+  {
+   "id": 2850,
+   "slug": "sicilia-fredda",
+   "date": "2026-01-16T16:58:18Z",
+   "modified": "2026-01-16T16:58:18Z",
+   "image": 2855,
+   "excerpt": "Authentic Sicilian foods, olive oils, delicacies.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/sicilia-fredda/",
+   "name": "Sicilia Fredda",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Sicilia Fredda export authentic Sicilian foods worldwide, offering award-winning olive oils, artisanal pasta, cheeses and other Mediterranean delicacies.</p>\n<p>Partnering with select producers, they bring genuine Southern Italian flavours to homes and businesses, celebrating Sicily’s heritage and culinary excellence in every product.</p>",
+   "description_text": "Sicilia Fredda export authentic Sicilian foods worldwide, offering award-winning olive oils, artisanal pasta, cheeses and other Mediterranean delicacies.\n\nPartnering with select producers, they bring genuine Southern Italian flavours to homes and businesses, celebrating Sicily’s heritage and culinary excellence in every product."
+  },
+  {
+   "id": 2848,
+   "slug": "nut-farms",
+   "date": "2026-01-16T16:57:57Z",
+   "modified": "2026-01-16T16:57:57Z",
+   "image": 2856,
+   "excerpt": "Premium British nuts, oils, sustainable produce.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/nut-farms/",
+   "name": "Nut Farms",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Nut Farms are Kent-based producers of premium British nuts and oils, known for roasted cobnuts, English walnuts, nut butters and cold-pressed oils.</p>\n<p>Committed to provenance and sustainability, they deliver authentic, flavourful nuts and nut products to markets, online customers, and food businesses, showcasing the best of British-grown produce.</p>",
+   "description_text": "Nut Farms are Kent-based producers of premium British nuts and oils, known for roasted cobnuts, English walnuts, nut butters and cold-pressed oils.\n\nCommitted to provenance and sustainability, they deliver authentic, flavourful nuts and nut products to markets, online customers, and food businesses, showcasing the best of British-grown produce."
+  },
+  {
+   "id": 2846,
+   "slug": "fingals-bakery",
+   "date": "2026-01-16T16:57:35Z",
+   "modified": "2026-01-16T16:57:35Z",
+   "image": 2857,
+   "excerpt": "Artisan sourdough, pastries, fresh daily bakes.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/fingals-bakery/",
+   "name": "Fingal’s Bakery",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Fingal’s Bakery are artisan bakers in Greenwich, London, creating naturally leavened sourdough, rye breads, pastries and sweet treats using traditional methods. Their range includes seeded sourdough, ciabatta, pain au chocolat, almond croissants and cinnamon buns all baked fresh daily.</p>\n<p>Craftsmanship and quality are at the heart of their bakery, with slow fermentation and stone deck ovens delivering exceptional flavour. They supply cafés, restaurants and markets, and invite visitors to enjoy their award‑worthy bakes in their café or at home.</p>",
+   "description_text": "Fingal’s Bakery are artisan bakers in Greenwich, London, creating naturally leavened sourdough, rye breads, pastries and sweet treats using traditional methods. Their range includes seeded sourdough, ciabatta, pain au chocolat, almond croissants and cinnamon buns all baked fresh daily.\n\nCraftsmanship and quality are at the heart of their bakery, with slow fermentation and stone deck ovens delivering exceptional flavour. They supply cafés, restaurants and markets, and invite visitors to enjoy their award‑worthy bakes in their café or at home."
+  },
+  {
+   "id": 2821,
+   "slug": "curd-cure",
+   "date": "2026-01-16T12:40:28Z",
+   "modified": "2026-01-16T12:44:17Z",
+   "image": 2825,
+   "excerpt": "Leading independent distributor of artisan food and drink.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/curd-cure/",
+   "name": "Curd & Cure",
+   "categories": [
+    61
+   ],
+   "description_html": "<p>Curd &amp; Cure are the South East’s leading independent artisan food and drink distributor, supplying some of the UK’s finest speciality producers since 1988. Based in Kent, they work closely with a trusted network of small and large producers to source and deliver outstanding quality products.</p>\n<p>With over 1,400 artisan deli, farm shop and foodservice lines available for next-day national delivery, and a flexible pallet consolidation service for Europe, Curd &amp; Cure are a key link between great producers and great food businesses.</p>\n<p>They are proud to be the exclusive UK stockist of the newly crowned 2025 World Champion Cheese, <b>Le Gruyère AOP</b>, and are delighted to showcase this exceptional cheese at the market.</p>",
+   "description_text": "Curd & Cure are the South East’s leading independent artisan food and drink distributor, supplying some of the UK’s finest speciality producers since 1988. Based in Kent, they work closely with a trusted network of small and large producers to source and deliver outstanding quality products.\n\nWith over 1,400 artisan deli, farm shop and foodservice lines available for next-day national delivery, and a flexible pallet consolidation service for Europe, Curd & Cure are a key link between great producers and great food businesses.\n\nThey are proud to be the exclusive UK stockist of the newly crowned 2025 World Champion Cheese, Le Gruyère AOP, and are delighted to showcase this exceptional cheese at the market."
+  },
+  {
+   "id": 2819,
+   "slug": "felthams-farm",
+   "date": "2026-01-16T12:40:09Z",
+   "modified": "2026-01-16T12:43:13Z",
+   "image": 2824,
+   "excerpt": "Award-winning organic cheesemakers rooted in sustainability.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/felthams-farm/",
+   "name": "Feltham’s Farm",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Feltham’s Farm are organic cheesemakers from the Blackmore Vale in South Somerset, best known for Renegade Monk, their multi award-winning ale-washed cheese made with local organic cow’s milk. Their range also includes Rebel Nun, Gert Lush, La Fresca Margarita and Lucky Marcel – all Great Taste Award winners, with Lucky Marcel taking Super Gold at the World Cheese Awards 2024.</p>\n<p>Sustainability sits at the heart of the farm, powered by solar energy, ground source heat pumps and rare breed pigs that recycle whey, alongside tree planting and organic farming practices certified by the Soil Association. Founders of the Organic Cheesemakers’ Network, Feltham’s Farm champion organic principles in British cheese.</p>\n<p>They regularly trade at London farmers’ markets and are delighted to share their cheeses with new customers – including their light, fresh La Fresca Margarita, a standout organic queso fresco.</p>",
+   "description_text": "Feltham’s Farm are organic cheesemakers from the Blackmore Vale in South Somerset, best known for Renegade Monk, their multi award-winning ale-washed cheese made with local organic cow’s milk. Their range also includes Rebel Nun, Gert Lush, La Fresca Margarita and Lucky Marcel – all Great Taste Award winners, with Lucky Marcel taking Super Gold at the World Cheese Awards 2024.\n\nSustainability sits at the heart of the farm, powered by solar energy, ground source heat pumps and rare breed pigs that recycle whey, alongside tree planting and organic farming practices certified by the Soil Association. Founders of the Organic Cheesemakers’ Network, Feltham’s Farm champion organic principles in British cheese.\n\nThey regularly trade at London farmers’ markets and are delighted to share their cheeses with new customers – including their light, fresh La Fresca Margarita, a standout organic queso fresco."
+  },
+  {
+   "id": 2794,
+   "slug": "european-fine-cheese",
+   "date": "2025-11-12T11:16:22Z",
+   "modified": "2025-11-12T11:27:07Z",
+   "image": 2797,
+   "excerpt": "Alfie brings cheeses like Potz Blitz and Perle des Apes from small producers in Switzerland and Holland.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/european-fine-cheese/",
+   "name": "European Fine Cheese",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Representing some of the finest cheeses from select dairies across Europe, European Fine Cheese showcases the lesser-known gems of the artisan cheese world. Working with trusted partners around the world, they bring delicious and characterful cheeses to discerning customers, highlighting the craft, heritage and diversity of Europe’s cheesemaking traditions in every wheel, wedge and bite.</p>",
+   "description_text": "Representing some of the finest cheeses from select dairies across Europe, European Fine Cheese showcases the lesser-known gems of the artisan cheese world. Working with trusted partners around the world, they bring delicious and characterful cheeses to discerning customers, highlighting the craft, heritage and diversity of Europe’s cheesemaking traditions in every wheel, wedge and bite."
+  },
+  {
+   "id": 2746,
+   "slug": "sawn-by-sarah",
+   "date": "2025-08-15T09:50:10Z",
+   "modified": "2025-11-12T11:48:07Z",
+   "image": 2750,
+   "excerpt": "Crafted by hand using live edge timber, Sawn by Sarah creates unique homewares and gifts full of natural beauty.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/sawn-by-sarah/",
+   "name": "Sawn by Sarah",
+   "categories": [
+    61
+   ],
+   "description_html": "<p>Using live edge timber and occasionally blending in epoxy resin, Sarah crafts unique home decor and gifting pieces that highlight the wood’s natural grain, knots, and organic voids. Ready to ship offerings span from charcuterie boards, coaster sets, and egg holders to candle holders and sculptural side and coffee tables, each infused with warmth and artisan flair. For those seeking something personal, bespoke commissions are warmly welcomed to bring your vision to life.</p>",
+   "description_text": "Using live edge timber and occasionally blending in epoxy resin, Sarah crafts unique home decor and gifting pieces that highlight the wood’s natural grain, knots, and organic voids. Ready to ship offerings span from charcuterie boards, coaster sets, and egg holders to candle holders and sculptural side and coffee tables, each infused with warmth and artisan flair. For those seeking something personal, bespoke commissions are warmly welcomed to bring your vision to life."
+  },
+  {
+   "id": 2494,
+   "slug": "pretty-cheese",
+   "date": "2025-04-16T10:02:15Z",
+   "modified": "2025-04-16T10:07:07Z",
+   "image": 2497,
+   "excerpt": "​The Pretty Cheese Company is a UK artisan producer specialising in hand-marinated cheeses infused with fresh herbs, edible flowers, and…",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/pretty-cheese/",
+   "name": "Pretty Cheese",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>​The Pretty Cheese Company is a UK artisan producer specialising in hand-marinated cheeses infused with fresh herbs, edible flowers, and aromatic oils, creating visually stunning and flavourful cheeses that celebrate seasonal ingredients and traditional craftsmanship.</p>",
+   "description_text": "​The Pretty Cheese Company is a UK artisan producer specialising in hand-marinated cheeses infused with fresh herbs, edible flowers, and aromatic oils, creating visually stunning and flavourful cheeses that celebrate seasonal ingredients and traditional craftsmanship."
+  },
+  {
+   "id": 2427,
+   "slug": "white-lake-cheese",
+   "date": "2025-03-21T17:02:54Z",
+   "modified": "2025-03-21T17:07:39Z",
+   "image": 2432,
+   "excerpt": "Somerset dairy specialising in cheeses made from goats and sheep milk with some Jersey cows milk cheese too. Don’t miss their Taste 3 star award-winning Driftwood and Tor.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/white-lake-cheese/",
+   "name": "White Lake Cheese",
+   "categories": [
+    6
+   ],
+   "description_html": "<p><img src=\"https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/03/Roger-Longman-White-Lake-Cheese-1024x678.png\" alt=\"\" data-media-id=\"2430\"></p>\n<p>White Lake’s home is at Bagborough Farm, just near to the Glastonbury Festival site in Somerset. Roger Longman, the 3rd generation owner makes cheese from his own own beloved herd of, primarily, French Alpine goats. A local Guernsey herd provide the cow’s milk, and the sheep’s milk comes from another well trusted farm. The result is minimal food miles, support from the community, and &#8211; of course &#8211; truly exceptional cheese.</p>",
+   "description_text": "White Lake’s home is at Bagborough Farm, just near to the Glastonbury Festival site in Somerset. Roger Longman, the 3rd generation owner makes cheese from his own own beloved herd of, primarily, French Alpine goats. A local Guernsey herd provide the cow’s milk, and the sheep’s milk comes from another well trusted farm. The result is minimal food miles, support from the community, and – of course – truly exceptional cheese."
+  },
+  {
+   "id": 393,
+   "slug": "wood-leg-smokery",
+   "date": "2024-12-09T20:08:13Z",
+   "modified": "2025-03-10T13:08:20Z",
+   "image": 1403,
+   "excerpt": "Handmade smoked meats and cheese.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/wood-leg-smokery/",
+   "name": "Wood & Leg Smokery",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Using traditional smoking methods and high-quality ingredients, their charcuterie and smoked cheese are rich in flavour and ideal for cheese boards or antipasti.</p>",
+   "description_text": "Using traditional smoking methods and high-quality ingredients, their charcuterie and smoked cheese are rich in flavour and ideal for cheese boards or antipasti."
+  },
+  {
+   "id": 385,
+   "slug": "the-wild-room",
+   "date": "2024-12-09T20:06:41Z",
+   "modified": "2025-03-10T13:07:35Z",
+   "image": 1794,
+   "excerpt": "The finest wild and exotic mushrooms, foraged produce, seaweeds, medicinal mushroom tinctures and truffles.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/the-wild-room/",
+   "name": "The Wild Room",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>The Wild Room specialises in foraged items, offering a unique and ever-changing selection of wild foods that make excellent accompaniments to cheese boards and charcuterie platters. From earthy wild mushrooms to tart seasonal berries and aromatic herbs, they provide ingredients that elevate the tasting experience of artisan cheese.</p>",
+   "description_text": "The Wild Room specialises in foraged items, offering a unique and ever-changing selection of wild foods that make excellent accompaniments to cheese boards and charcuterie platters. From earthy wild mushrooms to tart seasonal berries and aromatic herbs, they provide ingredients that elevate the tasting experience of artisan cheese."
+  },
+  {
+   "id": 371,
+   "slug": "isle-of-wight-tomatoes",
+   "date": "2024-12-09T20:04:04Z",
+   "modified": "2026-02-18T08:50:18Z",
+   "image": 1358,
+   "excerpt": "Specialist tomato producer from the Isle of Wight, growing up to 200 varieties.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/isle-of-wight-tomatoes/",
+   "name": "Isle of Wight Tomatoes",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Specialist tomato producer from the Isle of Wight, growing up to 200 varieties they make an excellent addition to cheese boards or as ingredients in recipes with cheese.</p>",
+   "description_text": "Specialist tomato producer from the Isle of Wight, growing up to 200 varieties they make an excellent addition to cheese boards or as ingredients in recipes with cheese."
+  },
+  {
+   "id": 369,
+   "slug": "sophies-delight",
+   "date": "2024-12-09T20:03:48Z",
+   "modified": "2026-01-16T15:21:24Z",
+   "image": 1782,
+   "excerpt": "Artisan small-batch vegan cheezes made with natural ingredients – the tasty and nutritious alternative to dairy.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/sophies-delight/",
+   "name": "Sophie’s Delight",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Sophie’s Delight offers plant-based cheese alternatives made with traditional methods, catering to vegans and those seeking dairy-free options. Their innovative approach ensures the taste and texture of artisanal cheeses.</p>",
+   "description_text": "Sophie’s Delight offers plant-based cheese alternatives made with traditional methods, catering to vegans and those seeking dairy-free options. Their innovative approach ensures the taste and texture of artisanal cheeses."
+  },
+  {
+   "id": 349,
+   "slug": "roi-queiruga-trethowan-brothers",
+   "date": "2024-12-09T20:00:37Z",
+   "modified": "2025-03-10T12:59:29Z",
+   "image": 1383,
+   "excerpt": "Pitchfork Cheddar and Gorwydd Caerphilly.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/roi-queiruga-trethowan-brothers/",
+   "name": "Roi Queiruga – Trethowan Brothers",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Todd and Maugan Trethowan hand make the multi-award-winning Pitchfork Cheddar and Gorwydd Caerphilly using raw milk and traditional methods in North Somerset.</p>",
+   "description_text": "Todd and Maugan Trethowan hand make the multi-award-winning Pitchfork Cheddar and Gorwydd Caerphilly using raw milk and traditional methods in North Somerset."
+  },
+  {
+   "id": 343,
+   "slug": "paolos-honey",
+   "date": "2024-12-09T19:59:35Z",
+   "modified": "2025-03-10T12:56:39Z",
+   "image": 1380,
+   "excerpt": "Organic Portuguese honey.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/paolos-honey/",
+   "name": "Paolo’s Honey",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Raw, unprocessed honey sourced from sustainably managed hives in Portugal. A great accompaniment for cheeses, particularly soft and tangy varieties like goat cheese or Brie. The range includes rosemary, wild lavender, oak, heather and multi floral honeys.</p>",
+   "description_text": "Raw, unprocessed honey sourced from sustainably managed hives in Portugal. A great accompaniment for cheeses, particularly soft and tangy varieties like goat cheese or Brie. The range includes rosemary, wild lavender, oak, heather and multi floral honeys."
+  },
+  {
+   "id": 337,
+   "slug": "the-olive-bar",
+   "date": "2024-12-09T19:58:35Z",
+   "modified": "2025-03-10T12:54:16Z",
+   "image": 1423,
+   "excerpt": "Feta, saucisson, nuts, antipasti and olives.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/the-olive-bar/",
+   "name": "The Olive Bar",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>A fabulous array of feta, olives, saucisson, nuts and antipasti.</p>",
+   "description_text": "A fabulous array of feta, olives, saucisson, nuts and antipasti."
+  },
+  {
+   "id": 333,
+   "slug": "nut-knowle-farm",
+   "date": "2024-12-09T19:57:45Z",
+   "modified": "2025-03-10T12:44:21Z",
+   "image": 1416,
+   "excerpt": "14 varieties of Sussex handmade goat’s cheese from a single herd.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/nut-knowle-farm/",
+   "name": "Nut Knowle Farm",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Nut Knowle Farm produces an exceptional range of artisan goat cheeses, all handcrafted in the heart of East Sussex from a single herd.</p>",
+   "description_text": "Nut Knowle Farm produces an exceptional range of artisan goat cheeses, all handcrafted in the heart of East Sussex from a single herd."
+  },
+  {
+   "id": 331,
+   "slug": "no-2-pound-street",
+   "date": "2024-12-09T19:57:27Z",
+   "modified": "2025-03-10T12:43:32Z",
+   "image": 1375,
+   "excerpt": "Fabulous cheesemonger and Cheese Academy tutor brings 3 different cheeses with great stories to every market.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/no-2-pound-street/",
+   "name": "No. 2 Pound Street",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Located in Wendover, No. 2 Pound Street is a fabulous cheesemonger who bring 3 different British Artisan cheeses with great stories to every market.</p>",
+   "description_text": "Located in Wendover, No. 2 Pound Street is a fabulous cheesemonger who bring 3 different British Artisan cheeses with great stories to every market."
+  },
+  {
+   "id": 311,
+   "slug": "love-fermented",
+   "date": "2024-12-09T19:54:20Z",
+   "modified": "2025-04-16T10:38:50Z",
+   "image": 1365,
+   "excerpt": "Local kimchis and pickles – home made and unpasteurised.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/love-fermented/",
+   "name": "Love Fermented",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Love Fermented specialises in handcrafted kimchi and fermented foods, made using traditional fermentation methods. Their products are packed with flavour and probiotics, offering a vibrant and tangy accompaniment to cheese.</p>",
+   "description_text": "Love Fermented specialises in handcrafted kimchi and fermented foods, made using traditional fermentation methods. Their products are packed with flavour and probiotics, offering a vibrant and tangy accompaniment to cheese."
+  },
+  {
+   "id": 307,
+   "slug": "london-smoke-and-cure",
+   "date": "2024-12-09T19:53:40Z",
+   "modified": "2025-03-10T12:33:22Z",
+   "image": 1387,
+   "excerpt": "Award-winning charcuterie, cheese and cold-smoked salmon.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/london-smoke-and-cure/",
+   "name": "London Smoke and Cure",
+   "categories": [
+    6,
+    5
+   ],
+   "description_html": "<p>London Smoke and Cure specialises in producing artisanal charcuterie, smoked fish, and cured meats, all crafted with care in small batches in London. Each month they bring a fine selection of different cheeses alongside a selection of their smoked products.</p>",
+   "description_text": "London Smoke and Cure specialises in producing artisanal charcuterie, smoked fish, and cured meats, all crafted with care in small batches in London. Each month they bring a fine selection of different cheeses alongside a selection of their smoked products."
+  },
+  {
+   "id": 305,
+   "slug": "la-maritxu",
+   "date": "2024-12-09T19:53:18Z",
+   "modified": "2025-03-10T12:32:09Z",
+   "image": 1361,
+   "excerpt": "Authentic Basque cheesecake made in London by Lucia using a family recipe.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/la-maritxu/",
+   "name": "La Maritxu",
+   "categories": [
+    4
+   ],
+   "description_html": "<p>Unbelievably good authentic Basque cheesecake made in London using a family recipe and well-deserved winners of a three star Great Taste Award.</p>",
+   "description_text": "Unbelievably good authentic Basque cheesecake made in London using a family recipe and well-deserved winners of a three star Great Taste Award."
+  },
+  {
+   "id": 301,
+   "slug": "la-latteria-thee-olive-tree",
+   "date": "2024-12-09T19:52:37Z",
+   "modified": "2025-03-10T12:31:08Z",
+   "image": 1415,
+   "excerpt": "Local, West London mozzarella and burrata as seen on Stanley Tucci’s ‘Taste of Italy’ series.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/la-latteria-thee-olive-tree/",
+   "name": "La Latteria / Thee Olive Tree",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Local, West London mozzarella and burrata as seen on Stanley Tucci’s ‘Taste of Italy’ series plus pasta and a selection of cheese from Italy and the UK.</p>",
+   "description_text": "Local, West London mozzarella and burrata as seen on Stanley Tucci’s ‘Taste of Italy’ series plus pasta and a selection of cheese from Italy and the UK."
+  },
+  {
+   "id": 297,
+   "slug": "kentish-town-jams",
+   "date": "2024-12-09T19:52:03Z",
+   "modified": "2025-09-19T14:07:56Z",
+   "image": 1359,
+   "excerpt": "Jams, preserves & chutneys.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/kentish-town-jams/",
+   "name": "Kentish Town Jams",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Stef&#8217;s Kitchen, based in Kentish Town, creates a delightful array of homemade jams and preserves, designed to complement cheese boards or add a burst of flavour to everyday meals. Using seasonal fruits and traditional techniques, Stef&#8217;s products offer an authentic, artisanal touch. Their jams are known for their balance of sweetness and acidity, making them a perfect pairing for cheeses and charcuterie.</p>",
+   "description_text": "Stef’s Kitchen, based in Kentish Town, creates a delightful array of homemade jams and preserves, designed to complement cheese boards or add a burst of flavour to everyday meals. Using seasonal fruits and traditional techniques, Stef’s products offer an authentic, artisanal touch. Their jams are known for their balance of sweetness and acidity, making them a perfect pairing for cheeses and charcuterie."
+  },
+  {
+   "id": 283,
+   "slug": "halopenos",
+   "date": "2024-12-09T19:49:53Z",
+   "modified": "2025-03-10T12:23:31Z",
+   "image": 2086,
+   "excerpt": "Small-batch creamy cheddar with a kick – handcrafted with flavoursome halopeños inside.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/halopenos/",
+   "name": "Halopeños",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>A variety of unique, flavoured cheddar cheeses that combine the bold taste of jalopenos with churrasco, peri peri, chipotle or lime each creating a distinctive flavour experience.</p>",
+   "description_text": "A variety of unique, flavoured cheddar cheeses that combine the bold taste of jalopenos with churrasco, peri peri, chipotle or lime each creating a distinctive flavour experience."
+  },
+  {
+   "id": 279,
+   "slug": "grate-grill",
+   "date": "2024-12-09T19:49:15Z",
+   "modified": "2025-03-10T12:20:49Z",
+   "image": 2089,
+   "excerpt": "Artisan sourdough cheese sandwiches and toasties.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/grate-grill/",
+   "name": "Grate & Grill",
+   "categories": [
+    4,
+    91
+   ],
+   "description_html": "<p>The best sizzling grilled cheese sandwiches made with artisan sourdough bread to order using fresh, high-quality cheeses and accompaniments.</p>",
+   "description_text": "The best sizzling grilled cheese sandwiches made with artisan sourdough bread to order using fresh, high-quality cheeses and accompaniments."
+  },
+  {
+   "id": 271,
+   "slug": "the-french-comte",
+   "date": "2024-12-09T19:47:56Z",
+   "modified": "2025-03-10T11:54:55Z",
+   "image": 1391,
+   "excerpt": "Specialising in Alpine cheeses and artisan French cheese and Mont d’Or when in season.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/the-french-comte/",
+   "name": "The French Comté",
+   "categories": [
+    6,
+    5
+   ],
+   "description_html": "<p>The French Comté specialises in Comté cheese, and they bring 4 different ages each month as well as huge array of French cheese and Mont d’Or when it is in season plus whole salamis and terrines.</p>",
+   "description_text": "The French Comté specialises in Comté cheese, and they bring 4 different ages each month as well as huge array of French cheese and Mont d’Or when it is in season plus whole salamis and terrines."
+  },
+  {
+   "id": 269,
+   "slug": "finer-things-deli",
+   "date": "2024-12-09T19:47:37Z",
+   "modified": "2025-03-10T11:51:40Z",
+   "image": 1789,
+   "excerpt": "Spanish cheeses and charcuterie.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/finer-things-deli/",
+   "name": "Finer Things Deli",
+   "categories": [
+    6,
+    5
+   ],
+   "description_html": "<p>Finer Things Deli are Spanish cheese and jamon specialists. Each month they bring a jamon leg so they can cut to order as well as a gorgeous selection of artisanal Spanish cheeses, and the accompaniments to tie everything together &#8211; olives, breadsticks and membrillo.</p>",
+   "description_text": "Finer Things Deli are Spanish cheese and jamon specialists. Each month they bring a jamon leg so they can cut to order as well as a gorgeous selection of artisanal Spanish cheeses, and the accompaniments to tie everything together – olives, breadsticks and membrillo."
+  },
+  {
+   "id": 267,
+   "slug": "emilia-bianca-mora",
+   "date": "2024-12-09T19:47:21Z",
+   "modified": "2025-09-19T14:07:16Z",
+   "image": 1790,
+   "excerpt": "Famous Red Cow 32 month aged Parmesan and Italian charcuterie.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/emilia-bianca-mora/",
+   "name": "Emilia / Bianca Mora",
+   "categories": [
+    6,
+    5
+   ],
+   "description_html": "<p>Emilia (trading under the name Bianca &#038; Mora) focus on high-quality cheeses and charcuterie sourced directly from Italy. Their famous Red Cow Parmigiano Reggiano is always a feature at the market. Also available each month are a selection of other Italian cheese including a Pecorino Romano and charcuterie.</p>",
+   "description_text": "Emilia (trading under the name Bianca & Mora) focus on high-quality cheeses and charcuterie sourced directly from Italy. Their famous Red Cow Parmigiano Reggiano is always a feature at the market. Also available each month are a selection of other Italian cheese including a Pecorino Romano and charcuterie."
+  },
+  {
+   "id": 263,
+   "slug": "drunk-cheese",
+   "date": "2024-12-09T19:46:40Z",
+   "modified": "2025-09-19T14:05:57Z",
+   "image": 1338,
+   "excerpt": "Wine, grape and eau de vie-steeped Italian cheeses.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/drunk-cheese/",
+   "name": "Drunk Cheese",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>A unique approach to cheese maturation, they infuse the rinds of different Italian cheeses with wine, grape must, beer or gin to enhance the flavours and textures.</p>",
+   "description_text": "A unique approach to cheese maturation, they infuse the rinds of different Italian cheeses with wine, grape must, beer or gin to enhance the flavours and textures."
+  },
+  {
+   "id": 259,
+   "slug": "dispensamor",
+   "date": "2024-12-09T19:46:04Z",
+   "modified": "2025-03-10T11:45:24Z",
+   "image": 1340,
+   "excerpt": "Variety of cheeses from Italy and France, plus handmade pasta.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/dispensamor/",
+   "name": "Dispensamor",
+   "categories": [
+    6,
+    5
+   ],
+   "description_html": "<p>Dispensamor offers an intriguing combination of cheese and pasta. Their pasta selections are similarly made with care, using only high-quality ingredients to create gourmet experiences for cheese lovers and pasta afficionados alike.</p>",
+   "description_text": "Dispensamor offers an intriguing combination of cheese and pasta. Their pasta selections are similarly made with care, using only high-quality ingredients to create gourmet experiences for cheese lovers and pasta afficionados alike."
+  },
+  {
+   "id": 253,
+   "slug": "dauntsey-preserves",
+   "date": "2024-12-09T19:44:59Z",
+   "modified": "2025-03-10T13:35:55Z",
+   "image": 1337,
+   "excerpt": "Chutney, jelly and jam handmade in Wiltshire.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/dauntsey-preserves/",
+   "name": "Dauntsey Preserves",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Known for their exceptional range of jams, chutneys and marmalades. The sweet and tangy flavours pair wonderfully with cheese.</p>",
+   "description_text": "Known for their exceptional range of jams, chutneys and marmalades. The sweet and tangy flavours pair wonderfully with cheese."
+  },
+  {
+   "id": 241,
+   "slug": "the-cornish-gouda-co",
+   "date": "2024-12-09T19:43:00Z",
+   "modified": "2025-08-15T09:07:00Z",
+   "image": 2085,
+   "excerpt": "Hand-produced Cornish Gouda cheese made using traditional Dutch techniques.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/the-cornish-gouda-co/",
+   "name": "The Cornish Gouda Co",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Founded by a Dutch family, based in Looe in Cornwall. Giel Spierings crafts traditional Dutch Gouda with a Cornish twist. Using milk from their own cows, they focus on creating high-quality cheeses with diverse flavour profiles from maturation or adding herbs and spices.</p>",
+   "description_text": "Founded by a Dutch family, based in Looe in Cornwall. Giel Spierings crafts traditional Dutch Gouda with a Cornish twist. Using milk from their own cows, they focus on creating high-quality cheeses with diverse flavour profiles from maturation or adding herbs and spices."
+  },
+  {
+   "id": 239,
+   "slug": "the-cornish-cheese-co",
+   "date": "2024-12-09T19:42:40Z",
+   "modified": "2025-11-12T11:49:09Z",
+   "image": 2084,
+   "excerpt": "Makers of award-winning cheeses, including Cornish Blue, Cornish Nanny and Cornish Brie.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/the-cornish-cheese-co/",
+   "name": "The Cornish Cheese Co",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Nestled in the heart of Cornwall, The Cornish Cheese Co. produces award-winning Cornish Blue cheese. They prioritise quality and use milk from local herds for a creamy and tangy flavour profile.</p>",
+   "description_text": "Nestled in the heart of Cornwall, The Cornish Cheese Co. produces award-winning Cornish Blue cheese. They prioritise quality and use milk from local herds for a creamy and tangy flavour profile."
+  },
+  {
+   "id": 237,
+   "slug": "collana-verde",
+   "date": "2024-12-09T19:42:18Z",
+   "modified": "2025-03-10T11:38:19Z",
+   "image": 1796,
+   "excerpt": "Organic producers of extra virgin olive oil.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/collana-verde/",
+   "name": "Collana Verde",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Collana Verde makes organic olive oil from 4 different varieties of olives grown in Campania.</p>",
+   "description_text": "Collana Verde makes organic olive oil from 4 different varieties of olives grown in Campania."
+  },
+  {
+   "id": 233,
+   "slug": "cheese-on-the-wey",
+   "date": "2024-12-09T19:41:41Z",
+   "modified": "2025-03-10T11:37:21Z",
+   "image": 1332,
+   "excerpt": "Small batch artisan cheese from a single herd near Farnham.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/cheese-on-the-wey/",
+   "name": "Cheese on the Wey",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Small artisan cheesemaker from Farnham using pasteurised milk from Pierrepoint Farm. The range includes Tilston Blue; Millie, a cheese similar to Caerphilly;  Weywood, a soft cheese with a cider washed rind and Tommie which is a seasonal Alpine style cheese.</p>",
+   "description_text": "Small artisan cheesemaker from Farnham using pasteurised milk from Pierrepoint Farm. The range includes Tilston Blue; Millie, a cheese similar to Caerphilly; Weywood, a soft cheese with a cider washed rind and Tommie which is a seasonal Alpine style cheese."
+  },
+  {
+   "id": 219,
+   "slug": "big-wheel-cheese",
+   "date": "2024-12-09T19:39:15Z",
+   "modified": "2025-03-10T11:32:52Z",
+   "image": 1328,
+   "excerpt": "English cheeses including Pevensey Blue, Baron Bigod, Mayfield, White Lake goats.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/big-wheel-cheese/",
+   "name": "Big Wheel Cheese",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Run by the fabulous Faye who curates and ages some of the finest artisanal cheeses from across the UK and beyond. She will always have Baron Bigod, White Lake cheeses, plus a selection from fantastic Sussex, including Golden Cross and Mayfield.</p>",
+   "description_text": "Run by the fabulous Faye who curates and ages some of the finest artisanal cheeses from across the UK and beyond. She will always have Baron Bigod, White Lake cheeses, plus a selection from fantastic Sussex, including Golden Cross and Mayfield."
+  },
+  {
+   "id": 213,
+   "slug": "beans-world",
+   "date": "2024-12-09T19:38:00Z",
+   "modified": "2025-07-18T16:12:25Z",
+   "image": 1323,
+   "excerpt": "Cold pressed rapeseed oil and specialist Italian vinegars.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/beans-world/",
+   "name": "Beans World",
+   "categories": [
+    5
+   ],
+   "description_html": "<p>Beans World specialise in premium balsamic vinegars and flavoured vinegars which pair beautifully with cheese. Their balsamics come in a variety of aged options, from the everyday to the exceptional, and each is crafted to elevate flavours in any culinary setting.</p>",
+   "description_text": "Beans World specialise in premium balsamic vinegars and flavoured vinegars which pair beautifully with cheese. Their balsamics come in a variety of aged options, from the everyday to the exceptional, and each is crafted to elevate flavours in any culinary setting."
+  },
+  {
+   "id": 211,
+   "slug": "bath-cheese-co",
+   "date": "2024-12-09T19:37:18Z",
+   "modified": "2025-03-10T11:22:30Z",
+   "image": 1322,
+   "excerpt": "Award-winning organic cheese made by hand near Bath at Park Farm, Kelston, with milk from their own cows.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/bath-cheese-co/",
+   "name": "Bath Cheese Co",
+   "categories": [
+    6
+   ],
+   "description_html": "<p>Using pasteurised milk from their own herd at Park Farm near Bath the family make a variety of cheeses including Bath Soft, a soft and yielding white bloomy rind cheese; Wyfe of Bath a semi-hard cheese with a rich, creamy interior and a slightly nutty taste; and Bath Blue, a creamy blue cheese that has also been a World Cheese Awards champion too.</p>",
+   "description_text": "Using pasteurised milk from their own herd at Park Farm near Bath the family make a variety of cheeses including Bath Soft, a soft and yielding white bloomy rind cheese; Wyfe of Bath a semi-hard cheese with a rich, creamy interior and a slightly nutty taste; and Bath Blue, a creamy blue cheese that has also been a World Cheese Awards champion too."
+  },
+  {
+   "id": 207,
+   "slug": "lamuse-bouche",
+   "date": "2024-12-09T19:36:03Z",
+   "modified": "2025-09-19T14:16:04Z",
+   "image": 1360,
+   "excerpt": "London-based street food business specialising in gluten-free crêpes & galettes.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/stallholders/lamuse-bouche/",
+   "name": "L’Amuse Bouche",
+   "categories": [
+    4
+   ],
+   "description_html": "<p>L’Amuse Bouche specialises in authentic French crêpes and galettes (gluten-free), using traditional recipes and carefully sourced ingredients, their signature dishes include The Goaty (goat’s cheese, chutney, spinach, and tomatoes) and The Raclette (raclette cheese, ham, mushrooms, and mustard sauce). </p>",
+   "description_text": "L’Amuse Bouche specialises in authentic French crêpes and galettes (gluten-free), using traditional recipes and carefully sourced ingredients, their signature dishes include The Goaty (goat’s cheese, chutney, spinach, and tomatoes) and The Raclette (raclette cheese, ham, mushrooms, and mustard sauce)."
+  }
+ ]
+}

@@ -1,1 +1,5 @@
 _site/
+# Local image copies (optional, --media) and scratch builds.
+snapshot/
+build/
+__pycache__/

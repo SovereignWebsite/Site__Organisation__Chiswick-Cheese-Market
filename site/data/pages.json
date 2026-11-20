@@ -1,0 +1,2709 @@
+{
+ "about": "Public pages. The site's page builder (WPBakery / Uncode) shortcodes are converted to plain blocks.",
+ "snapshot": {
+  "snapshot_started": "2026-11-20T21:02:58Z",
+  "snapshot_finished": "2026-11-20T21:03:59Z",
+  "source": "https://www.chiswickcheesemarket.uk",
+  "api": "https://www.chiswickcheesemarket.uk/wp-json/",
+  "tool": "tools/fetch-wp.py (tools/wordpress)"
+ },
+ "fields": {
+  "blocks": "section > column > heading | text | button | image | gallery | listing | embed | form",
+  "image": "the page's header image, id into media.json",
+  "source_url": "the page on the official site"
+ },
+ "count": 18,
+ "items": [
+  {
+   "id": 2910,
+   "slug": "newsletter",
+   "title": "Newsletter",
+   "date": "2026-02-23T13:00:17Z",
+   "modified": "2026-10-10T14:39:45Z",
+   "image": 2915,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [],
+       "background_image": 2915
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "div",
+         "text": "#CHEESEWICK #NEWS #WELOVECHEESE"
+        },
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Explore Our Latest Newsletters"
+        },
+        {
+         "type": "text",
+         "html": "Stay up to date with everything happening at Chiswick Cheese Market. From trader highlights and seasonal favourites to event announcements and behind-the-scenes stories, our newsletters bring you closer to the market. Browse our recent editions below and catch up on all the latest cheese news."
+        },
+        {
+         "type": "button",
+         "text": "Subscribe",
+         "url": "http://eepurl.com/gDF7c1"
+        },
+        {
+         "type": "button",
+         "text": "View Newsletters",
+         "url": "https://us3.campaign-archive.com/home/?u=c1e5194438bc098286c0c3ec9&id=47ce73cc68"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/newsletter/"
+  },
+  {
+   "id": 2542,
+   "slug": "apply-for-a-stall",
+   "title": "Apply for a Stall",
+   "date": "2025-05-12T14:22:38Z",
+   "modified": "2025-06-02T14:44:39Z",
+   "image": null,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Apply to become a stallholder"
+        },
+        {
+         "type": "text",
+         "html": "If you’d like to become a stallholder please fill in this form."
+        },
+        {
+         "type": "text",
+         "html": "We welcome cheesemakers, mongers and all cheese related products. Please read the Terms of Trade document before filling the application form."
+        },
+        {
+         "type": "button",
+         "text": "Terms of Trade",
+         "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/terms-of-trade-chiswick-cheese-market.pdf"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/apply-for-a-stall/"
+  },
+  {
+   "id": 1996,
+   "slug": "cheesemakers-grant",
+   "title": "Cheesemakers Grant",
+   "date": "2025-01-09T14:20:05Z",
+   "modified": "2026-01-23T13:06:40Z",
+   "image": 1638,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "2/3",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h1",
+         "text": "Cheesemakers Grant"
+        },
+        {
+         "type": "text",
+         "html": "At Chiswick Cheese Market, we’re passionate about supporting the next generation of cheesemakers. That’s why we’ve created the Chiswick Cheese Market Cheesemakers Grant — a special initiative designed to help new talent break into the world of cheese-making and take their craft to the next level.\n<p>The Chiswick Cheese Market Cheesemakers Grant is our way of giving emerging cheesemakers the tools, knowledge, and experience they need to succeed. In partnership with the <a href=\"https://academyofcheese.org/chiswick-cheese-market-grant-for-cheesemakers/\"><strong>Academy of Cheese</strong></a>, we offer this annual grant to deserving cheesemakers each year. Through the grant, recipients will gain Academy of Cheese certifications, hands-on cheesemaking experience, and invaluable support to enhance their skills and grow their careers in the cheese industry.</p>\n<p>For a full 12 months, each grant winner will benefit from bespoke training and guidance, helping them to sharpen their craft and improve their business acumen. Additionally, we’ll offer them the chance to showcase their creations at Chiswick Cheese Market and connect with Academy of Cheese members around the world – providing opportunities for exposure, promotion, and growth in the wider cheese community.</p>\n<p>If you’re a new cheesemaker looking to advance your career and make your mark in the cheese world, the Chiswick Cheese Market Cheesemakers Grant could be the perfect stepping stone.</p>"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h3",
+         "text": "Aims"
+        },
+        {
+         "type": "text",
+         "html": "<ul>\n<li>Encourage and support new cheesemakers</li>\n<li>Support new cheese development</li>\n<li>Provide access to cheese courses and certification</li>\n</ul>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-210407",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "2025 Awardees"
+        },
+        {
+         "type": "text",
+         "html": "We’re delighted to announce 2025 year’s two recipients of the Cheesemaker’s Grant. Both have impressed the organisers with their ethos, passion, and vision for the future. Their dedication to excellence and innovation makes them truly deserving of this recognition, and we are excited to support their journeys."
+        },
+        {
+         "type": "gallery",
+         "media": [
+          2866,
+          2867
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "2024 Awardees"
+        },
+        {
+         "type": "text",
+         "html": "There were so many deserving candidates that we added an extra grant in 2024. The five winners, who beat off the competition from a host of entries and impressed the organisers during their interviews are Emily Tydeman from Suffolk, Finn Dunlop from Kent, Jo Shelton from Norfolk, Matt Gue from Sussex and Matthew Lloyd from Shropshire."
+        },
+        {
+         "type": "gallery",
+         "media": [
+          2006,
+          2007,
+          2008,
+          2010,
+          2009
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-210407",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "2023 Awardees"
+        },
+        {
+         "type": "text",
+         "html": "Our very first grants were awarded to Aine Rubikaite from East Sussex, Dean Storey from Herefordshire, Millie Preese from Shropshire and Tracey Longhurst of Surrey."
+        },
+        {
+         "type": "gallery",
+         "media": [
+          1999,
+          2000,
+          2001,
+          2003
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "In The News"
+        },
+        {
+         "type": "listing",
+         "post_type": "post",
+         "note": "a live list of posts or stallholders, built from posts.json / exhibitors.json",
+         "size": 2,
+         "order_by": "date"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [
+    "https://academyofcheese.org/chiswick-cheese-market-grant-for-cheesemakers/"
+   ],
+   "source_url": "https://www.chiswickcheesemarket.uk/cheesemakers-grant/"
+  },
+  {
+   "id": 683,
+   "slug": "contact-us",
+   "title": "Contact us",
+   "date": "2024-12-11T23:09:38Z",
+   "modified": "2025-04-25T08:30:32Z",
+   "image": 1637,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Contact us"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1666,
+          1667
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/contact-us/"
+  },
+  {
+   "id": 77,
+   "slug": "recipes",
+   "title": "Recipes",
+   "date": "2024-12-07T09:27:03Z",
+   "modified": "2025-03-27T12:08:37Z",
+   "image": 1670,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "2/3",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Recipes"
+        },
+        {
+         "type": "text",
+         "html": "A selection of cheese recipes from new cookbooks and cookery archives via <strong>ckbk</strong> – a digital subscription service for cooks, with more than 100,000 recipes available via the ckbk website and app.\n<p><strong>Save 25% on ckbk Premium Membership with code CHEESEWICK</strong></p>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "listing",
+         "post_type": "post",
+         "note": "a live list of posts or stallholders, built from posts.json / exhibitors.json",
+         "categories": [
+          25,
+          21
+         ],
+         "size": 21,
+         "order_by": "date"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/recipes/"
+  },
+  {
+   "id": 75,
+   "slug": "journal",
+   "title": "Journal",
+   "date": "2024-12-07T09:26:30Z",
+   "modified": "2025-03-27T11:55:53Z",
+   "image": 1775,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "2/3",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Community Journal"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Read some of the compelling stories behind the Market’s produce and take inspiration from an impressive cast of traders, cheese makers and food writers.</strong>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "listing",
+         "post_type": "post",
+         "note": "a live list of posts or stallholders, built from posts.json / exhibitors.json",
+         "size": 21,
+         "order_by": "date"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/journal/"
+  },
+  {
+   "id": 73,
+   "slug": "volunteer-with-us",
+   "title": "Volunteer with us",
+   "date": "2024-12-07T09:25:54Z",
+   "modified": "2025-03-27T12:10:40Z",
+   "image": 1678,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Volunteer with us"
+        },
+        {
+         "type": "text",
+         "html": "<strong>A fantastic way to support your community while enjoying a lively, unique event. Help local cheesemakers, artisans, and small businesses, meet new people, and make a real difference. From setup to market day assistance or post-event tasks, we’ll match your skills with the perfect role!</strong>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "Thank you for reaching out to the Chiswick Cheese Market. We will come back to you as soon as we possibly can!"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1680
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/volunteer-with-us/"
+  },
+  {
+   "id": 71,
+   "slug": "how-we-give-back",
+   "title": "How we give back",
+   "date": "2024-12-07T09:25:27Z",
+   "modified": "2026-01-27T09:34:12Z",
+   "image": 1772,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Charity"
+        },
+        {
+         "type": "text",
+         "html": "<strong>The Chiswick Cheese Market was born out of twin concerns for the plight of UK cheesemakers and the state of the high street during the pandemic. As a group of local women volunteers, community has been at the forefront of our endeavour.</strong>"
+        },
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Support #Cheesewick"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-210407",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1471
+        },
+        {
+         "type": "text",
+         "html": "We have been proud to donate 24k to the Hammersmith based, <strong>Upper Room </strong>to date, a charity devoted to providing support to people experiencing homelessness, from meals, toiletries, clothing and bedding to support into employment."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1481
+        },
+        {
+         "type": "text",
+         "html": "In February 2023 the Chiswick Cheese Market hosted a <strong>Ukrainian Winter Appeal</strong> to highlight the ongoing crisis in Ukraine. A total of £8,070 was raised to support the vital work of the British-Ukrainian Aid and First Aid Ukraine charities (£690 was donated from market funds).<br>"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1480
+        },
+        {
+         "type": "text",
+         "html": "In recognition of the market’s contributions to the area, Jeremy Vine presented the Chiswick Cheese Market with a <strong>Community Recognition Award</strong> in 2023 on behalf of the <strong>Chiswick Calendar</strong> for helping to enrich the area and enhance the profile of Chiswick.<br>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Chiswick Cheese Market Cheesemakers Grant"
+        },
+        {
+         "type": "text",
+         "html": "To help ensure the future health of the cheese industry, the Chiswick Cheese Market Grant, in association with the <b>Academy of Cheese</b>, is awarded annually to <b>novice cheesemakers</b> to gain Academy of Cheese certifications and cheesemaking experience to improve their knowledge, skills and career opportunities. Bespoke support and mentoring are provided for 12 months, as well as exposure at the Chiswick Cheese Market and to the Academy of Cheese’s global network."
+        },
+        {
+         "type": "button",
+         "text": "https://academyofcheese.org/chiswick-cheese-market-grant-for-cheesemakers/",
+         "url": "https://academyofcheese.org/chiswick-cheese-market-grant-for-cheesemakers/"
+        },
+        {
+         "type": "image",
+         "media": 1676
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "2/3",
+       "blocks": [
+        {
+         "type": "listing",
+         "post_type": "post",
+         "note": "a live list of posts or stallholders, built from posts.json / exhibitors.json",
+         "size": 3,
+         "order_by": "date"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/how-we-give-back/"
+  },
+  {
+   "id": 69,
+   "slug": "chiswick-a-grand-day-out",
+   "title": "Chiswick – A Grand Day Out",
+   "date": "2024-12-07T09:23:10Z",
+   "modified": "2026-05-05T11:45:44Z",
+   "image": 2063,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Chiswick – A Grand Day Out!"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Chiswick Cheese Market serves as a delicious and delightful opportunity to explore this vibrant corner of London and its array of culinary and cultural delights. Beyond the market, spend a Sunday sampling Chiswick’s wealth of attractions. </strong>"
+        },
+        {
+         "type": "text",
+         "html": "The bustling High Road offers an eclectic mix of <strong>independent stores</strong>, charming <strong>charity shops</strong> boasting quality finds, and <strong>high street stores</strong>. Tease your tastebuds and gather your cheeses and other market bounty and then indulge in a coffee or lunch at one of the charming <strong>coffee shops</strong>, <strong>restaurants</strong> or <strong>pubs</strong> off the beaten track of Chiswick."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1714,
+          1809,
+          1801,
+          1800,
+          1805
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 2066
+        },
+        {
+         "type": "text",
+         "html": "The <strong>Thames towpath</strong> awaits for those with a penchant for exploration. A leisurely walk will take you past the graceful architecture of Georgian and Victorian residences dotted with <strong>blue plaques</strong> of the many famous residents as well as the picturesque pubs of <strong>Strand on the Green</strong>."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 2064
+        },
+        {
+         "type": "text",
+         "html": "Delve further into Chiswick’s rich history by visiting <strong>Chiswick House</strong>, one of the earliest and possibly most exquisite examples of Neo-Palladian architecture. Built by Lord Burlington, Chiswick House was designed as an homage to the wonders of European art architecture witnessed during his ‘Grand Tours’ and trips to Paris. Immerse yourself in the tranquillity of its sprawling gardens, perfect for a picnic, a wander or a moment of quiet contemplation."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 2065
+        },
+        {
+         "type": "text",
+         "html": "Finally, no visit to Chiswick would be complete without a stop at <strong>Fullers Brewery</strong>. With a storied history dating back to 1845, this esteemed establishment offers informative tours tailored for beer enthusiasts, providing a fascinating glimpse into the art and science of brewing."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h3",
+         "text": "So, whether you’re drawn by the allure of Chiswick Cheese Market or the myriad of attractions that grace this charming locale, a day in West London promises to be a delightful journey filled with culinary delights, cultural discoveries, and memorable experiences."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "Tamp Coffee",
+             "url": "https://www.tampcoffee.co.uk/collections/our-coffees/"
+            },
+            {
+             "type": "button",
+             "text": "La Tarantella",
+             "url": "https://www.latarantella.co.uk/"
+            },
+            {
+             "type": "button",
+             "text": "Napoli on the Road",
+             "url": "https://www.napoliontheroad.co.uk/"
+            },
+            {
+             "type": "button",
+             "text": "La Trompette",
+             "url": "https://www.latrompette.co.uk/"
+            },
+            {
+             "type": "button",
+             "text": "Duci Ice cream",
+             "url": "http://www.ducilondon.com/"
+            },
+            {
+             "type": "button",
+             "text": "George IV",
+             "url": "https://www.georgeiv.co.uk/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "Whistling Oyster",
+             "url": "https://www.thewhistlingoyster.co.uk/"
+            },
+            {
+             "type": "button",
+             "text": "High Road Brasserie",
+             "url": "https://www.highroadbrasserie.co.uk/"
+            },
+            {
+             "type": "button",
+             "text": "The Packhorse & Talbot",
+             "url": "https://www.greeneking.co.uk/pubs/greater-london/packhorse-and-talbot"
+            },
+            {
+             "type": "button",
+             "text": "The Hound",
+             "url": "https://www.thehound.london/"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "Borough Kitchen",
+             "url": "https://www.boroughkitchen.com/"
+            },
+            {
+             "type": "button",
+             "text": "The Old Cinema",
+             "url": "https://www.theoldcinema.co.uk/"
+            },
+            {
+             "type": "button",
+             "text": "Pet Pavillion",
+             "url": "https://www.petpavilion.co.uk"
+            },
+            {
+             "type": "button",
+             "text": "Greige Lifestyle",
+             "url": "https://www.greige.co.uk"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "The Good Wine Shop",
+             "url": "https://www.thegoodwineshop.co.uk/"
+            },
+            {
+             "type": "button",
+             "text": "Collins Veg stall",
+             "url": "https://collinsofchiswick.business.site/"
+            },
+            {
+             "type": "button",
+             "text": "Wild Swans",
+             "url": "https://wild-swans.com/"
+            },
+            {
+             "type": "button",
+             "text": "Fosters Books",
+             "url": "https://www.fosterbooks.co.uk/"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "text",
+         "html": "Over 10 charity shops with amazing items to be purchased."
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "Chiswick House and Gardens also has a cafe",
+             "url": "https://chiswickhouseandgardens.org.uk/plan-your-visit/eat-drink-shop/"
+            },
+            {
+             "type": "button",
+             "text": "Fullers brewery",
+             "url": "https://www.fullersbrewery.co.uk/pages/brewery-tours"
+            },
+            {
+             "type": "button",
+             "text": "William Morris Museum",
+             "url": "https://williammorrissociety.org/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "River Thames tow path",
+             "url": "https://chiswickcalendar.co.uk/this-is-chiswick/places/strand-on-the-green/"
+            },
+            {
+             "type": "button",
+             "text": "Hogarth’s House",
+             "url": "https://hogarthshouse.org/"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/chiswick-a-grand-day-out/"
+  },
+  {
+   "id": 67,
+   "slug": "visit-us",
+   "title": "Visit us",
+   "date": "2024-12-07T09:22:19Z",
+   "modified": "2026-04-02T13:29:00Z",
+   "image": null,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Plan your visit to the UK’s only dedicated cheese market"
+        },
+        {
+         "type": "text",
+         "html": "The market is held every third Sunday of the month between <strong>9.30 am and 3.00 pm at The Old Market Place, Chiswick High Road (opposite M&amp;S), W4 2DR</strong>.\n<p>What3Words: <a href=\"https://w3w.co/cherry.grabs.tubes\"><strong>///cherry.grabs.tubes</strong></a></p>"
+        },
+        {
+         "type": "text",
+         "html": "A unique destination for cheese lovers. Held every third Sunday of the month, the market celebrates the finest artisan cheeses from across the UK and beyond. Come and explore a delicious array of flavours in the charming surroundings of The Old Market Place in Chiswick."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "html",
+             "html": "<b>Turnham Green station</b> (District Line) is a 5-minute walk from the market. <b>Chiswick Park</b> and <b>Gunnersbury</b> stations are also nearby."
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "html",
+             "html": "Use the <b>Chiswick Police Station</b> stop for routes <b>237, 267, 110, E3</b>, and <b>H91</b>. For the <b>Turnham Green Station</b> stop, use routes <b>94</b> and <b>272</b>. For the <b>Turnham Green Church</b> stop, use route <b>440</b>."
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "html",
+             "html": "<b>Gunnersbury</b> station is on the Mildmay line (Overground) a 15-minute walk along Chiswick High Road or connect to a bus or the <strong>District</strong> line."
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "html",
+             "html": "<b>Chiswick station</b> (South Western Railways) is 25 minutes on foot or take the <b>E3</b> or <b>272</b> bus."
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "html",
+             "html": "Old Market Place is located next to <b>Cycleway 9</b> on Chiswick High Road. Check the <b>TfL</b> website for updates."
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "html",
+             "html": "Car parking is on-street and is mostly free of charge on Sundays but check first via signage on the street or <b>PaybyPhone App</b>. Free parking is available on side roads, with larger options at Sainsbury’s (Essex Place, W4 5UT) and St. Mary’s RC Primary School (book via <b>JustPark</b>)."
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h3",
+         "text": "Plan your journey easily using Google Maps, TfL or CityMapper tools"
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "Google Directions",
+             "url": "https://www.google.com/maps/dir/?api=1&destination=Chiswick+Cheese+Market,+Chiswick+High+Rd,+Chiswick,+London+W4+2DR"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "TfL Journey Planner",
+             "url": "https://tfl.gov.uk/plan-a-journey/?Input=Chiswick+High+Rd,+Chiswick,+London+W4+2DR"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "CityMapper",
+             "url": "https://citymapper.com/directions?endaddress=Chiswick+High+Rd,+Chiswick,+London+W4+2DR"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "button",
+             "text": "Trainline",
+             "url": "https://www.thetrainline.com/?to=Chiswick+High+Rd,+Chiswick,+London+W4+2DR"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Accessibility"
+        },
+        {
+         "type": "text",
+         "html": "<strong>The market is held entirely on a single-level outdoor space at The Old Market Place with no stairs or lifts to navigate.</strong>"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Parking</strong><br>\nThere is dedicated disabled parking on Devonshire Road. For blue badge holders, there are many more options.\n<p><strong>Assistance</strong><br>\nOur friendly staff and volunteers are always happy to provide assistance or answer any questions during your visit.</p>"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1810,
+          2321,
+          1722
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [
+    "https://w3w.co/cherry.grabs.tubes"
+   ],
+   "source_url": "https://www.chiswickcheesemarket.uk/visit-us/"
+  },
+  {
+   "id": 65,
+   "slug": "calendar",
+   "title": "Calendar",
+   "date": "2024-12-07T09:21:02Z",
+   "modified": "2026-01-04T12:59:48Z",
+   "image": 1725,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Calendar"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Discover upcoming Sunday market dates, special events, tastings, and seasonal celebrations. Stay informed about key industry milestones and award dates featuring your favourite cheesemakers.</strong>"
+        },
+        {
+         "type": "embed",
+         "note": "third-party embed (newsletter form or feed) not copied"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "5/6",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Award Calendar"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Cheese is celebrated in awards all year long across the UK and around the world. The awards – which many of our stallholders and makers have won – recognise the artistry and craft behind each cheese.</strong>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "March"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "British Cheese Awards"
+            },
+            {
+             "type": "text",
+             "html": "Founded in 1994, these awards are among the most prestigious in the UK, celebrating a wide range of cheeses across multiple categories. Held as part of major food events like the Bath &amp; West Show, these awards attract entries from across the UK and beyond."
+            },
+            {
+             "type": "button",
+             "text": "https://www.britishcheeseawards.com",
+             "url": "https://www.britishcheeseawards.com/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1533
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "May"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "Virtual Cheese Awards"
+            },
+            {
+             "type": "text",
+             "html": "The VCA Awards celebrate the best of British cheese, drawing hundreds of entries from across the British Isles. Profits support the British cheese industry through a bursary with the Specialist Cheesemaker Association, funding key educational events like the Science of Artisan Cheese Conference to help cheesemakers grow their craft."
+            },
+            {
+             "type": "button",
+             "text": "https://www.virtualcheeseawards.com",
+             "url": "https://www.virtualcheeseawards.com/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1538
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "May"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "Artisan Cheese Awards"
+            },
+            {
+             "type": "text",
+             "html": "The Artisan Cheese Awards celebrate and support small to micro-scale cheesemakers in the UK and Ireland, open to producers with an annual output of up to 400 tons. Cheesemakers can enter in one of 20 categories, including Fresh, Soft, Semi-Soft, Hard, Blue, and other specialty classes like Organic, Raw Milk, Farmhouse, and Affinage."
+            },
+            {
+             "type": "button",
+             "text": "https://artisancheeseawards.com",
+             "url": "https://artisancheeseawards.com/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1532
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "June"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "Affineur of the Year Awards"
+            },
+            {
+             "type": "text",
+             "html": "We’re proud to sponsor the Affineur of the Year competition, founded by the Academy of Cheese and Quicke’s in 2022 to celebrate the art of cheese aging. The event includes categories for Hard, Crumbly, Soft, and Washed Rind cheeses. Guests also vote for the People’s Choice Award."
+            },
+            {
+             "type": "button",
+             "text": "https://academyofcheese.org/affineur-of-the-year/",
+             "url": "https://academyofcheese.org/affineur-of-the-year/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1531
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "July"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "Great Taste Awards"
+            },
+            {
+             "type": "text",
+             "html": "The Great Taste Awards are held at the Battersea Arts Centre and recognize the best products in the accreditation scheme. The Great Taste Awards judging panel is made up of over 500 food and drink professionals, including chefs, critics, and journalists."
+            },
+            {
+             "type": "button",
+             "text": "https://gff.co.uk/for-producers/great-taste/",
+             "url": "https://gff.co.uk/for-producers/great-taste/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1534
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "October"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "The Real Cheese Project / People’s Cheese"
+            },
+            {
+             "type": "text",
+             "html": "Celebrating the iconic “territorials”—classic British cheeses like Cheddar, Stilton, Red Leicester, Caerphilly, and more. With three rounds of public judging, this unique event invites cheese lovers across the country to savor, score, and crown the nation’s favorite cheese."
+            },
+            {
+             "type": "button",
+             "text": "https://www.therealcheeseproject.co.uk/peoples-cheese",
+             "url": "https://www.therealcheeseproject.co.uk/peoples-cheese"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1536
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "November"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "Young Cheesemonger of the Year"
+            },
+            {
+             "type": "text",
+             "html": "The Young Cheesemonger of the Year Award highlights emerging talent in the cheese industry, celebrating the skills needed to become a professional cheesemonger."
+            },
+            {
+             "type": "button",
+             "text": "https://academyofcheese.org/young-cheesemonger-of-the-year",
+             "url": "https://academyofcheese.org/young-cheesemonger-of-the-year"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1539
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "4/6",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "November"
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "World Cheese Awards"
+            },
+            {
+             "type": "text",
+             "html": "A truly global cheese event, World Cheese brings together cheesemakers, retailers, buyers and food commentators worldwide to judge over<br>\n4,000 cheeses from over 40 countries."
+            },
+            {
+             "type": "button",
+             "text": "https://gff.co.uk/for-producers/world-cheese-awards/",
+             "url": "https://gff.co.uk/for-producers/world-cheese-awards/"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "2/6",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1537
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/calendar/"
+  },
+  {
+   "id": 61,
+   "slug": "no-vacant-places",
+   "title": "No vacant places",
+   "date": "2024-12-07T09:19:12Z",
+   "modified": "2025-04-25T12:09:37Z",
+   "image": 2330,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-wayh",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Become a trader"
+        },
+        {
+         "type": "text",
+         "html": "Unfortunately, we don’t have any free spaces in the Market at the moment, and are currently unable to accept any new applications.\n<p>If you wish to be notified when we do have a vacancy then please register your email below:</p>"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [],
+       "background_image": 2330
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/no-vacant-places/"
+  },
+  {
+   "id": 59,
+   "slug": "meet-the-stallholders",
+   "title": "Meet the stallholders",
+   "date": "2024-12-07T09:18:40Z",
+   "modified": "2026-02-11T16:04:09Z",
+   "image": 1776,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "2/3",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Meet the stallholders"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Below is a selection of traders who regularly join the market.</strong>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "listing",
+         "post_type": "portfolio",
+         "note": "a live list of posts or stallholders, built from posts.json / exhibitors.json",
+         "order_by": "title"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/meet-the-stallholders/"
+  },
+  {
+   "id": 57,
+   "slug": "awards-affiliations",
+   "title": "Awards & affiliations",
+   "date": "2024-12-07T09:17:35Z",
+   "modified": "2025-03-27T17:01:08Z",
+   "image": 1747,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Awards and affiliations"
+        },
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Affineur of the Year Awards"
+        },
+        {
+         "type": "text",
+         "html": "The Chiswick Cheese Market is pleased to sponsor in the <b>Hard Cheese category of the Affineur of the Year Awards</b> by the <b>Academy of Cheese</b> and <b>Quicke’s Cheddar</b>. The competing cheesemongers and cheesemakers age their cheese for 6 months. The annual event is open to the public as the competing affineurs de-cloth and unveil their cheddars."
+        },
+        {
+         "type": "button",
+         "text": "https://academyofcheese.org/affineur-of-the-year/",
+         "url": "https://academyofcheese.org/affineur-of-the-year/"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1752
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1745
+         ]
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "The Academy of Cheese"
+        },
+        {
+         "type": "text",
+         "html": "The Academy of Cheese is dedicated to elevating cheese knowledge and appreciation for everyone, from enthusiasts to industry professionals. Established in 2013, inspired by the <b>American Cheese Society</b>’s Certified Cheese Professional qualification, the Academy aims to promote cheese education and careers through four levels of certification, culminating in the prestigious title of Master of Cheese. As a not-for-profit organisation, we support cheesemakers and foster a thriving cheese industry while creating a community of passionate cheese lovers. By empowering individuals and showcasing the expertise of our members, we strive to enhance respect for the craft and inspire a deeper love of cheese. We are intensely proud of our collaborations with the Academy of Cheese."
+        },
+        {
+         "type": "button",
+         "text": "https://academyofcheese.org/",
+         "url": "https://academyofcheese.org/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Michael Caines Academy"
+        },
+        {
+         "type": "text",
+         "html": "The Chiswick Cheese Market supports a new collaboration between the Academy of Cheese and the Michael Caines Academy. Michael Caines MBE and the Academy of Cheese have joined forces to deliver AOC Level One training to Michael Caines Academy students. This annual, day’s long course will be funded by the Chiswick Cheese Market.\n<p>The Michael Caines Academy at Exeter College aims to nurture the region’s future generation of talented restaurateurs, chefs, waiters and front-of-house staff. The Level One course introduces the hospitality trainees to artisan and quintessential cheeses, highlighting their importance in our restaurants and associated food industries.</p>"
+        },
+        {
+         "type": "button",
+         "text": "https://www.michaelcaines.com/michael-caines-academy/",
+         "url": "https://academyofcheese.org/affineur-of-the-year/"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          2078
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/awards-affiliations/"
+  },
+  {
+   "id": 55,
+   "slug": "cheesewick-hq-buttercup",
+   "title": "Cheesewick HQ / Buttercup",
+   "date": "2024-12-07T09:16:59Z",
+   "modified": "2026-04-02T13:30:29Z",
+   "image": 1702,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Cheesewick HQ"
+        },
+        {
+         "type": "text",
+         "html": "<strong>In our mission to explore and share the wonderful world of cheese, there is always something going on at our Cheesewick Market HQ. </strong>"
+        },
+        {
+         "type": "text",
+         "html": "To make the most of each month’s market, please come by and say hello. At each market, <strong>Buttercup</strong> has a fresh look and is on hand for a <strong>#Cheesewick</strong> selfie opportunity as well as <strong>free tastings</strong> and our <strong>market merchandise</strong>. HQ also features <strong>competitions, book sales, ‘Meet the Maker’</strong> moments and market highlights."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1485,
+          1486,
+          1487
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-210407",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1706
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "Market merchandise"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1703
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "Free tastings"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/3",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1704
+            },
+            {
+             "type": "heading",
+             "level": "h3",
+             "text": "Meet the maker"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1432,
+          1434,
+          1438
+         ]
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Meet Buttercup, our moovellous Cheesewick market mascot"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Buttercup, a Holstein Freisian dairy cow, first came to market during The Big Cheese Weekender in October 2023 and was named through a competition the following month. The heart-churning favourite was BUTTERCUP!</strong>"
+        },
+        {
+         "type": "text",
+         "html": "The iconic, mostly black and white cows are the most populous dairy cows due to their high dairy production and are bred worldwide in 160 countries.\n<p>Buttercup is ever-ready for her <strong>#cheesewick</strong> selfie close-up and never says no to a photo op!</p>\n<p>Between markets, she resides at the Barley Moo Barn (<a href=\"https://www.workspace.co.uk/workspaces/barley-mow-centre\"><strong>The Barley Mow Centre</strong></a>) courtesy of Workspace.</p>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1429
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1447
+        },
+        {
+         "type": "heading",
+         "level": "h3",
+         "text": "Seasonal Celebrations"
+        },
+        {
+         "type": "text",
+         "html": "<strong>Each month, the market lends itself to a theme and while they vary, there are some that are fixed in the calendar: </strong>"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1711
+        },
+        {
+         "type": "text",
+         "html": "We start the year off on a high with our ‘Alpine Ascent’ in <strong>January</strong> when we focus on the many cheeses from the French, Italian. Swiss, German, Austrian and Slovenian Alps and all the gooey recipes that are made from them (raclette, fondue, tartiflette, etc.)."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1709
+        },
+        {
+         "type": "text",
+         "html": "The Perfect Pair. In <strong>February</strong>, the month of love, we play market matchmaker and try to inspire you with unusual matches made in cheese heaven. Our imaginative stall-holders look for opportunities to collaborate to create tasty combinations (kimchi and cheddar toastie anyone?) to tempt your tastebuds beyond the cheese and cracker. We recently sampled Italian cheeses from the Emilia-Romagna region of Italy with ten-year-old Balsamic vinegar."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1448
+        },
+        {
+         "type": "text",
+         "html": "Beyond the May Day celebrations, <strong>May</strong> is our anniversary month so we break out the bunting and push the cheese borders – celebratory Morris dancing may occur!"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1705
+        },
+        {
+         "type": "text",
+         "html": "<strong>October</strong> is when we honour and collaborate with the <a href=\"https://academyofcheese.org/\"><strong>Academy of Cheese</strong></a>, Britain’s professional body for cheese expertise. Whether it’s the <a href=\"https://bigcheeseweekender.com/\"><strong>Big Cheese Weekender</strong></a> when the Academy does a market take-over or we come together for specialised cheese events. Expect to meet cheesemakers and award-winning affineurs as well as taste some superb cheeses."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/3",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 979
+        },
+        {
+         "type": "text",
+         "html": "The Christmas market in <strong>December</strong> is perfectly timed for you to create the ultimate cheese board for your big feast as well as chock full of gifting opportunities – one stop foodie shopping!"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h3",
+         "text": "Visit Buttercup and our HQ for our seasonal celebrations before you ‘mooch’ the market!"
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [
+    "https://academyofcheese.org/",
+    "https://bigcheeseweekender.com/",
+    "https://www.workspace.co.uk/workspaces/barley-mow-centre"
+   ],
+   "source_url": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/"
+  },
+  {
+   "id": 53,
+   "slug": "our-story-team",
+   "title": "Our story / Team",
+   "date": "2024-12-07T09:16:25Z",
+   "modified": "2026-10-25T12:15:54Z",
+   "image": 2520,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Our story"
+        },
+        {
+         "type": "text",
+         "html": "Chiswick Cheese Market has become the prime destination for cheese lovers. With more than 200 different cheeses and high-quality accoutrements, the market draws producers and sellers from across the UK who bring cheese and related produce from around the world. Visitors discover something new each month whether it is a new trader or only seasonally available delicacies. And there is always something new to taste on <b>Cheesewick HQ</b> in our aim to promote the love for and knowledge of cheese."
+        },
+        {
+         "type": "text",
+         "html": "It’s a happy coincidence that the leafy West London suburb of Chiswick, once known as <b>Cheesewick</b> or <b>Ceswican</b> in Old English (owing to a dairy farm by the Thames at Duke’s Meadow and meaning “Cheese Farm”), now hosts its own thriving cheese market. More than a thousand years after the settlement was named, a group of passionate women brought cheese back to Chiswick by launching a monthly market in May 2021."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          2436,
+          2515,
+          2435,
+          2434
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1699,
+          1694,
+          2516,
+          2433
+         ]
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "text",
+         "html": "Originally inspired by Jamie Oliver’s ‘Save British Cheese’ campaign in 2020 we set about creating a market for cheese producers and enthusiasts to come together over the very best cheeses from Britain and beyond and bring the wonder of well-crafted cheese to Chiswick.\n<p>The market is the brainchild of the <strong>Cookbook Kitchen</strong>, now <strong>Chiswick Cheese Market</strong>, a group of women who share a love of fine food and community spirit and who formed a Community Interest Company (CIC) specifically so that the market would be of benefit to the wider community. The market launched on 15th May 2021 with tremendous support. The Mayor of Hounslow was on hand to cut the ribbon and witness the cracking of a magnificent 41 kilo wheel of “Vacche Rosse” Red Cow Parmigiano Reggiano.</p>"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "text",
+         "html": "Since starting the market, we have delved into the wonderful world of cheese and the further in we get, the further we want to go, and we definitely want to take you with us. Two of our team are Level 2 Members of the Academy of Cheese and the entire team are soon to be Level 1 Associates. We have been invited &#8211; and in some cases invited ourselves &#8211; to judge awards, sponsor awards, sponsor cheese makers and cheese classes, to host events, talks, demonstrations tastings and pairings to which we have said a resounding YES.\n<p>We have witnessed and taken part in cheese making and we have even entered ourselves in the Affineur of the Year Awards (of which we are a sponsor in another category) and are busing lovingly looking over our very own 8 kilo Cropwell Bishop Shropshire Blue ‘cheese baby’ – Watch this space to see how we get on!</p>"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1695,
+          2513,
+          1692,
+          2514
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h3",
+         "text": "For more information on The Cheese Market, read this article from the Market Times April 2023 edition."
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "accent",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "The team"
+        },
+        {
+         "type": "text",
+         "html": "<strong>The Chiswick Cheese Market is run by a group of women who are passionate about Chiswick and cheese! Among our ranks of dedicated foodies are restaurateurs, chefs, cooks, caterers, designers and cook-book authors. </strong>"
+        },
+        {
+         "type": "text",
+         "html": "Prior to founding the Chiswick Cheese Market, the same group of like-minded women produced the Cookbook Festivals 2018–2019 and hosted popular chef-led supper clubs in the local W4 area."
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 1577
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "gallery",
+         "media": [
+          1586,
+          2213,
+          1582,
+          1578,
+          1581,
+          1583,
+          1576,
+          1579,
+          3168
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/our-story-team/"
+  },
+  {
+   "id": 27,
+   "slug": "home",
+   "title": "Home",
+   "date": "2024-12-06T11:40:23Z",
+   "modified": "2026-11-20T20:08:15Z",
+   "image": null,
+   "body_html": null,
+   "body_text": null,
+   "blocks": [
+    {
+     "type": "section",
+     "background": "accent",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h6",
+         "text": "",
+         "inline_images": [
+          915
+         ],
+         "style": "marquee"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-210407",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h6",
+         "text": "SEE YOU AT OUR CHRISTMAS MARKET ON THE 20TH OF DECEMBER!",
+         "inline_images": [
+          959
+         ],
+         "style": "marquee"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "The UK’s only specialist cheese market"
+        },
+        {
+         "type": "text",
+         "html": "<strong>The market is held every third Sunday of the month between 9.30 am and 3.00 pm at The Old Market Place, Chiswick High Road (opposite M&amp;S), W4 2DR. </strong>"
+        },
+        {
+         "type": "text",
+         "html": "A unique destination for cheese lovers the market celebrates the finest artisan cheeses from across the UK and beyond. Come and explore a delicious array of flavours in the charming surroundings of Chiswick."
+        },
+        {
+         "type": "button",
+         "text": "Getting here",
+         "url": "https://www.chiswickcheesemarket.uk/visit-us/"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "image",
+         "media": 3209
+        }
+       ],
+       "background_image": 2908
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-210407",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "A cheese lover’s paradise"
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1512
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "World-wide selection"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1510
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "Tastings"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1518
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "All the know how"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1164
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "Takeaway food stalls"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-169796",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Latest from the journal"
+        },
+        {
+         "type": "listing",
+         "post_type": "post",
+         "note": "a live list of posts or stallholders, built from posts.json / exhibitors.json",
+         "size": 9,
+         "order_by": "date"
+        },
+        {
+         "type": "button",
+         "text": "Read the journal",
+         "url": "https://www.chiswickcheesemarket.uk/journal/"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-xsdn",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "#CHEESEWICK"
+        },
+        {
+         "type": "text",
+         "html": "Follow us on Instagram <a href=\"https://www.instagram.com/chiswickcheesemarket/\">@chiswickcheesemarket</a>"
+        },
+        {
+         "type": "embed",
+         "note": "third-party embed (newsletter form or feed) not copied"
+        }
+       ]
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-210407",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "Sunday 18th January 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 15th February 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 15th March 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 19th April 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 17th May 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 21st June 2026"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/2",
+           "blocks": [
+            {
+             "type": "text",
+             "html": "Sunday 19th July 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 16th August 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 20th September 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 18th October 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 15th November 2026"
+            },
+            {
+             "type": "text",
+             "html": "Sunday 20th December 2026"
+            }
+           ]
+          }
+         ]
+        },
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "2026 Market Dates",
+         "style": "vertical"
+        }
+       ]
+      },
+      {
+       "type": "column",
+       "width": "1/2",
+       "blocks": [],
+       "background_image": 1501
+      }
+     ]
+    },
+    {
+     "type": "section",
+     "background": "color-690767",
+     "blocks": [
+      {
+       "type": "column",
+       "width": "1/1",
+       "blocks": [
+        {
+         "type": "heading",
+         "level": "h2",
+         "text": "Community and passion"
+        },
+        {
+         "type": "column",
+         "width": "1/1",
+         "blocks": [
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1577
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "Volunteer-run"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 2751
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "Supporting local producers"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1471
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "Giving back"
+            }
+           ]
+          },
+          {
+           "type": "column",
+           "width": "1/4",
+           "blocks": [
+            {
+             "type": "image",
+             "media": 1436
+            },
+            {
+             "type": "heading",
+             "level": "h2",
+             "text": "Mascot Buttercup"
+            }
+           ]
+          }
+         ]
+        }
+       ]
+      }
+     ]
+    }
+   ],
+   "links": [
+    "https://www.instagram.com/chiswickcheesemarket/"
+   ],
+   "source_url": "https://www.chiswickcheesemarket.uk/"
+  },
+  {
+   "id": 3,
+   "slug": "privacy-policy",
+   "title": "Privacy Policy",
+   "date": "2024-12-06T10:56:54Z",
+   "modified": "2026-04-17T13:40:36Z",
+   "image": null,
+   "body_html": "<h2>Who we are</h2>\r\n\r\n\r\n\r\n<p>Our website address is: http://www.chiswickcheesemarket.uk</p>\r\n\r\n\r\n\r\n<h2>Comments</h2>\r\n\r\n\r\n\r\n<p>When visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection.</p>\r\n\r\n\r\n\r\n<p>An anonymised string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service Privacy Policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.</p>\r\n\r\n\r\n\r\n<h2>Media</h2>\r\n\r\n\r\n\r\n<p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p>\r\n\r\n\r\n\r\n<h2>Cookies</h2>\r\n\r\n\r\n\r\n<p>If you leave a comment on our site you may opt in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p>\r\n\r\n\r\n\r\n<p>If you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>\r\n\r\n\r\n\r\n<p>When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select &#8220;Remember Me&#8221;, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p>\r\n\r\n\r\n\r\n<p>If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p>\r\n\r\n\r\n\r\n<h2>Embedded content from other websites</h2>\r\n\r\n\r\n\r\n<p>Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>\r\n\r\n\r\n\r\n<p>These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>\r\n\r\n\r\n\r\n<h2>Who we share your data with</h2>\r\n\r\n\r\n\r\n<p>If you request a password reset, your IP address will be included in the reset email.</p>\r\n\r\n\r\n\r\n<h2>How long we retain your data</h2>\r\n\r\n\r\n\r\n<p>If you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognise and approve any follow-up comments automatically instead of holding them in a moderation queue.</p>\r\n\r\n\r\n\r\n<p>For users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.</p>\r\n\r\n\r\n\r\n<h2>What rights you have over your data</h2>\r\n\r\n\r\n\r\n<p>If you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.</p>\r\n\r\n\r\n\r\n<h2>Where your data is sent</h2>\r\n\r\n\r\n\r\n<p>Visitor comments may be checked through an automated spam detection service.</p>",
+   "body_text": "Who we are\r\n\r\n\r\n\r\nOur website address is: http://www.chiswickcheesemarket.uk\r\n\r\n\r\n\r\nComments\r\n\r\n\r\n\r\nWhen visitors leave comments on the site we collect the data shown in the comments form, and also the visitor’s IP address and browser user agent string to help spam detection.\n\nAn anonymised string created from your email address (also called a hash) may be provided to the Gravatar service to see if you are using it. The Gravatar service Privacy Policy is available here: https://automattic.com/privacy/. After approval of your comment, your profile picture is visible to the public in the context of your comment.\r\n\r\n\r\n\r\nMedia\r\n\r\n\r\n\r\nIf you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.\r\n\r\n\r\n\r\nCookies\r\n\r\n\r\n\r\nIf you leave a comment on our site you may opt in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.\n\nIf you visit our login page, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.\n\nWhen you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select “Remember Me”, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.\n\nIf you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.\r\n\r\n\r\n\r\nEmbedded content from other websites\r\n\r\n\r\n\r\nArticles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.\n\nThese websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.\r\n\r\n\r\n\r\nWho we share your data with\r\n\r\n\r\n\r\nIf you request a password reset, your IP address will be included in the reset email.\r\n\r\n\r\n\r\nHow long we retain your data\r\n\r\n\r\n\r\nIf you leave a comment, the comment and its metadata are retained indefinitely. This is so we can recognise and approve any follow-up comments automatically instead of holding them in a moderation queue.\n\nFor users that register on our website (if any), we also store the personal information they provide in their user profile. All users can see, edit, or delete their personal information at any time (except they cannot change their username). Website administrators can also see and edit that information.\r\n\r\n\r\n\r\nWhat rights you have over your data\r\n\r\n\r\n\r\nIf you have an account on this site, or have left comments, you can request to receive an exported file of the personal data we hold about you, including any data you have provided to us. You can also request that we erase any personal data we hold about you. This does not include any data we are obliged to keep for administrative, legal, or security purposes.\r\n\r\n\r\n\r\nWhere your data is sent\r\n\r\n\r\n\r\nVisitor comments may be checked through an automated spam detection service.",
+   "blocks": null,
+   "links": [],
+   "source_url": "https://www.chiswickcheesemarket.uk/privacy-policy/"
+  }
+ ]
+}

@@ -1,0 +1,18 @@
+
+.tabs a{color:var(--text-secondary);text-decoration:none;padding:4px 10px;border-radius:999px}
+.tabs a[aria-current]{background:var(--text-primary);color:var(--bg)}
+.find li{margin:0 0 10px;color:var(--text-secondary)}.find b{color:var(--text-primary)}
+tr.no td{color:var(--muted)}
+button,.btnlink{font:600 14px 'Inter',sans-serif;background:var(--text-primary);color:var(--bg);border:0;border-radius:8px;padding:10px 16px;cursor:pointer;text-decoration:none;display:inline-block}
+.browser{display:grid;grid-template-columns:280px minmax(0,1fr);gap:16px;margin-top:14px}
+.items{max-height:640px;overflow:auto;border:1px solid var(--line);border-radius:10px;display:flex;flex-direction:column}
+.items button{background:none;color:var(--text-primary);text-align:left;border-radius:0;border-bottom:1px solid var(--line);font-weight:400;padding:8px 10px}
+.items button[aria-pressed]{background:var(--bg);box-shadow:inset 3px 0 0 var(--series-1)}
+.items code{color:var(--muted);font-size:12px}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+.two>div,.panes,.browser>*{min-width:0}
+.card td:first-child{color:var(--text-primary)}
+.two h3{font-size:13px;color:var(--text-secondary);margin:0 0 6px;font-weight:600}
+.two pre{max-height:600px}
+pre.wrap{white-space:pre-wrap;word-break:break-word}
+@media (max-width:860px){.browser,.two{grid-template-columns:1fr}.items{max-height:260px}}

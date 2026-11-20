@@ -1,0 +1,182 @@
+{
+ "about": "Site name, tagline, menus and social links. Menus are read from the public homepage, as the menus API needs a login.",
+ "snapshot": {
+  "snapshot_started": "2026-11-20T21:02:58Z",
+  "snapshot_finished": "2026-11-20T21:03:59Z",
+  "source": "https://www.chiswickcheesemarket.uk",
+  "api": "https://www.chiswickcheesemarket.uk/wp-json/",
+  "tool": "tools/fetch-wp.py (tools/wordpress)"
+ },
+ "fields": {
+  "navigation": "main menu; items with children are dropdowns",
+  "topbar": "the small bar above the header",
+  "footer_1, footer_2, bottom_bar": "footer menus",
+  "social": "official social profiles linked from the site",
+  "logo_file": "local copy of the logo under site/"
+ },
+ "count": null,
+ "items": {
+  "name": "Chiswick Cheese Market",
+  "tagline": "The UK's only market dedicated to cheese",
+  "url": "https://www.chiswickcheesemarket.uk",
+  "timezone": "Europe/London",
+  "icon": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/03/ccm-favicon.png",
+  "navigation": [
+   {
+    "label": "Visit us",
+    "url": null,
+    "children": [
+     {
+      "label": "Visit us",
+      "url": "https://www.chiswickcheesemarket.uk/visit-us/"
+     },
+     {
+      "label": "Chiswick – A Grand Day Out",
+      "url": "https://www.chiswickcheesemarket.uk/chiswick-a-grand-day-out/"
+     }
+    ]
+   },
+   {
+    "label": "Newsletter",
+    "url": "https://www.chiswickcheesemarket.uk/newsletter/"
+   },
+   {
+    "label": "Stallholders",
+    "url": null,
+    "children": [
+     {
+      "label": "Meet the stallholders",
+      "url": "https://www.chiswickcheesemarket.uk/meet-the-stallholders/"
+     },
+     {
+      "label": "Become a stallholder",
+      "url": "https://www.chiswickcheesemarket.uk/apply-for-a-stall/"
+     }
+    ]
+   },
+   {
+    "label": "About",
+    "url": null,
+    "children": [
+     {
+      "label": "Our story / Team",
+      "url": "https://www.chiswickcheesemarket.uk/our-story-team/"
+     },
+     {
+      "label": "Cheesewick HQ / Buttercup",
+      "url": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/"
+     },
+     {
+      "label": "Calendar",
+      "url": "https://www.chiswickcheesemarket.uk/calendar/"
+     },
+     {
+      "label": "Cheesemakers Grant",
+      "url": "https://www.chiswickcheesemarket.uk/cheesemakers-grant/"
+     },
+     {
+      "label": "Awards & affiliations",
+      "url": "https://www.chiswickcheesemarket.uk/awards-affiliations/"
+     }
+    ]
+   },
+   {
+    "label": "Charity",
+    "url": null,
+    "children": [
+     {
+      "label": "How we give back",
+      "url": "https://www.chiswickcheesemarket.uk/how-we-give-back/"
+     },
+     {
+      "label": "Volunteer with us",
+      "url": "https://www.chiswickcheesemarket.uk/volunteer-with-us/"
+     }
+    ]
+   },
+   {
+    "label": "Journal",
+    "url": null,
+    "children": [
+     {
+      "label": "Journal",
+      "url": "https://www.chiswickcheesemarket.uk/journal/"
+     },
+     {
+      "label": "Recipes",
+      "url": "https://www.chiswickcheesemarket.uk/recipes/"
+     }
+    ]
+   }
+  ],
+  "topbar": [
+   {
+    "label": "Sign up for newsletter",
+    "url": null
+   },
+   {
+    "label": "Find us",
+    "url": "https://www.chiswickcheesemarket.uk/visit-us/"
+   },
+   {
+    "label": "Market every third Sunday of the month",
+    "url": "https://www.chiswickcheesemarket.uk/#market-days"
+   }
+  ],
+  "footer_1": [
+   {
+    "label": "Visit us",
+    "url": "https://www.chiswickcheesemarket.uk/visit-us/"
+   },
+   {
+    "label": "Stallholders",
+    "url": "https://www.chiswickcheesemarket.uk/meet-the-stallholders/"
+   }
+  ],
+  "footer_2": [
+   {
+    "label": "About",
+    "url": "https://www.chiswickcheesemarket.uk/our-story-team/"
+   },
+   {
+    "label": "Charity",
+    "url": "https://www.chiswickcheesemarket.uk/how-we-give-back/"
+   },
+   {
+    "label": "Journal",
+    "url": "https://www.chiswickcheesemarket.uk/journal/"
+   }
+  ],
+  "bottom_bar": [
+   {
+    "label": "Contact us",
+    "url": "https://www.chiswickcheesemarket.uk/contact-us/"
+   },
+   {
+    "label": "Trader Login",
+    "url": "https://www.chiswickcheesemarket.uk/log-in/"
+   },
+   {
+    "label": "Privacy Policy",
+    "url": "https://www.chiswickcheesemarket.uk/privacy-policy/"
+   }
+  ],
+  "social": [
+   "https://www.facebook.com/chiswickcheesemarket",
+   "https://www.instagram.com/chiswickcheesemarket/",
+   "https://www.threads.net/@chiswickcheesemarket",
+   "https://www.tiktok.com/@chiswickcheesemarket",
+   "https://x.com/chiswickm"
+  ],
+  "logo_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/CCM-Logo-Yellow-White.svg",
+  "copyright": "© 2026. All Rights Reserved. Chiswick Cheese Market CIC",
+  "home_header": {
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Video-Chiswick-Cheese-Market.jpg",
+   "video_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/03/ccmonlinevideo-1.mp4",
+   "image_file": "media/header-Video-Chiswick-Cheese-Market.jpg",
+   "video_file": "media/header-ccmonlinevideo-1.mp4"
+  },
+  "source": "https://www.chiswickcheesemarket.uk/",
+  "logo_file": "media/CCM-Logo-Yellow-White.svg"
+ }
+}

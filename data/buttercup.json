@@ -1,0 +1,325 @@
+{
+ "about": "Buttercup, the market's cow, as she appears in the market's own media library and journal. Found with read-only GET requests; only images whose file name, caption or page say Buttercup are listed.",
+ "found": "2026-11-20",
+ "images": [
+  {
+   "date": "2023-12-12",
+   "title": "Cheese-Market-Cow-and-Team (caption: Buttercup the Cheesewick cow)",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2023/12/Cheese-Market-Cow-and-Team.jpg",
+   "media_id": 1161,
+   "source": "https://www.chiswickcheesemarket.uk/2023/12/12/whats-new-this-month-christmas-edition/"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-1-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-1-Chiswick-Cheese-Market.jpg",
+   "media_id": 1431,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-2-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-2-Chiswick-Cheese-Market.jpg",
+   "media_id": 1432,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-3-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-3-Chiswick-Cheese-Market.jpg",
+   "media_id": 1433,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-4-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-4-Chiswick-Cheese-Market.jpg",
+   "media_id": 1434,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-5-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-5-Chiswick-Cheese-Market.jpg",
+   "media_id": 1435,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-6-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-6-Chiswick-Cheese-Market.jpg",
+   "media_id": 1436,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML) and homepage 'Mascot Buttercup' tile"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-7-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-7-Chiswick-Cheese-Market.jpg",
+   "media_id": 1437,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-8-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-8-Chiswick-Cheese-Market.jpg",
+   "media_id": 1438,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12 (upload folder; media hidden from REST)",
+   "title": "Buttercup-9-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-9-Chiswick-Cheese-Market.jpg",
+   "media_id": 1489,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/ (rendered HTML)"
+  },
+  {
+   "date": "2024-12-19",
+   "title": "Buttercup-Flowers-Chiswick-CHeese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-Flowers-Chiswick-CHeese-Market.jpg",
+   "media_id": 1447,
+   "source": "https://www.chiswickcheesemarket.uk/cheesewick-hq-buttercup/"
+  },
+  {
+   "date": "2024-12-20",
+   "title": "Buttercup-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/Buttercup-Chiswick-Cheese-Market.jpg",
+   "media_id": 1504,
+   "source": "media library"
+  },
+  {
+   "date": "2025-01-03",
+   "title": "Buttercup-join-Chiswick-Cheese-Market",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Buttercup-join-Chiswick-Cheese-Market.jpg",
+   "media_id": 1661,
+   "source": "media library; used on homepage"
+  },
+  {
+   "date": "2025-01-09",
+   "title": "Jan25-Buttercup",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan25-Buttercup.jpg",
+   "media_id": 2058,
+   "source": "media library"
+  },
+  {
+   "date": "2025-01-10",
+   "title": "Jan-Buttercup",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-Buttercup.jpg",
+   "media_id": 2069,
+   "source": "media library"
+  },
+  {
+   "date": "2025-04-16",
+   "title": "buttercup-find-friends",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/buttercup-find-friends.jpg",
+   "media_id": 2484,
+   "source": "media library (Easter 2025 hunt)"
+  },
+  {
+   "date": "2026-09-28",
+   "title": "markup_20184 (caption: Buttercup and Duncan Grant)",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/09/markup_20184.jpg",
+   "media_id": 3113,
+   "source": "https://www.chiswickcheesemarket.uk/2026/09/28/fine-cheesemakers-of-scotland-shine-at-the-september-market/"
+  },
+  {
+   "date": "2026-11-17",
+   "title": "IMG-20261116-WA0012 (caption: Surprising Spanish cheese themed Buttercup)",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/IMG-20261116-WA0012.jpg",
+   "media_id": 3221,
+   "source": "https://www.chiswickcheesemarket.uk/2026/11/17/market-highlights-november/"
+  },
+  {
+   "date": "2026-11-16",
+   "title": "2026-Dec-market.gif (animated; Buttercup in Christmas tinsel)",
+   "image_url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market.gif",
+   "media_id": 3209,
+   "source": "https://www.chiswickcheesemarket.uk/"
+  }
+ ],
+ "outfits": [
+  {
+   "date": "2023-12-12",
+   "post_url": "https://www.chiswickcheesemarket.uk/2023/12/12/whats-new-this-month-christmas-edition/",
+   "quote": "Buttercup will be attending each and every market so please come and say hello to her – she’s perfect for a festive selfie as she will be looking very Christmassy on the 17th #cheesewick."
+  },
+  {
+   "date": "2024-01-16",
+   "post_url": "https://www.chiswickcheesemarket.uk/2024/01/16/whats-new-this-month-the-alpine-edition/",
+   "quote": "Buttercup, our cow, will be giving it her Alpine best with a great photo-op Alpine back drop"
+  },
+  {
+   "date": "2024-03-12",
+   "post_url": "https://www.chiswickcheesemarket.uk/2024/03/12/whats-new-this-month-st-patricks-day/",
+   "quote": "Buttercup will be suitably dressed so come along for a selfie and don’t forget to share #cheesewick"
+  },
+  {
+   "date": "2024-08-13",
+   "post_url": "https://www.chiswickcheesemarket.uk/2024/08/13/whats-new-this-month-greek-odyssey-edition/",
+   "quote": "Buttercup is trying out her best Greek Goddess look, so pop by for a selfie with Chiswick’s favourite cow who will be joined this month by a new addition!"
+  },
+  {
+   "date": "2025-04-16",
+   "post_url": "https://www.chiswickcheesemarket.uk/2025/04/16/easter-sunday-at-cheesewick-20th-april-9-30am-3pm/",
+   "quote": "Kids can join in the fun too – help Buttercup the cow find her five hidden friends across the market and win an Easter egg!"
+  },
+  {
+   "date": "2026-09-28",
+   "post_url": "https://www.chiswickcheesemarket.uk/2026/09/28/fine-cheesemakers-of-scotland-shine-at-the-september-market/",
+   "quote": "He serenaded a tartaned Buttercup and marched the length and breadth of the market, certainly a man at the height of his ‘skirl’ power."
+  },
+  {
+   "date": "2026-11-17",
+   "post_url": "https://www.chiswickcheesemarket.uk/2026/11/17/market-highlights-november/",
+   "quote": "As ever, our property master Lucy Lee-Tirrell, dressed Buttercup to beautifully reflect the surprising Spanish cheeses from Brindisa that we tasted on Cheesewick HQ."
+  }
+ ],
+ "animated_banners": [
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/11/2026-Dec-market.gif",
+   "bytes": 549609,
+   "verified_shows_buttercup": true,
+   "note": "Current homepage hero (media 3209): Buttercup in Christmas tinsel/bauble horns; cheeses slide in beside her frame by frame (2s hold then 0.2s frames), looping. VERIFIED by frame extraction."
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/08/September-2026-market.gif",
+   "bytes": 7129381,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-08-23 (media 3079); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/07/August-Summer-market.gif",
+   "bytes": 6153040,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-07-31 (media 3062); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/06/July-2026-market.gif",
+   "bytes": 19746344,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-06-23 (media 3036); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/05/June-Affineur-market-2026.gif",
+   "bytes": 15023539,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-05-17 (media 3027); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/04/May-26-market.gif",
+   "bytes": 14764705,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-04-19 (media 2987); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/03/Apr-26-market.gif",
+   "bytes": 14006996,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-03-16 (media 2966); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/02/chiswick-cheese-market-february-2026.gif",
+   "bytes": 836282,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-02-02 (media 2884); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2026/01/New-Cheese-market-January-2026.gif",
+   "bytes": 1031865,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2026-01-05 (media 2816); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/11/chiswick-cheese-market-november-2025.gif",
+   "bytes": 1916578,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-11-18 (media 2802); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/10/CCM-Nov-2025.gif",
+   "bytes": 2153119,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-10-22 (media 2790); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/09/cheese-market-oct-25.gif",
+   "bytes": 2649654,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-09-29 (media 2787); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/08/ccm-september-2025.gif",
+   "bytes": 4706270,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-08-18 (media 2754); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/07/august-cornish-market-2025.gif",
+   "bytes": 2132846,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-07-23 (media 2741); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/July-feta-cheese-market.gif",
+   "bytes": 1253766,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-06-18 (media 2717); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/06/ccm-june-2025-affineur-market.gif",
+   "bytes": 3361265,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-06-05 (media 2612); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/05/May-25-market.gif",
+   "bytes": 13240886,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-05-12 (media 2555); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/04/web-apr-25-market.gif",
+   "bytes": 1510307,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-04-16 (media 2482); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2025/01/Jan-25-market.gif",
+   "bytes": 2734534,
+   "verified_shows_buttercup": false,
+   "note": "Monthly market announcement GIF uploaded 2025-01-15 (media 2123); same series as the Dec 2026 one, NOT opened, so whether it shows Buttercup is unverified"
+  }
+ ],
+ "wayback": {
+  "note": "The Internet Archive could not be reached from our build environment (connection reset at the network proxy), so earlier versions were not inspected. Its availability API gave these homepage snapshots, the earliest in May 2021; the current design dates from December 2024.",
+  "snapshots": [
+   {
+    "timestamp": "20210509201749",
+    "url": "https://web.archive.org/web/20210509201749/https://www.chiswickcheesemarket.uk/"
+   },
+   {
+    "timestamp": "20211226222013",
+    "url": "https://web.archive.org/web/20211226222013/https://www.chiswickcheesemarket.uk/"
+   },
+   {
+    "timestamp": "20220618060924",
+    "url": "https://web.archive.org/web/20220618060924/https://www.chiswickcheesemarket.uk/"
+   },
+   {
+    "timestamp": "20230525102449",
+    "url": "https://web.archive.org/web/20230525102449/https://www.chiswickcheesemarket.uk/"
+   },
+   {
+    "timestamp": "20240602110924",
+    "url": "https://web.archive.org/web/20240602110924/https://www.chiswickcheesemarket.uk/"
+   },
+   {
+    "timestamp": "20250520104918",
+    "url": "https://web.archive.org/web/20250520104918/https://www.chiswickcheesemarket.uk/"
+   },
+   {
+    "timestamp": "20261010213107",
+    "url": "https://web.archive.org/web/20261010213107/https://www.chiswickcheesemarket.uk/"
+   }
+  ]
+ }
+}

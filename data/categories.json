@@ -1,0 +1,801 @@
+{
+ "about": "Exhibitor categories (portfolio_category), journal categories and the tags in use.",
+ "snapshot": {
+  "snapshot_started": "2026-11-20T21:02:58Z",
+  "snapshot_finished": "2026-11-20T21:03:59Z",
+  "source": "https://www.chiswickcheesemarket.uk",
+  "api": "https://www.chiswickcheesemarket.uk/wp-json/",
+  "tool": "tools/fetch-wp.py (tools/wordpress)"
+ },
+ "fields": {
+  "count": "number of items in WordPress"
+ },
+ "count": null,
+ "items": {
+  "exhibitor_categories": [
+   {
+    "id": 6,
+    "count": 22,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/stallholders_cat/cheese-producers-and-mongers/",
+    "name": "Cheese producers and mongers",
+    "slug": "cheese-producers-and-mongers",
+    "parent": 0
+   },
+   {
+    "id": 5,
+    "count": 18,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/stallholders_cat/cheese-accompaniments/",
+    "name": "Cheese accompaniments",
+    "slug": "cheese-accompaniments",
+    "parent": 0
+   },
+   {
+    "id": 61,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/stallholders_cat/cheese-accessories/",
+    "name": "Cheese Accessories",
+    "slug": "cheese-accessories",
+    "parent": 0
+   },
+   {
+    "id": 4,
+    "count": 3,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/stallholders_cat/made-with-cheese/",
+    "name": "Made with cheese",
+    "slug": "made-with-cheese",
+    "parent": 0
+   },
+   {
+    "id": 91,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/stallholders_cat/hot-food/",
+    "name": "Hot Food",
+    "slug": "hot-food",
+    "parent": 0
+   },
+   {
+    "id": 60,
+    "count": 0,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/stallholders_cat/beverages/",
+    "name": "Beverages",
+    "slug": "beverages",
+    "parent": 0
+   }
+  ],
+  "post_categories": [
+   {
+    "id": 1,
+    "count": 0,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/uncategorised/",
+    "name": "Uncategorised",
+    "slug": "uncategorised",
+    "parent": 0
+   },
+   {
+    "id": 7,
+    "count": 54,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/news/",
+    "name": "News",
+    "slug": "news",
+    "parent": 0
+   },
+   {
+    "id": 18,
+    "count": 7,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/charity/",
+    "name": "Charity",
+    "slug": "charity",
+    "parent": 0
+   },
+   {
+    "id": 19,
+    "count": 21,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/cheeses/",
+    "name": "Cheeses",
+    "slug": "cheeses",
+    "parent": 0
+   },
+   {
+    "id": 20,
+    "count": 12,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/awards/",
+    "name": "Awards",
+    "slug": "awards",
+    "parent": 0
+   },
+   {
+    "id": 21,
+    "count": 39,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/recipes/",
+    "name": "Recipes",
+    "slug": "recipes",
+    "parent": 0
+   },
+   {
+    "id": 22,
+    "count": 15,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/spotlight/",
+    "name": "Spotlight",
+    "slug": "spotlight",
+    "parent": 0
+   },
+   {
+    "id": 25,
+    "count": 10,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/recipe-of-the-month/",
+    "name": "Recipe of the month",
+    "slug": "recipe-of-the-month",
+    "parent": 0
+   },
+   {
+    "id": 29,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/spotlight/trader-of-the-month/",
+    "name": "Trader of the Month",
+    "slug": "trader-of-the-month",
+    "parent": 22
+   },
+   {
+    "id": 98,
+    "count": 11,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/lucys-cheese-of-the-month/",
+    "name": "Lucy's Cheese of the Month",
+    "slug": "lucys-cheese-of-the-month",
+    "parent": 0
+   },
+   {
+    "id": 101,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/spotlight/grantees/",
+    "name": "Grantees",
+    "slug": "grantees",
+    "parent": 22
+   },
+   {
+    "id": 102,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/tasting-notes/",
+    "name": "Tasting Notes",
+    "slug": "tasting-notes",
+    "parent": 0
+   },
+   {
+    "id": 103,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/category/market-highlights/",
+    "name": "Market Highlights",
+    "slug": "market-highlights",
+    "parent": 0
+   }
+  ],
+  "tags": [
+   {
+    "id": 8,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/ravensworth/",
+    "name": "Ravensworth",
+    "slug": "ravensworth"
+   },
+   {
+    "id": 9,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/college-white/",
+    "name": "College White",
+    "slug": "college-white"
+   },
+   {
+    "id": 10,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/basque-cheesecake/",
+    "name": "Basque Cheesecake",
+    "slug": "basque-cheesecake"
+   },
+   {
+    "id": 11,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/torta-del-casar/",
+    "name": "Torta del Casar",
+    "slug": "torta-del-casar"
+   },
+   {
+    "id": 12,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/shorrocks-lancashire-bomber/",
+    "name": "Shorrock’s Lancashire bomber",
+    "slug": "shorrocks-lancashire-bomber"
+   },
+   {
+    "id": 13,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/mango-lime-apricot-halopeno-cheese/",
+    "name": "Mango Lime &amp; Apricot Halopeño cheese",
+    "slug": "mango-lime-apricot-halopeno-cheese"
+   },
+   {
+    "id": 14,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/testun-al-castagno/",
+    "name": "Testun Al Castagno",
+    "slug": "testun-al-castagno"
+   },
+   {
+    "id": 15,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/stracciatella/",
+    "name": "Stracciatella",
+    "slug": "stracciatella"
+   },
+   {
+    "id": 16,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/burrata/",
+    "name": "Burrata",
+    "slug": "burrata"
+   },
+   {
+    "id": 17,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/baron-bigod/",
+    "name": "Baron Bigod",
+    "slug": "baron-bigod"
+   },
+   {
+    "id": 23,
+    "count": 3,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/golden-cross/",
+    "name": "Golden Cross",
+    "slug": "golden-cross"
+   },
+   {
+    "id": 24,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/soft-joyce/",
+    "name": "Soft Joyce",
+    "slug": "soft-joyce"
+   },
+   {
+    "id": 26,
+    "count": 3,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/ricotta/",
+    "name": "Ricotta",
+    "slug": "ricotta"
+   },
+   {
+    "id": 27,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/parmesan/",
+    "name": "Parmesan",
+    "slug": "parmesan"
+   },
+   {
+    "id": 28,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/sheep-goats-curd-cheese/",
+    "name": "sheep/goats curd cheese",
+    "slug": "sheep-goats-curd-cheese"
+   },
+   {
+    "id": 30,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/pevensey/",
+    "name": "Pevensey",
+    "slug": "pevensey"
+   },
+   {
+    "id": 31,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/oxford-blues/",
+    "name": "Oxford Blues",
+    "slug": "oxford-blues"
+   },
+   {
+    "id": 32,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/stichelton/",
+    "name": "Stichelton",
+    "slug": "stichelton"
+   },
+   {
+    "id": 33,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/stilton/",
+    "name": "Stilton",
+    "slug": "stilton"
+   },
+   {
+    "id": 34,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/raclette/",
+    "name": "raclette",
+    "slug": "raclette"
+   },
+   {
+    "id": 35,
+    "count": 3,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/reblochon/",
+    "name": "Reblochon",
+    "slug": "reblochon"
+   },
+   {
+    "id": 36,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/vacherin-fribourgeois/",
+    "name": "Vacherin Fribourgeois",
+    "slug": "vacherin-fribourgeois"
+   },
+   {
+    "id": 37,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/blue-cheese/",
+    "name": "blue cheese",
+    "slug": "blue-cheese"
+   },
+   {
+    "id": 38,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/emmenthal/",
+    "name": "Emmenthal",
+    "slug": "emmenthal"
+   },
+   {
+    "id": 39,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/jarlsberg/",
+    "name": "Jarlsberg",
+    "slug": "jarlsberg"
+   },
+   {
+    "id": 40,
+    "count": 3,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/gruyere/",
+    "name": "Gruyère",
+    "slug": "gruyere"
+   },
+   {
+    "id": 41,
+    "count": 3,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/comte/",
+    "name": "Comté",
+    "slug": "comte"
+   },
+   {
+    "id": 42,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/ogleshield/",
+    "name": "Ogleshield",
+    "slug": "ogleshield"
+   },
+   {
+    "id": 43,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/kefir/",
+    "name": "kefir",
+    "slug": "kefir"
+   },
+   {
+    "id": 44,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/benville-triple/",
+    "name": "Benville Triple",
+    "slug": "benville-triple"
+   },
+   {
+    "id": 47,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/wigmore/",
+    "name": "Wigmore",
+    "slug": "wigmore"
+   },
+   {
+    "id": 48,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/lanark-blue/",
+    "name": "Lanark Blue",
+    "slug": "lanark-blue"
+   },
+   {
+    "id": 49,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/sinodun-hill/",
+    "name": "Sinodun Hill",
+    "slug": "sinodun-hill"
+   },
+   {
+    "id": 50,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/tunworth/",
+    "name": "Tunworth",
+    "slug": "tunworth"
+   },
+   {
+    "id": 51,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/quickes-cheddar/",
+    "name": "Quicke’s Cheddar",
+    "slug": "quickes-cheddar"
+   },
+   {
+    "id": 52,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/trethowans-gorwydd-caerphilly/",
+    "name": "Trethowan’s Gorwydd Caerphilly",
+    "slug": "trethowans-gorwydd-caerphilly"
+   },
+   {
+    "id": 53,
+    "count": 3,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/pitchfork-cheddar/",
+    "name": "Pitchfork Cheddar",
+    "slug": "pitchfork-cheddar"
+   },
+   {
+    "id": 54,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/witherage/",
+    "name": "Witherage",
+    "slug": "witherage"
+   },
+   {
+    "id": 55,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/red-leicester/",
+    "name": "Red Leicester",
+    "slug": "red-leicester"
+   },
+   {
+    "id": 56,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/cheddar/",
+    "name": "cheddar",
+    "slug": "cheddar"
+   },
+   {
+    "id": 57,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/mozzarella/",
+    "name": "mozzarella",
+    "slug": "mozzarella"
+   },
+   {
+    "id": 58,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/brie-de-melun/",
+    "name": "Brie de Melun",
+    "slug": "brie-de-melun"
+   },
+   {
+    "id": 59,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/brie-de-meaux/",
+    "name": "Brie de Meaux",
+    "slug": "brie-de-meaux"
+   },
+   {
+    "id": 64,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/roquefort/",
+    "name": "Roquefort",
+    "slug": "roquefort"
+   },
+   {
+    "id": 65,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/beaufort/",
+    "name": "Beaufort",
+    "slug": "beaufort"
+   },
+   {
+    "id": 66,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/tomme/",
+    "name": "Tomme",
+    "slug": "tomme"
+   },
+   {
+    "id": 67,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/feta/",
+    "name": "Feta",
+    "slug": "feta"
+   },
+   {
+    "id": 68,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/testun-castagno/",
+    "name": "Testun Castagno",
+    "slug": "testun-castagno"
+   },
+   {
+    "id": 69,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/snowdrop/",
+    "name": "Snowdrop",
+    "slug": "snowdrop"
+   },
+   {
+    "id": 70,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/trabzons-kolot/",
+    "name": "Trabzon’s kolot",
+    "slug": "trabzons-kolot"
+   },
+   {
+    "id": 71,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/brie/",
+    "name": "Brie",
+    "slug": "brie"
+   },
+   {
+    "id": 72,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/camembert/",
+    "name": "Camembert",
+    "slug": "camembert"
+   },
+   {
+    "id": 73,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/vacherin/",
+    "name": "Vacherin",
+    "slug": "vacherin"
+   },
+   {
+    "id": 74,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/manchego/",
+    "name": "Manchego",
+    "slug": "manchego"
+   },
+   {
+    "id": 75,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/wissington/",
+    "name": "Wissington",
+    "slug": "wissington"
+   },
+   {
+    "id": 76,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/norfolk-white-lady/",
+    "name": "Norfolk White Lady",
+    "slug": "norfolk-white-lady"
+   },
+   {
+    "id": 77,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/binham-blue/",
+    "name": "Binham Blue",
+    "slug": "binham-blue"
+   },
+   {
+    "id": 78,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/wells-alpine/",
+    "name": "Wells Alpine",
+    "slug": "wells-alpine"
+   },
+   {
+    "id": 79,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/gurneys-gold/",
+    "name": "Gurney’s Gold",
+    "slug": "gurneys-gold"
+   },
+   {
+    "id": 80,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/norfolk-mardler/",
+    "name": "Norfolk Mardler",
+    "slug": "norfolk-mardler"
+   },
+   {
+    "id": 81,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/norfolk-pink-foot/",
+    "name": "Norfolk Pink Foot",
+    "slug": "norfolk-pink-foot"
+   },
+   {
+    "id": 82,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/high-road/",
+    "name": "High Road",
+    "slug": "high-road"
+   },
+   {
+    "id": 83,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/vacherin-mont-dor/",
+    "name": "Vacherin Mont d’Or",
+    "slug": "vacherin-mont-dor"
+   },
+   {
+    "id": 84,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/pendragon/",
+    "name": "Pendragon",
+    "slug": "pendragon"
+   },
+   {
+    "id": 85,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/gloucester/",
+    "name": "Gloucester",
+    "slug": "gloucester"
+   },
+   {
+    "id": 86,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/wensleydale/",
+    "name": "Wensleydale",
+    "slug": "wensleydale"
+   },
+   {
+    "id": 87,
+    "count": 2,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/caerphilly/",
+    "name": "Caerphilly",
+    "slug": "caerphilly"
+   },
+   {
+    "id": 88,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/dunlop/",
+    "name": "Dunlop",
+    "slug": "dunlop"
+   },
+   {
+    "id": 89,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/lancashire/",
+    "name": "Lancashire",
+    "slug": "lancashire"
+   },
+   {
+    "id": 90,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/rachel/",
+    "name": "Rachel",
+    "slug": "rachel"
+   },
+   {
+    "id": 92,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/chabis/",
+    "name": "Chabis",
+    "slug": "chabis"
+   },
+   {
+    "id": 93,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/lincolnshire-poacher/",
+    "name": "Lincolnshire Poacher",
+    "slug": "lincolnshire-poacher"
+   },
+   {
+    "id": 94,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/poachfork/",
+    "name": "Poachfork",
+    "slug": "poachfork"
+   },
+   {
+    "id": 95,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/blue/",
+    "name": "Blue",
+    "slug": "blue"
+   },
+   {
+    "id": 96,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/washed-rind/",
+    "name": "Washed Rind",
+    "slug": "washed-rind"
+   },
+   {
+    "id": 97,
+    "count": 1,
+    "description": "",
+    "link": "https://www.chiswickcheesemarket.uk/tag/blue-shropshire/",
+    "name": "Blue Shropshire",
+    "slug": "blue-shropshire"
+   }
+  ]
+ }
+}

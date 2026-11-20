@@ -1,0 +1,42 @@
+{
+ "about": "Chiswick Cheese Market content snapshot, read-only from the public WordPress REST API.",
+ "snapshot": {
+  "snapshot_started": "2026-11-20T21:02:58Z",
+  "snapshot_finished": "2026-11-20T21:03:59Z",
+  "source": "https://www.chiswickcheesemarket.uk",
+  "api": "https://www.chiswickcheesemarket.uk/wp-json/",
+  "tool": "tools/fetch-wp.py (tools/wordpress)"
+ },
+ "files": [
+  {
+   "file": "data/site.json",
+   "about": "Site name, tagline, menus and social links. Menus are read from the public homepage, as the menus API needs a login.",
+   "count": null
+  },
+  {
+   "file": "data/exhibitors.json",
+   "about": "Stallholders (WordPress post type 'portfolio', shown on the site as Stallholders).",
+   "count": 40
+  },
+  {
+   "file": "data/posts.json",
+   "about": "Journal posts (news, market highlights, tasting notes, recipes ...).",
+   "count": 103
+  },
+  {
+   "file": "data/pages.json",
+   "about": "Public pages. The site's page builder (WPBakery / Uncode) shortcodes are converted to plain blocks.",
+   "count": 18
+  },
+  {
+   "file": "data/categories.json",
+   "about": "Exhibitor categories (portfolio_category), journal categories and the tags in use.",
+   "count": null
+  },
+  {
+   "file": "data/media.json",
+   "about": "Every image the snapshot uses. All images belong to Chiswick Cheese Market and are used here only to show their own content back to them.",
+   "count": 380
+  }
+ ]
+}

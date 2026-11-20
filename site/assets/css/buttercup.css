@@ -1,0 +1,15 @@
+.cow{max-width:1100px}
+.cow h1{font-size:clamp(34px,6vw,60px);margin:6px 0 10px}
+.cow h2{margin-top:40px}
+.lede{color:var(--soft);max-width:70ch}
+.k{text-transform:uppercase;letter-spacing:.14em;font-size:12px;font-weight:700;color:#8a5a00}
+@media (prefers-color-scheme:dark){.k{color:var(--brand)}}
+.anim{margin:24px 0;max-width:640px}.anim img{width:100%;border-radius:18px}.anim figcaption{color:var(--soft);font-size:14px;margin-top:6px}
+.cowgrid{display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.cowgrid figure{margin:0;background:var(--card);border-radius:16px;overflow:hidden}
+.cowgrid img{width:100%;aspect-ratio:1;object-fit:cover;display:block}
+.cowgrid figcaption{padding:8px 12px 12px;font-size:14px}.cowgrid small{display:block;color:var(--soft)}
+.outfits{list-style:none;padding:0;display:grid;gap:14px}
+.outfits li{background:var(--card);border-radius:16px;padding:14px 18px}
+.outfits time{font-weight:700}.outfits blockquote{margin:6px 0;font-style:italic}
+.gifs{columns:2 300px;font-size:14px}.gifs small{color:var(--soft)}

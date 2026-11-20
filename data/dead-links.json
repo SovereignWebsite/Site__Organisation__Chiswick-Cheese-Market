@@ -1,0 +1,83 @@
+{
+ "about": "Links in the market's own content that no longer work. The designs show them as plain text, marked.",
+ "checked": "2026-11-20T21:39Z",
+ "links_checked": 110,
+ "how": "One HEAD (or GET) per link, one at a time with a pause; 404 or 410 twice counts as dead.",
+ "items": [
+  {
+   "url": "https://collinsofchiswick.business.site/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/chiswick-a-grand-day-out/"
+  },
+  {
+   "url": "https://kanpai.london/shop/best-of-the-british-isles-cheese-and-sake",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2025/02/17/evening-pairing-4-british-sakes-with-4-artisan-cheeses/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/berkshire-trout/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/08/13/whats-new-this-month-greek-odyssey-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/hollis-mead-dairy/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/01/16/whats-new-this-month-the-alpine-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/maltby-greek/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/08/13/whats-new-this-month-greek-odyssey-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/sexy-pickles/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/11/12/whats-new-this-month-french-alp-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/somerset-cheese-company/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/07/12/whats-new-this-month-flower-power-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/the-ealing-relish-company/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2023/12/12/whats-new-this-month-christmas-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/the-italians/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/07/12/whats-new-this-month-flower-power-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/the-tomato-stall/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/08/13/whats-new-this-month-greek-odyssey-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/vinagogo-wines/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/12/09/whats-new-this-month-festive-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/portfolio/wyneot/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/01/16/whats-new-this-month-the-alpine-edition/"
+  },
+  {
+   "url": "https://www.chiswickcheesemarket.uk/stallholders/gastronomica-market/",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2025/05/15/its-national-goats-milk-week-12th-to-18th-may/"
+  },
+  {
+   "url": "https://www.eventbrite.com/e/heritage-cheese-tasting-tickets-912294666907",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/2024/07/12/live-tasting/"
+  },
+  {
+   "url": "https://www.therealcheeseproject.co.uk/peoples-cheese",
+   "status": 404,
+   "found_on": "https://www.chiswickcheesemarket.uk/calendar/"
+  }
+ ]
+}

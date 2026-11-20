@@ -29,7 +29,9 @@ add('Internal links and assets', internal);
 
 // 2. External links: 404 or 410 fails; a timeout or other error only warns.
 const extErr = [], extWarn = [];
-await Promise.all([...external].map(async ([u, at]) => {
+// At most 4 requests at a time: the designs load hundreds of images from the market's own site, and a check must not be a burst.
+const pool = async (list, n, fn) => { const q = [...list]; await Promise.all(Array.from({ length: n }, async () => { while (q.length) await fn(q.shift()); })); };
+await pool(external, 4, async ([u, at]) => {
   try {
     const ctl = new AbortController(); const t = setTimeout(() => ctl.abort(), 15000);
     let r = await fetch(u, { method: 'HEAD', redirect: 'follow', signal: ctl.signal }).catch(() => null);
@@ -38,7 +40,7 @@ await Promise.all([...external].map(async ([u, at]) => {
     if (r.status === 404 || r.status === 410) extErr.push(`${at}: ${u} answers ${r.status}`);
     else if (r.status >= 400) extWarn.push(`${at}: ${u} answers ${r.status}`);
   } catch (e) { extWarn.push(`${at}: ${u} did not answer (${e.name})`); }
-}));
+});
 add(`External links (${external.size})`, extErr, extWarn);
 
 // 3. No em dashes in visible text (the house style).
