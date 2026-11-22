@@ -141,7 +141,7 @@ h2{font-size:clamp(36px,5vw,64px);font-style:italic;text-align:center}
 .menu-foot{margin-top:24px}
 .shelf-name{overflow-wrap:anywhere}
 @media (max-width:560px){.dish{flex-direction:column;text-align:center}.dish .round{width:110px;height:110px;flex-basis:auto}}
-.mq-pause{display:none}
+.mq-pause,.mq-b{display:none}
 /* Pass 3: a fuller menu */
 .menu .txt,.dish em{color:var(--fg)}
 .menu-lines{list-style:none;margin:16px auto 0;padding:0;max-width:520px;text-align:left}
@@ -152,5 +152,5 @@ h2{font-size:clamp(36px,5vw,64px);font-style:italic;text-align:center}
 .dates .past{color:var(--fg);text-decoration:none;font-style:normal}
 .dates .past small{color:var(--soft);font:600 12px 'Inter',sans-serif;letter-spacing:.08em}
 /* the home page ticker (common.ticker) */
-.tk-wrap{--tk-bg:var(--bg2);--tk-fg:var(--gold);--tk-font:italic 400 clamp(20px,2.8vw,26px)/1.3 'Playfair Display',serif;--tk-case:none;--tk-border:1px solid var(--line);--tk-ic:none;--tk-speed:60s;--tk-py:10px}
+.tk-wrap{--tk-bg:var(--bg2);--tk-bg2:var(--bg2);--tk-gap2:4px;--tk-fg:var(--gold);--tk-font:italic 400 clamp(20px,2.8vw,26px)/1.3 'Playfair Display',serif;--tk-case:none;--tk-border:1px solid var(--line);--tk-ic:none;--tk-speed:60s;--tk-py:10px}
 .tk-wrap .ticker{margin:0}

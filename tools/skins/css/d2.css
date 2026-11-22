@@ -137,7 +137,7 @@ main{max-width:1240px;margin:0 auto;padding:0 24px}
 .cl b{font:600 15px 'Fraunces',serif}
 @media (max-width:860px){.front{grid-template-columns:1fr}.front .sunday{order:-1}}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
-.mq-pause{display:none}
+.mq-pause,.mq-b{display:none}
 /* the home page ticker (common.ticker) */
-.tk-wrap{--tk-bg:transparent;--tk-fg:var(--accent);--tk-font:italic 400 clamp(19px,2.6vw,24px)/1.3 'Fraunces',serif;--tk-case:none;--tk-border:3px double var(--rule);--tk-py:8px;--tk-ic:none;--tk-speed:55s;max-width:1180px;margin:18px auto 0;padding:0 clamp(16px,3vw,32px)}
+.tk-wrap{--tk-bg:transparent;--tk-bg2:transparent;--tk-gap2:6px;--tk-fg:var(--accent);--tk-font:italic 400 clamp(19px,2.6vw,24px)/1.3 'Fraunces',serif;--tk-case:none;--tk-border:3px double var(--rule);--tk-py:8px;--tk-ic:none;--tk-speed:55s;max-width:1180px;margin:18px auto 0;padding:0 clamp(16px,3vw,32px)}
 .tk-wrap .ticker{margin:0}

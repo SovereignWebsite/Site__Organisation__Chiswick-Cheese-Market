@@ -281,13 +281,17 @@ footer .sws-version{opacity:1}
 .tk-track span{display:inline-flex;align-items:center;gap:10px;padding-right:var(--tk-gap,28px)}
 .tk-ic{width:1.2em;height:1.2em;object-fit:contain;display:var(--tk-ic,inline-block)}
 @keyframes tk{from{transform:translateX(-50%)}to{transform:none}}
-.ticker:has(input:checked) .tk-track{animation-play-state:paused}
-.tk-pause{position:absolute;right:calc(2% + 10px);top:50%;transform:translateY(-50%);z-index:2;font:700 12px/1 system-ui,sans-serif;cursor:pointer;letter-spacing:normal;text-transform:none}
+.tk-wrap:has(.tk-pause input:checked) .tk-track{animation-play-state:paused}
+/* the second band: the same words, running the other way, parallel to the first (Dinis, 22 Nov 2026) */
+.tk-b{background:var(--tk-bg2,#e67b08);color:var(--tk-fg2,var(--tk-fg,#1d1a16));margin-top:var(--tk-gap2,8px)}
+.tk-b .tk-track{animation-direction:reverse}
+/* Pause sits just above the bands, at the right, so it never covers the words */
+.tk-pause{display:flex;justify-content:flex-end;position:relative;z-index:2;margin:0 calc(2% + 10px) 6px;font:700 12px/1 system-ui,sans-serif;cursor:pointer;letter-spacing:normal;text-transform:none}
 .tk-pause input{position:absolute;opacity:0;width:1px;height:1px}
 .tk-pause span{display:inline-block;background:#111;color:#fff;border-radius:999px;padding:6px 12px}
 .tk-pause input:checked+span::before{content:"Paused \\b7  "}
 .tk-pause input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
-@media (prefers-reduced-motion:reduce){.tk-track{animation:none;white-space:normal;padding:0 16px}.tk-track span:not(:first-child),.tk-pause{display:none}.ticker{white-space:normal;text-align:center;margin:0}}
+@media (prefers-reduced-motion:reduce){.tk-track{animation:none;white-space:normal;padding:0 16px}.tk-track span:not(:first-child),.tk-pause,.tk-b{display:none}.ticker{white-space:normal;text-align:center;margin:0}}
 """
 
 
@@ -326,8 +330,9 @@ def render_blocks(ctx, blocks, skin, depth=0):
                 icon = "".join(ctx.image(i, "mq-ic", True, "") for i in b.get("inline_images", [])[:1])
                 if txt:
                     unit = f"<span>{txt} {icon}</span>"
-                    out.append(f'<div class="marquee" role="marquee" aria-label="{txt}"><label class="mq-pause"><input type="checkbox"><span>Pause</span></label>'
-                               f'<div class="mq-track" aria-hidden="true">{unit * 8}</div></div>')
+                    out.append(f'<div class="mq-wrap"><label class="mq-pause"><input type="checkbox"><span>Pause</span></label>'
+                               f'<div class="marquee" role="marquee" aria-label="{txt}"><div class="mq-track" aria-hidden="true">{unit * 8}</div></div>'
+                               f'<div class="marquee mq-b" aria-hidden="true"><div class="mq-track">{unit * 8}</div></div></div>')
                 continue
             lvl = b.get("level", "h2")
             lvl = lvl if lvl in ("h1", "h2", "h3", "h4", "h5", "h6") else "h2"
@@ -420,8 +425,9 @@ def ticker(text, icon_src=""):
     t = esc(text)
     icon = f'<img class="tk-ic" src="{esc(icon_src)}" alt="" width="34" height="34">' if icon_src else ""
     unit = f"<span>{t} {icon}</span>"
-    return (f'<div class="tk-wrap"><div class="ticker" role="marquee" aria-label="{t}"><label class="tk-pause"><input type="checkbox"><span>Pause</span></label>'
-            f'<div class="tk-track" aria-hidden="true">{unit * 8}</div></div></div>')
+    return (f'<div class="tk-wrap"><label class="tk-pause"><input type="checkbox"><span>Pause</span></label>'
+            f'<div class="ticker" role="marquee" aria-label="{t}"><div class="tk-track" aria-hidden="true">{unit * 8}</div></div>'
+            f'<div class="ticker tk-b" aria-hidden="true"><div class="tk-track">{unit * 8}</div></div></div>')
 
 
 def home_ticker(c):
