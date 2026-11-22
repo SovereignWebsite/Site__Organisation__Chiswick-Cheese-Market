@@ -6,7 +6,7 @@ kate-curtis-evans.b's tools/inbox_drain.py, itself after SGit-AI__Website__Web-S
 
 Lists the lane with the enum key, fetches what is pending, opens each envelope with the keeper's private key (sgit's key
 store; passphrase from SG_SEND_PASSPHRASE or ~/.sw-secret/pass), checks the sender's ECDSA signature against
-site/data/site-requesters.json, writes each message into the inbox vault (messages/<date>/<id>.json, photos beside it),
+site/send/requesters.json, writes each message into the inbox vault (messages/<date>/<id>.json, photos beside it),
 commits and pushes the vault, and only then marks the lane files processed: a failed push loses nothing.
 
 Only messages signed by a named requester's active key are written in full and printed for the keeper, who acts on them
@@ -36,7 +36,7 @@ def verify(msg):
     try:
         from cryptography.hazmat.primitives.asymmetric import ec, utils
         from cryptography.hazmat.primitives import hashes
-        keys = json.load(open(os.path.join(ROOT, 'site', 'data', 'site-requesters.json')))['keys']
+        keys = json.load(open(os.path.join(ROOT, 'site', 'send', 'requesters.json')))['keys']
         k = next((k for k in keys if k['person'] == sg.get('person') and k['fingerprint'] == sg.get('key') and k.get('status') == 'active'), None)
         if not k:
             return False, f"no active published key {sg.get('key')} for {sg.get('person')}"

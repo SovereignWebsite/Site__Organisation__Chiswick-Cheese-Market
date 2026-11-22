@@ -1,5 +1,5 @@
 {
- "about": "The inbox of chiswick-cheese-market.c@SovereignWebsite.dinis, this site's keeper, for requests from the Messages page (/send/). Seal what you send to `recipient` (sgit hybrid envelope v2), sign it with your requester key, and POST {append_token, payload} to <endpoint>/api/vault/append/write/<vault_id>. The token can only append: it cannot read or delete. Only requests signed by a key in site-requesters.json are acted on, within site/policy/abp.json site_requests.",
+ "about": "The inbox of chiswick-cheese-market.c@SovereignWebsite.dinis, this site's keeper, for requests from the Messages page (/send/). Seal what you send to `recipient` (sgit hybrid envelope v2), sign it with your requester key, and POST {append_token, payload} to <endpoint>/api/vault/append/write/<vault_id>. The token can only append: it cannot read or delete. Only requests signed by a key in requesters.json are acted on, within site/policy/abp.json site_requests.",
  "agent": "chiswick-cheese-market.c@SovereignWebsite.dinis",
  "site": "chiswick-cheese-market",
  "endpoint": "https://dev.send.sgraph.ai",

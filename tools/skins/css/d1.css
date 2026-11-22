@@ -73,7 +73,7 @@ h3{font-size:24px}
 .mq-track{display:inline-block;animation:mq 40s linear infinite;font:700 clamp(20px,4vw,32px)/1.2 var(--head);text-transform:uppercase}
 .mq-track span{display:inline-flex;align-items:center;gap:10px;padding-right:14px}
 .mq-ic{width:34px;height:34px;object-fit:contain;display:inline-block}
-@keyframes mq{to{transform:translateX(-50%)}}
+@keyframes mq{from{transform:translateX(-50%)}to{transform:none}}
 @media (prefers-reduced-motion:reduce){.mq-track{animation:none}}
 .vertical{writing-mode:vertical-rl;transform:rotate(180deg);font-size:44px;text-transform:uppercase;margin:0;position:absolute;right:20px;top:40px}
 .col:has(>.vertical){position:relative;padding-right:80px}
@@ -176,7 +176,7 @@ main{overflow-x:clip}
 .sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
 .col .txt.past{text-decoration:line-through;text-decoration-thickness:1px;color:var(--ink)}
 .marquee{position:relative}
-.marquee:hover .mq-track,.marquee:focus-within .mq-track,.marquee:has(input:checked) .mq-track{animation-play-state:paused}
+.marquee:has(input:checked) .mq-track{animation-play-state:paused}
 .mq-pause{position:absolute;right:10px;top:50%;transform:translateY(-50%);z-index:2;font:700 12px/1 system-ui,sans-serif;cursor:pointer}
 .mq-pause input{position:absolute;opacity:0;width:1px;height:1px}
 .mq-pause span{display:inline-block;background:var(--ink);color:#fff;border-radius:999px;padding:6px 12px}

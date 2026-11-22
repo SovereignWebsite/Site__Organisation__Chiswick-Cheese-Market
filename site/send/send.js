@@ -3,7 +3,7 @@
 // assets/feedback.js (Apache-2.0): the message is sealed to the agent's public key with sgit's hybrid envelope v2
 // (byte-compatible with PKI__Crypto.hybrid_decrypt), signed with the person's key held in this browser
 // (keyring.js), and appended to the keeper's lane on its sgit vault. The lane token can only append.
-// Replies from the agent are sealed to the person (ws-ecies-1) in /data/replies/<person>.json; only this browser opens them.
+// Replies from the agent are sealed to the person (ws-ecies-1) in replies/<person>.json; only this browser opens them.
 (() => {
     'use strict'
     const $ = s => document.querySelector(s)
@@ -52,7 +52,7 @@
     async function showReplies(who) {
         const box = $('#replies'); box.innerHTML = ''
         let list = []
-        try { const r = await fetch(`/data/replies/${who}.json`, { cache: 'no-store' }); if (r.ok) list = await r.json() } catch { }
+        try { const r = await fetch(`replies/${who}.json`, { cache: 'no-store' }); if (r.ok) list = await r.json() } catch { }
         if (!list.length) { box.innerHTML = '<p class="muted">No answers yet. When the keeper answers, it appears here, readable only in this browser.</p>'; return }
         for (const env of list.slice().reverse()) {
             const d = document.createElement('article'); d.className = 'reply'
@@ -79,7 +79,7 @@
         catch (e) { say(e.message, true) }
     }
     async function main() {
-        try { CFG = await (await fetch('/data/inbox.json', { cache: 'no-store' })).json() } catch { return say('The inbox details could not be loaded.', true) }
+        try { CFG = await (await fetch('inbox.json', { cache: 'no-store' })).json() } catch { return say('The inbox details could not be loaded.', true) }
         $('#form').addEventListener('submit', send)
         $('#addbtn').addEventListener('click', addKey)
         $('#lock').addEventListener('click', async () => { await window.WSKeyring.lock(); say('Your key is removed from this browser.'); showWho() })

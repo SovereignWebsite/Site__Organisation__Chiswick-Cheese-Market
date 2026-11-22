@@ -280,8 +280,8 @@ footer .sws-version{opacity:1}
 .tk-track{display:inline-block;animation:tk var(--tk-speed,40s) linear infinite;font:var(--tk-font,700 26px/1.2 system-ui,sans-serif);text-transform:var(--tk-case,uppercase);letter-spacing:var(--tk-ls,normal)}
 .tk-track span{display:inline-flex;align-items:center;gap:10px;padding-right:var(--tk-gap,28px)}
 .tk-ic{width:1.2em;height:1.2em;object-fit:contain;display:var(--tk-ic,inline-block)}
-@keyframes tk{to{transform:translateX(-50%)}}
-.ticker:hover .tk-track,.ticker:focus-within .tk-track,.ticker:has(input:checked) .tk-track{animation-play-state:paused}
+@keyframes tk{from{transform:translateX(-50%)}to{transform:none}}
+.ticker:has(input:checked) .tk-track{animation-play-state:paused}
 .tk-pause{position:absolute;right:calc(2% + 10px);top:50%;transform:translateY(-50%);z-index:2;font:700 12px/1 system-ui,sans-serif;cursor:pointer;letter-spacing:normal;text-transform:none}
 .tk-pause input{position:absolute;opacity:0;width:1px;height:1px}
 .tk-pause span{display:inline-block;background:#111;color:#fff;border-radius:999px;padding:6px 12px}
@@ -413,7 +413,8 @@ def home_facts(c):
 def ticker(text, icon_src=""):
     """The scrolling banner from the market's home page (its marquee heading), as one strip any page can use.
     The words are read once by screen readers (aria-label); the moving copies are hidden from them.
-    It pauses on hover, on focus or with its Pause switch, and stands still for prefers-reduced-motion."""
+    It runs left to right, as on the market's own site, and keeps running on hover (Dinis, 22 Nov 2026); it stops
+    only with its Pause switch, and stands still for prefers-reduced-motion."""
     if not text:
         return ""
     t = esc(text)

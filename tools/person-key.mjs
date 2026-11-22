@@ -10,7 +10,7 @@
 // Two P-256 keys, small enough for one QR code: an ECDH key (things sealed TO the person) and an ECDSA key (the
 // person's browser SIGNS what it sends). The private half stays outside the repository (~/.sg-send/issued/<id>.json,
 // mode 0600) and reaches the person only as a link whose #fragment carries it (a fragment is never sent to a server).
-// The public half is published in site/data/site-requesters.json. The issuing agent holds the private half too, and says so:
+// The public half is published in site/send/requesters.json. The issuing agent holds the private half too, and says so:
 // it can read what is sealed to the person. A new session issues a new key; the old one is marked replaced.
 //
 //   node admin/tools/person-key.mjs issue --person dinis --by conductor@web-summit.dinis --session <session id>
@@ -28,7 +28,7 @@ import os from 'os'
 import crypto from 'crypto'
 
 const ROOT = path.resolve(path.dirname(new URL(import.meta.url).pathname), '..')
-const PUB = path.join(ROOT, 'site/data/site-requesters.json')
+const PUB = path.join(ROOT, 'site/send/requesters.json')
 const STORE = path.join(os.homedir(), '.sg-send/issued')
 const args = process.argv.slice(2), cmd = args[0]
 const opt = k => { const i = args.indexOf('--' + k); return i > 0 ? args[i + 1] : undefined }
@@ -69,7 +69,7 @@ if (cmd === 'issue') {
     for (const k of pub.keys) if (k.person === person && k.status === 'active') { k.status = 'replaced'; k.replaced_at = at; k.replaced_by = fingerprint }
     pub.keys.push({ person, fingerprint, signing_fingerprint: fp(s), status: 'active', issued_by: by, session, issued_at: at, valid: 'while the issuing session lives', encrypt: pubJwk(e), sign: pubJwk(s) })
     fs.writeFileSync(PUB, JSON.stringify(pub, null, 2) + '\n')
-    console.log(`issued ${fingerprint} for ${person}: public half in site/data/site-requesters.json, private half in ${path.join(STORE, person + '.json')} (never commit it)`)
+    console.log(`issued ${fingerprint} for ${person}: public half in site/send/requesters.json, private half in ${path.join(STORE, person + '.json')} (never commit it)`)
 } else if (cmd === 'link') {
     const person = opt('person') || fail('--person'), p = priv(person)
     const packed = b64u(JSON.stringify({ v: 1, p: person, f: p.fingerprint, e: [p.encrypt.d, p.encrypt.x, p.encrypt.y], s: [p.sign.d, p.sign.x, p.sign.y] }))
