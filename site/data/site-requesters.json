@@ -1,0 +1,27 @@
+{
+  "about": "The people the owner names who may send requests from /send/ (site/policy/abp.json site_requests): a label and the public halves of the key on their QR code. The keeper issued each key in its session (tools/person-key.mjs) and holds the private half too, so it can read what is sealed to that person; a new keeper session issues new keys. Names are published only with the person's agreement.",
+  "keys": [
+    {
+      "person": "dinis",
+      "fingerprint": "sha256:b0460425c3774da4",
+      "signing_fingerprint": "sha256:0d67d7d572bf02b5",
+      "status": "active",
+      "issued_by": "chiswick-cheese-market.c@SovereignWebsite.dinis",
+      "session": "https://claude.ai/code/session_01Kw9UwCvCX638VWVq9UPXsN",
+      "issued_at": "2026-11-22T17:29:17Z",
+      "valid": "while the issuing session lives",
+      "encrypt": {
+        "kty": "EC",
+        "crv": "P-256",
+        "x": "vSuneENjtvKsWp_7YpXfdYGnSJpKCgtQAnW1Uao9GTI",
+        "y": "G06NUVnvkRw1U4VAn1Q-i0Lc7YjGzhzNEFO51PZcVNU"
+      },
+      "sign": {
+        "kty": "EC",
+        "crv": "P-256",
+        "x": "cMX5zCC0b45Lr3j_MFLM5bt366XueTa1RnrPOs-0U84",
+        "y": "vcyBz_ao9r_42QKvbunmH8MBbwn8XxxTsibLI2hs9jA"
+      }
+    }
+  ]
+}
