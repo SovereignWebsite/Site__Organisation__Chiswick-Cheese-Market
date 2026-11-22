@@ -274,6 +274,20 @@ footer .sws-version{opacity:1}
 .pick-head{margin:0 0 10px;font-size:13px;color:#55514b}
 .pick-also{margin:12px 0 0;font-size:13px;color:#55514b}.pick-cards .pick-also a{display:inline;color:#7a4f00;text-decoration:underline}
 @media (max-width:600px){.demo-choose .pick-cards{position:fixed;left:10px;right:10px;top:46px;width:auto;max-height:80vh;overflow:auto}}
+/* the home page ticker (common.ticker); each design sets --tk-* */
+.tk-wrap{overflow:hidden;padding:var(--tk-pad,0)}
+.ticker{position:relative;overflow:hidden;white-space:nowrap;background:var(--tk-bg,#fab600);color:var(--tk-fg,#1d1a16);transform:rotate(var(--tk-tilt,0deg));margin:0 -2%;padding:var(--tk-py,12px) 0;border-block:var(--tk-border,0)}
+.tk-track{display:inline-block;animation:tk var(--tk-speed,40s) linear infinite;font:var(--tk-font,700 26px/1.2 system-ui,sans-serif);text-transform:var(--tk-case,uppercase);letter-spacing:var(--tk-ls,normal)}
+.tk-track span{display:inline-flex;align-items:center;gap:10px;padding-right:var(--tk-gap,28px)}
+.tk-ic{width:1.2em;height:1.2em;object-fit:contain;display:var(--tk-ic,inline-block)}
+@keyframes tk{to{transform:translateX(-50%)}}
+.ticker:hover .tk-track,.ticker:focus-within .tk-track,.ticker:has(input:checked) .tk-track{animation-play-state:paused}
+.tk-pause{position:absolute;right:calc(2% + 10px);top:50%;transform:translateY(-50%);z-index:2;font:700 12px/1 system-ui,sans-serif;cursor:pointer;letter-spacing:normal;text-transform:none}
+.tk-pause input{position:absolute;opacity:0;width:1px;height:1px}
+.tk-pause span{display:inline-block;background:#111;color:#fff;border-radius:999px;padding:6px 12px}
+.tk-pause input:checked+span::before{content:"Paused \\b7  "}
+.tk-pause input:focus-visible+span{outline:3px solid #fff;outline-offset:2px}
+@media (prefers-reduced-motion:reduce){.tk-track{animation:none;white-space:normal;padding:0 16px}.tk-track span:not(:first-child),.tk-pause{display:none}.ticker{white-space:normal;text-align:center;margin:0}}
 """
 
 
@@ -371,7 +385,9 @@ def home_facts(c):
         ls = list(leaves([sec]))
         heads = [b for b in ls if b["type"] == "heading" and b.get("style") not in ("marquee", "vertical")]
         if any(b["type"] == "heading" and b.get("style") == "marquee" and b.get("text") for b in ls):
-            f["marquee"] = next(b["text"] for b in ls if b.get("style") == "marquee" and b.get("text"))
+            mq = next(b for b in ls if b.get("style") == "marquee" and b.get("text"))
+            f["marquee"] = mq["text"]
+            f["marquee_icon"] = (mq.get("inline_images") or [None])[0]
         imgs = [b for b in ls if b["type"] == "image"]
         if heads and not f["tagline"] and any(b["type"] == "text" for b in ls):
             f["tagline"] = heads[0]["text"]
@@ -392,6 +408,25 @@ def home_facts(c):
                     pairs.append({"image": pend, "title": b["text"]}); pend = None
             f["features"].append({"title": heads[0]["text"], "items": pairs})
     return f
+
+
+def ticker(text, icon_src=""):
+    """The scrolling banner from the market's home page (its marquee heading), as one strip any page can use.
+    The words are read once by screen readers (aria-label); the moving copies are hidden from them.
+    It pauses on hover, on focus or with its Pause switch, and stands still for prefers-reduced-motion."""
+    if not text:
+        return ""
+    t = esc(text)
+    icon = f'<img class="tk-ic" src="{esc(icon_src)}" alt="" width="34" height="34">' if icon_src else ""
+    unit = f"<span>{t} {icon}</span>"
+    return (f'<div class="tk-wrap"><div class="ticker" role="marquee" aria-label="{t}"><label class="tk-pause"><input type="checkbox"><span>Pause</span></label>'
+            f'<div class="tk-track" aria-hidden="true">{unit * 8}</div></div></div>')
+
+
+def home_ticker(c):
+    f = home_facts(c)
+    m = c.img(f.get("marquee_icon")) if f.get("marquee_icon") else None
+    return ticker(f["marquee"], (m or {}).get("original_url", ""))
 
 
 def intro_text(c):

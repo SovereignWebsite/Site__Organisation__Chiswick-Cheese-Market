@@ -151,3 +151,6 @@ h2{font-size:clamp(36px,5vw,64px);font-style:italic;text-align:center}
 .menu-lines a:hover b{color:var(--gold)}
 .dates .past{color:var(--fg);text-decoration:none;font-style:normal}
 .dates .past small{color:var(--soft);font:600 12px 'Inter',sans-serif;letter-spacing:.08em}
+/* the home page ticker (common.ticker) */
+.tk-wrap{--tk-bg:var(--bg2);--tk-fg:var(--gold);--tk-font:italic 400 clamp(20px,2.8vw,26px)/1.3 'Playfair Display',serif;--tk-case:none;--tk-border:1px solid var(--line);--tk-ic:none;--tk-speed:60s;--tk-py:10px}
+.tk-wrap .ticker{margin:0}

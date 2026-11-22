@@ -3,7 +3,7 @@ each maker's page, every journal post that mentions them (found in the data, not
 Friendly, rounded, app-like on a phone. Space Grotesk and Inter (SIL OFL)."""
 import re
 from .base import Skin
-from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts
+from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts, home_ticker
 
 FILTER_JS = """(function(){var q=document.getElementById('q'),items=[].slice.call(document.querySelectorAll('.mk,.tile')),
 chips=[].slice.call(document.querySelectorAll('.f-chip')),cat='',out=document.getElementById('count'),
@@ -79,6 +79,7 @@ class Makers(Skin):
         body = (f'<section class="hello"><div><p class="pill-next">{f"Next market \u00b7 Sunday {ordinal(nm.day)} {nm:%B}" if nm else ""}</p>'
                 f'{f"<p class=where>{esc(where)}</p>" if where else ""}'
                 f'<h1>Meet the {len(c.exhibitors)} stallholders of Chiswick Cheese Market</h1></div></section>'
+                f'{home_ticker(c)}'
                 f'{self.finder(ctx, "Find a stall")}'
                 f'<section class="pad"><h2>Most recently added to the site</h2><div class="news">{new_html}</div></section>'
                 f'<section class="gap"><h2>What the data does not have yet</h2><p>The market\'s site keeps a description and a photograph for each stallholder, '

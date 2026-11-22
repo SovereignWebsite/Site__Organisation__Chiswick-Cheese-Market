@@ -1,7 +1,7 @@
 """Design 3: Poster. Bold market-poster typography: huge condensed type, a calendar of the year's
 market days, stallholders as a big type index. Bebas Neue and Work Sans (SIL OFL)."""
 from .base import Skin
-from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts, ics, poster_month, pick_size_url
+from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts, ics, poster_month, pick_size_url, home_ticker
 
 
 class Poster(Skin):
@@ -92,7 +92,7 @@ class Poster(Skin):
                        for x in c.ex_cats if c.ex_in(x["id"]))
         news = "".join(f'<li><a href="{ctx.link("journal/" + p["slug"] + "/")}"><span>{fmt_date(p["date"], "%d.%m.%y")}</span>{esc(p["title"])}</a></li>' for p in c.posts[:8])
         upcoming_html = f'<section class="band" aria-label="Upcoming">{"".join(upcoming)}</section>' if upcoming else ""
-        body = (f'{hero}{upcoming_html}'
+        body = (f'{hero}{home_ticker(c)}{upcoming_html}'
                 f'{f"<section class=band><h2>{c.snap_date.year} on the wall</h2><div class=wall>{wall}</div>{missing_note}</section>" if wall else ""}'
                 f'{f"<section class=band><h2>Past posters</h2><div class=past-strip>{strip}</div></section>" if strip else ""}'
                 f'<section class="band"><h2>{c.market_dates[0].year if c.market_dates else ""} market days</h2><ol class="cal">{cal}</ol></section>'

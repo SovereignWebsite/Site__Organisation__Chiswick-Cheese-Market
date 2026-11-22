@@ -1,7 +1,7 @@
 """Design 4: Cellar. Dark and warm, like a cheese cave: full-bleed photographs, gold rules, a serif
 in italics. A light 'parchment' version follows the visitor's light mode. Playfair Display and Inter (SIL OFL)."""
 from .base import Skin
-from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced
+from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, home_ticker
 
 
 class Cellar(Skin):
@@ -62,7 +62,7 @@ class Cellar(Skin):
                  f'<span><b>{esc(note["title"])}</b><em>{esc(note["excerpt"])}</em></span></a></li>') if note else ""
         dates = "".join(f'<li class="{"past" if d < c.snap_date else ""}{" next" if d == nm else ""}">Sunday {ordinal(d.day)} {d:%B}{" <small>(past)</small>" if d < c.snap_date else ""}</li>' for d in c.market_dates)
         intro = "".join(f'<div class="txt">{ctx.rewrite_html(h)}</div>' for h in f["intro"][:1])
-        body = (f'<section class="menu-wrap"><div class="menu"><p class="eyebrow">Tasting menu</p><h1>{esc(f["tagline"] or c.site["name"])}</h1>'
+        body = (f'{home_ticker(c)}<section class="menu-wrap"><div class="menu"><p class="eyebrow">Tasting menu</p><h1>{esc(f["tagline"] or c.site["name"])}</h1>'
                 f'{f"<p class=when>Served on <em>Sunday {ordinal(nm.day)} {nm:%B %Y}</em></p>" if nm else ""}{intro}'
                 f'<ol class="courses">{"".join(courses)}{close}</ol>'
                 f'<p class="menu-foot"><a class="gold" href="{ctx.link("stallholders/")}">All {len(c.exhibitors)} makers, shelf by shelf</a> '

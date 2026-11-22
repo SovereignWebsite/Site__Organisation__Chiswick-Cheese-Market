@@ -1,7 +1,7 @@
 """Design 2: Journal. An editorial, magazine-style site: a masthead, a lead story, the market's
 words set like a newspaper, the stallholders as an index. Fraunces and Inter (SIL OFL)."""
 from .base import Skin
-from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts
+from .common import esc, home_facts, fmt_date, ordinal, render_blocks, page_sourced, market_facts, home_ticker
 
 
 class Journal(Skin):
@@ -48,7 +48,7 @@ class Journal(Skin):
         classifieds = "".join(f'<section class="cl"><h3>{esc(x["name"])}</h3><ul>' + "".join(
             f'<li><a href="{ctx.link("stallholders/" + e["slug"] + "/")}"><b>{esc(e["name"])}</b></a> {esc(e["description_text"][:90].rsplit(" ", 1)[0])}&hellip;</li>'
             for e in c.ex_in(x["id"])) + "</ul></section>" for x in c.ex_cats if c.ex_in(x["id"]))
-        body = (f'<div class="front">{sunday}<div class="col-main">{lead_html}</div><aside class="col-side" aria-label="Latest"><h2 class="rule">Latest</h2>{side}'
+        body = (f'{home_ticker(c)}<div class="front">{sunday}<div class="col-main">{lead_html}</div><aside class="col-side" aria-label="Latest"><h2 class="rule">Latest</h2>{side}'
                 f'<p><a class="more" href="{ctx.link("journal/")}">The whole journal &rarr;</a></p></aside></div>'
                 f'<section class="about-market"><h2 class="big">{esc(f["tagline"] or "")}</h2><div class="cols dropcap">{intro}</div></section>'
                 f'<section class="listings"><h2 class="rule">Listings: market days {c.market_dates[0].year if c.market_dates else ""}</h2><ol class="list-box">{dates}</ol></section>'
