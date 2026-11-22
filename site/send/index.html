@@ -66,6 +66,16 @@ code{font-size:.9em}main a,main code{overflow-wrap:anywhere}
 .req .panel h2{margin-top:0}.req label{display:block;font-weight:600;color:var(--fg);margin:.7rem 0 .25rem}
 .req select,.req textarea,.req input[type=text]{width:100%;font:inherit;font-size:1rem;padding:.55rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
 .req textarea{min-height:8rem}
+.drop{border:2px dashed var(--brand2);border-radius:12px;padding:1rem 1.1rem;margin:.6rem 0 1rem;background:var(--bg)}
+.drop .big{font-weight:800;font-size:1.25rem;color:var(--fg);margin:0 0 .3rem}.drop p{margin:0 0 .6rem}
+.dropping .drop,.dropping #form{outline:3px solid var(--brand);outline-offset:3px}
+.ways{display:flex;flex-wrap:wrap;gap:.6rem;align-items:center;margin:.4rem 0 0}
+.req .btn{display:inline-flex;align-items:center;min-height:44px;padding:0 1.2rem;border-radius:999px;background:#1d1a16;color:#fab600;font-weight:600;cursor:pointer}
+@media (prefers-color-scheme:dark){.req .btn{background:#fab600;color:#1d1a16}}
+.req .btn{position:relative}.req .vh{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden}.req label.btn:focus-within{outline:3px solid var(--accent);outline-offset:2px}
+.req button.plain{background:transparent;color:var(--fg);border:2px solid var(--fg)}
+#cam[hidden]{display:none}#cam{display:block;width:100%;max-width:22rem;border-radius:10px;margin-top:.6rem;background:#000}
+.small{font-size:.9rem}
 .top{max-width:none;margin:0 -2%;padding:18px calc(2% + 1rem) 14px;background:var(--brand);transform:rotate(-1.5deg);box-shadow:0 8px 0 var(--brand2),0 14px 24px rgba(0,0,0,.18);justify-content:center}
 .top .name{color:#1d1a16;font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(18px,3.4vw,26px)}
 body{overflow-x:hidden}h1{font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
@@ -94,13 +104,18 @@ body{overflow-x:hidden}h1{font-weight:800;text-transform:uppercase;letter-spacin
 <div class="req" id="req">
 <div><p class="keyline" role="status" aria-live="polite"><span class="dot" aria-hidden="true"></span><span id="who">Checking this browser for a key...</span><button type="button" id="lock" class="link" hidden>Forget this key</button></p>
 <p id="status" class="status" role="status"></p></div>
-<details id="addkey" class="panel" open><summary>Add your key</summary><p>Scan the QR code you were given, or open its link, and the key is added to this browser. Or paste the link here. It stays in this browser only and is never sent anywhere.</p>
-<label for="keylink">Your private key link</label><input type="text" id="keylink" autocomplete="off" placeholder="https://chiswick-cheese-market.organisation.sovereignweb.site/send/#key=..."><p><button type="button" id="addbtn">Add my key</button></p></details>
+<details id="addkey" class="panel" open><summary>Add your key</summary>
+<div class="drop"><p class="big">Paste your QR code here</p><p>Copy the QR picture, click on this page and press Ctrl+V (Cmd+V on a Mac). Or drop the picture anywhere on the page.</p>
+<p class="ways"><label class="btn">Choose the QR picture<input type="file" id="qrfile" accept="image/*" class="vh"></label> <button type="button" id="cambtn" class="plain">Scan with the camera</button></p>
+<video id="cam" hidden muted playsinline></video></div>
+<p>On a phone, scanning the QR code with the phone's camera opens this page with your key already added.</p>
+<label for="keylink">Or paste your key link</label><input type="text" id="keylink" autocomplete="off" spellcheck="false" placeholder="https://chiswick-cheese-market.organisation.sovereignweb.site/send/#key=..."><p><button type="button" id="addbtn" class="plain">Add my key</button></p>
+<p class="small">Your key stays in this browser only and is never sent anywhere.</p></details>
 <form id="form" class="panel" hidden><h2>Your request</h2>
 <label for="kind">What is it about?</label>
 <select id="kind"><option value="words">Words on a page</option><option value="look">How a design looks</option><option value="link">A broken or wrong link</option><option value="picture">A picture</option><option value="other">Something else</option></select>
 <label for="text">Your request</label><textarea id="text" placeholder="Which design and page, and what should change. For example: design 3, the home page: the date in the banner is cut off on my phone."></textarea>
-<label for="files">Screenshots (optional, up to four)</label><input type="file" id="files" accept="image/*" multiple><div id="thumbs"></div>
+<label for="files">Screenshots (optional, up to four): choose them, paste them (Ctrl+V or Cmd+V) or drop them on the page</label><input type="file" id="files" accept="image/*" multiple><div id="thumbs"></div>
 <p><button type="submit" id="send">Seal and send</button></p></form>
 <section class="panel" id="replies-box"><h2>Answers</h2><div id="replies"><p>Add your key to see the keeper's answers.</p></div></section>
 </div>

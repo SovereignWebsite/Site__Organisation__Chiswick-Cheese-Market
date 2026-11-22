@@ -70,25 +70,97 @@
             const body = { kind, text, images }, items_json = JSON.stringify(body)
             const signed = { person: KR.person, key: KR.fingerprint, alg: 'ECDSA-P256-SHA256-P1363', sig: await KR.sign(items_json) }
             await append(JSON.stringify({ type: 'ccm.request/v1', to: CFG.agent, site: location.origin, sent_at: new Date().toISOString(), from: KR.person, signed, items_json }))
-            $('#text').value = ''; images = []; $('#files').value = ''; $('#thumbs').innerHTML = ''
+            $('#text').value = ''; images = []; $('#thumbs').innerHTML = ''
             say('Sent. The keeper reads its inbox, acts on it within the policy, and answers here.')
         } catch (e) { say('Not sent: ' + e.message, true) } finally { $('#send').disabled = false }
     }
-    async function addKey() {
-        try { const p = await window.WSKeyring.add($('#keylink').value); $('#keylink').value = ''; say(`Key added for ${p}.`); showWho() }
+    // The key, however the person has it (Dinis, 22 Nov 2026: "make these as easy as possible"): the QR picture
+    // pasted (Ctrl+V or Cmd+V anywhere on the page), dropped, chosen as a file or held up to the camera, or the link
+    // pasted, which is added at once. Once a key is in, a pasted or dropped picture becomes a screenshot instead.
+    const signedIn = () => !!window.WSKeyring.person
+    async function useKeyText(t) {
+        try { const p = await window.WSKeyring.add(t); $('#keylink').value = ''; stopCamera(); say(`Key added for ${p}. You can write your request now.`); await showWho(); $('#text').focus() }
         catch (e) { say(e.message, true) }
+    }
+    let jsqrLoad = null
+    const loadJsQR = () => (jsqrLoad = jsqrLoad || new Promise((ok, no) => {
+        const sc = document.createElement('script'); sc.src = '/vendor/jsqr-1.4.0/jsQR.js'
+        sc.onload = () => ok(window.jsQR); sc.onerror = () => no(new Error('the QR reader could not be loaded')); document.head.append(sc)
+    }))
+    async function qrFrom(source, w, h) {
+        if ('BarcodeDetector' in window) {
+            try { const c = await new BarcodeDetector({ formats: ['qr_code'] }).detect(source); if (c.length) return c[0].rawValue } catch { }
+        }
+        const jsQR = await loadJsQR(), k = Math.min(1, 1600 / Math.max(w, h)), cv = document.createElement('canvas')
+        cv.width = Math.round(w * k); cv.height = Math.round(h * k)
+        const cx = cv.getContext('2d', { willReadFrequently: true }); cx.drawImage(source, 0, 0, cv.width, cv.height)
+        const r = jsQR(cx.getImageData(0, 0, cv.width, cv.height).data, cv.width, cv.height)
+        return r ? r.data : null
+    }
+    async function keyFromPicture(file) {
+        say('Reading the QR code...')
+        try {
+            const bmp = await createImageBitmap(file), t = await qrFrom(bmp, bmp.width, bmp.height)
+            if (!t) return say('No QR code found in that picture. Try a sharper or larger picture, or paste the link.', true)
+            if (!/key=/.test(t)) return say('That QR code is not a key for this page.', true)
+            await useKeyText(t)
+        } catch (e) { say('That picture could not be read: ' + e.message, true) }
+    }
+    async function addScreenshots(files) {
+        for (const f of files) {
+            if (images.length >= 4) { say('Four pictures at most in one request.', true); break }
+            try { const im = await shrink(f); images.push(im); const t = document.createElement('img'); t.src = im.data; t.alt = ''; $('#thumbs').appendChild(t) } catch (x) { say(x.message, true) }
+        }
+        if (images.length) say(`${images.length} picture${images.length > 1 ? 's' : ''} added to your request.`)
+    }
+    const pictures = list => [...list].filter(f => f && f.type && f.type.startsWith('image/'))
+    async function takePictures(files) {
+        const imgs = pictures(files); if (!imgs.length) return false
+        if (signedIn()) await addScreenshots(imgs); else await keyFromPicture(imgs[0])
+        return true
+    }
+    // the camera: frames read until a key is found, or the person stops it
+    let stream = null, timer = null
+    function stopCamera() {
+        if (timer) clearInterval(timer); timer = null
+        if (stream) stream.getTracks().forEach(t => t.stop()); stream = null
+        $('#cam').hidden = true; $('#cambtn').textContent = 'Scan with the camera'
+    }
+    async function startCamera() {
+        if (stream) return stopCamera()
+        try { stream = await navigator.mediaDevices.getUserMedia({ video: { facingMode: 'environment' }, audio: false }) }
+        catch (e) { return say('The camera could not be opened (' + (e.message || e.name) + '). Paste or choose the QR picture instead.', true) }
+        const v = $('#cam'); v.srcObject = stream; v.hidden = false; await v.play(); $('#cambtn').textContent = 'Stop the camera'
+        say('Hold the QR code up to the camera.')
+        let busy = false
+        timer = setInterval(async () => {
+            if (busy || !v.videoWidth) return; busy = true
+            try { const t = await qrFrom(v, v.videoWidth, v.videoHeight); if (t && /key=/.test(t)) await useKeyText(t) } catch { } finally { busy = false }
+        }, 350)
     }
     async function main() {
         try { CFG = await (await fetch('inbox.json', { cache: 'no-store' })).json() } catch { return say('The inbox details could not be loaded.', true) }
         $('#form').addEventListener('submit', send)
-        $('#addbtn').addEventListener('click', addKey)
+        $('#addbtn').addEventListener('click', () => useKeyText($('#keylink').value))
+        $('#keylink').addEventListener('input', e => { if (/key=[A-Za-z0-9_-]{100,}/.test(e.target.value)) useKeyText(e.target.value) })
+        $('#qrfile').addEventListener('change', e => { takePictures(e.target.files); e.target.value = '' })
+        $('#cambtn').addEventListener('click', startCamera)
+        if (!(navigator.mediaDevices && navigator.mediaDevices.getUserMedia)) $('#cambtn').hidden = true
         $('#lock').addEventListener('click', async () => { await window.WSKeyring.lock(); say('Your key is removed from this browser.'); showWho() })
-                $('#files').addEventListener('change', async e => {
-            images = []; $('#thumbs').innerHTML = ''
-            for (const f of [...e.target.files].slice(0, 4)) {
-                try { const im = await shrink(f); images.push(im); const t = document.createElement('img'); t.src = im.data; t.alt = ''; $('#thumbs').appendChild(t) } catch (x) { say(x.message, true) }
-            }
+        $('#files').addEventListener('change', e => { addScreenshots(pictures(e.target.files)); e.target.value = '' })
+        // paste anywhere: a picture (the QR code, or a screenshot once signed in) or the key link
+        document.addEventListener('paste', async e => {
+            const cd = e.clipboardData; if (!cd) return
+            const files = [...cd.items].filter(i => i.kind === 'file').map(i => i.getAsFile())
+            if (pictures(files).length) { e.preventDefault(); return takePictures(files) }
+            const t = cd.getData('text') || ''
+            if (/key=[A-Za-z0-9_-]{100,}/.test(t) && e.target !== $('#text')) { e.preventDefault(); useKeyText(t) }
         })
+        // drop anywhere on the page
+        const over = on => document.documentElement.classList.toggle('dropping', on)
+        window.addEventListener('dragover', e => { if ([...(e.dataTransfer?.items || [])].some(i => i.kind === 'file')) { e.preventDefault(); over(true) } })
+        window.addEventListener('dragleave', e => { if (!e.relatedTarget) over(false) })
+        window.addEventListener('drop', e => { over(false); if (e.dataTransfer?.files?.length) { e.preventDefault(); takePictures(e.dataTransfer.files) } })
         showWho()
     }
     main()
