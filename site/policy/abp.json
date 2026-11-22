@@ -107,6 +107,7 @@
     ],
     "never": [
       "anything in site/policy/, .github/, site/CNAME, CLAUDE.md, site/send/, site/data/site-requesters.json or the key files",
+      "use a colour, font or logo that is not in site/brand/brand.json, or change site/brand/ itself",
       "remove or weaken the note that this is not the official site, or the noindex",
       "add a script from another site, a form that collects data, cookies, tracking, or a server",
       "add a fact, a price, a date, a stallholder or a quote that is not in the market's own WordPress data",
@@ -122,6 +123,12 @@
       "a request outside may_change, or a doubt, goes to the owner; nothing is done until the owner says"
     ],
     "owner_override": "The owner may widen or narrow this list at any time, in the keeper's session; the commit says where.",
-    "status": "Not yet in use: waiting for the account's inbox agent and the named QR codes."
+    "status": "Not yet in use: waiting for the account's inbox agent and the named QR codes.",
+    "brand": {
+      "file": "site/brand/brand.json",
+      "explained": "/brand/",
+      "rule": "Colours, fonts and logos only from the brand file, by token: 'make it more yellow' means the brand's yellow (#FAB600) with black text, never a new colour. Every colour pair passes WCAG AA. Anything the brand file cannot meet goes to the owner.",
+      "source": "Dinis Cruz, 22 Nov 2026, ~16:30 UTC, in chiswick-cheese-market.d's session: \"if you say, hey, can you make a change to go for yellow? We'll make sure the yellow matches the brand guidelines. Right? And you make sure everything connects to that.\""
+    }
   }
 }

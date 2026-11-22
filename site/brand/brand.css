@@ -1,0 +1,42 @@
+@font-face{font-family:'Kapra stand-in';src:url('../assets/fonts/barlow-condensed-700-normal.woff2') format('woff2');font-weight:700;font-display:swap}
+@font-face{font-family:'Roboto Slab';src:url('../assets/fonts/roboto-slab-400-normal.woff2') format('woff2');font-weight:400;font-display:swap}
+@font-face{font-family:'Roboto Slab';src:url('../assets/fonts/roboto-slab-700-normal.woff2') format('woff2');font-weight:600 700;font-display:swap}
+:root{--yellow:#FAB600;--orange:#E67B08;--ink:#141618;--paper:#fffaf0;--fg:#141618;--soft:#4a4740;--card:#fff;--line:#e5dccb;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--paper:#141618;--fg:#f4efe4;--soft:#c9c1b2;--card:#1e2023;--line:#33363a;color-scheme:dark}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--paper);color:var(--fg);font:400 17px/1.6 'Roboto Slab',Georgia,serif}
+a{color:inherit}
+.hero{display:flex;gap:28px;align-items:center;background:var(--ink);color:#fff;padding:40px clamp(16px,5vw,64px);border-bottom:10px solid var(--yellow)}
+.hero .logo{flex:none;width:120px;height:120px}
+.hero h1{font:700 clamp(40px,7vw,72px)/.95 'Kapra stand-in','Arial Narrow',sans-serif;text-transform:uppercase;color:var(--yellow);margin:0 0 10px}
+.hero p{max-width:60ch;margin:0}
+.kick{font:600 13px/1 system-ui,sans-serif;letter-spacing:.14em;text-transform:uppercase;color:var(--yellow);margin:0 0 8px!important}
+main{max-width:1180px;margin:0 auto;padding:16px clamp(16px,4vw,40px) 40px}
+h2{font:700 clamp(30px,4vw,44px)/1 'Kapra stand-in','Arial Narrow',sans-serif;text-transform:uppercase;margin:36px 0 8px}
+.sub{color:var(--soft);margin:0 0 16px}
+.swatches{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(auto-fill,minmax(200px,1fr));gap:14px}
+.swatches li{border-radius:14px;padding:16px;min-height:170px;display:flex;flex-direction:column;gap:4px;border:1px solid rgba(127,127,127,.3)}
+.swatches b{font:700 24px/1 'Kapra stand-in','Arial Narrow',sans-serif;text-transform:uppercase}
+.swatches code{font:600 15px ui-monospace,monospace}
+.swatches span{font-size:15px}
+.swatches small{margin-top:auto;font-size:13px;font-weight:600}
+.type{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.type>div{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px}
+.sample{margin:0 0 10px}
+.sample.head{font:700 40px/1 'Kapra stand-in','Arial Narrow',sans-serif}
+.sample.body{font-size:20px}
+.shapes{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:14px}
+.shapes figure{margin:0;border-radius:14px;padding:18px;min-height:190px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:12px;border:1px solid var(--line);background:var(--card);overflow:hidden}
+.shapes figcaption{font-size:14px;color:var(--soft)}
+.on-dark{background:var(--ink)!important}.on-dark figcaption{color:#e6e0d4}
+.on-yellow{background:var(--yellow)!important}.on-yellow figcaption{color:#000}
+.pill{display:inline-block;border-radius:999px;padding:10px 22px;font-weight:700}
+.pill.black{background:#000;color:#fff}.pill.orange{background:var(--orange);color:#000}
+.bands{position:relative}
+.band{display:block;width:130%;padding:8px 0;text-align:center;font:700 22px/1 'Kapra stand-in','Arial Narrow',sans-serif}
+.band.b1{background:var(--yellow);color:#000;transform:rotate(-4deg);position:relative;z-index:2}
+.band.b2{background:var(--orange);height:30px;transform:rotate(4deg);margin-top:-24px}
+.voice{padding-left:1.2em}.voice li{margin:0 0 8px}
+.rules{background:var(--card);border:1px solid var(--line);border-left:8px solid var(--yellow);border-radius:14px;padding:4px 22px 12px;margin-top:36px}
+.foot{text-align:center;color:var(--soft);font-size:14px;padding:20px 16px 30px}
+@media (max-width:700px){.hero{flex-direction:column;align-items:flex-start}.type{grid-template-columns:1fr}}

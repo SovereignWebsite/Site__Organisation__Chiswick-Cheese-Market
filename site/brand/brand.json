@@ -1,0 +1,42 @@
+{
+  "about": "Chiswick Cheese Market's brand, as its own website uses it, read from chiswickcheesemarket.uk on 22 November 2026 (computed styles of the home, visit-us and stallholders pages, and the theme's colour palette). Agents changing this demonstration use only these colours and fonts: a request such as 'make it more yellow' means the yellow below, never a new one. The brand belongs to Chiswick Cheese Market; this file only describes it. Plain-English version: /brand/.",
+  "source": "https://www.chiswickcheesemarket.uk/",
+  "read": "2026-11-22",
+  "colours": [
+    {"name": "Cheese yellow", "token": "yellow", "hex": "#FAB600", "role": "The brand colour: the main background of the home page, the logo, the banner.", "text_on_it": "#000000", "contrast_black": 11.8, "contrast_white": 1.8},
+    {"name": "Rind orange", "token": "orange", "hex": "#E67B08", "role": "The accent: buttons, the second banner, highlights.", "text_on_it": "#000000", "contrast_black": 7.2, "contrast_white": 2.9, "note": "The live site puts white text on it (2.9:1, below the 4.5:1 that WCAG AA asks for normal text). Use black text, or white only for large headings."},
+    {"name": "Market night", "token": "ink", "hex": "#141618", "role": "The header bar, the footer and dark sections.", "text_on_it": "#FFFFFF", "contrast_white": 18.1},
+    {"name": "Black", "token": "black", "hex": "#000000", "role": "Body text on yellow and white; black buttons.", "text_on_it": "#FFFFFF", "contrast_white": 21.0},
+    {"name": "White", "token": "white", "hex": "#FFFFFF", "role": "Text on dark; white sections.", "text_on_it": "#000000", "contrast_black": 21.0},
+    {"name": "Wine", "token": "wine", "hex": "#7A2E3D", "role": "Journal category labels.", "text_on_it": "#FFFFFF", "contrast_white": 9.2},
+    {"name": "Deep teal", "token": "teal", "hex": "#1F3845", "role": "In the theme's palette; used sparingly.", "text_on_it": "#FFFFFF", "contrast_white": 12.3},
+    {"name": "Sage", "token": "sage", "hex": "#AED5C7", "role": "In the theme's palette; used sparingly.", "text_on_it": "#000000", "contrast_black": 13.1},
+    {"name": "Charcoal", "token": "charcoal", "hex": "#303133", "role": "Secondary text.", "text_on_it": "#FFFFFF", "contrast_white": 13.0}
+  ],
+  "fonts": [
+    {"use": "Headings, menu, banner", "family": "Kapra Neue SB", "weights": [400, 600], "case": "upper case", "note": "A commercial font, licensed to the market's site. This demonstration uses Barlow Condensed (SIL OFL) as its stand-in and never copies Kapra Neue."},
+    {"use": "Body text and buttons", "family": "Roboto Slab", "weights": [400, 500, 600], "note": "Open licence (Apache 2.0); this demonstration self-hosts it."}
+  ],
+  "shapes": {
+    "buttons": "Pills (fully rounded ends), Roboto Slab 600, sentence case; black or orange.",
+    "banners": "Full-width bands tilted a few degrees, crossing each other: yellow carries the scrolling words, orange sits behind.",
+    "logo": "The round Chiswick Cheese Market mark with a slice cut out: yellow and white on dark, white on yellow."
+  },
+  "logos": [
+    {"file": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/CCM-Logo-Yellow-White.svg", "use": "Header, on dark"},
+    {"file": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/CCM-Logo-White.svg", "use": "On yellow or orange"},
+    {"file": "https://www.chiswickcheesemarket.uk/wp-content/uploads/2024/12/cheese-svgrepo-com.svg", "use": "The cheese icon in the banner"}
+  ],
+  "voice": {
+    "tagline": "The UK's only market dedicated to cheese",
+    "headline": "The UK's only specialist cheese market",
+    "notes": "Short, warm, exclamatory banners in capitals (\"SEE YOU AT OUR CHRISTMAS MARKET ON THE 20TH OF DECEMBER!\"); the market's own words only, never invented."
+  },
+  "rules_for_agents": [
+    "Use only the colours above, by token. 'More yellow' means more of #FAB600, not a new yellow.",
+    "Text on yellow, orange or sage is black; text on ink, black, wine, teal or charcoal is white. Every pair must pass WCAG AA (4.5:1, or 3:1 for large text).",
+    "Headings in the heading font, upper case; body in Roboto Slab.",
+    "Logos only from the market's own site, never redrawn or recoloured.",
+    "If a request cannot be met inside these rules, ask the owner instead of inventing."
+  ]
+}
