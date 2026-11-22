@@ -23,8 +23,8 @@
 <meta name="twitter:image" content="https://chiswick-cheese-market.organisation.sovereignweb.site/assets/share/card-1200x630.jpg">
 <link rel="canonical" href="https://chiswick-cheese-market.organisation.sovereignweb.site/send/">
 <style>
-:root{--bg:#fbfaf7;--fg:#1d1d1b;--muted:#5d5c57;--accent:#2f6b4f;--line:#e4e1d8}
-@media (prefers-color-scheme:dark){:root{--bg:#141513;--fg:#ecebe6;--muted:#a8a69e;--accent:#7fc3a0;--line:#2c2d29}}
+:root{--bg:#fffaf0;--fg:#1d1a16;--muted:#5c544b;--accent:#a14e00;--line:#eadfc8;--brand:#fab600;--brand2:#e67b08;color-scheme:light}
+@media (prefers-color-scheme:dark){:root{--bg:#16130f;--fg:#f4efe4;--muted:#b7ad9c;--accent:#ffc233;--line:#3a3328;--brand:#ffc233;--brand2:#e67b08;color-scheme:dark}}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 system-ui,-apple-system,Segoe UI,sans-serif}
 main{max-width:44rem;margin:0 auto;padding:10vh 1rem 4rem}
 .skip{position:absolute;left:-999px}.skip:focus{left:1rem;top:1rem}
@@ -65,8 +65,12 @@ code{font-size:.9em}main a,main code{overflow-wrap:anywhere}
 .req{display:grid;gap:1rem;margin-top:1.2rem}.req .panel{border:1px solid var(--line);border-radius:10px;padding:1rem 1.1rem}
 .req .panel h2{margin-top:0}.req label{display:block;font-weight:600;color:var(--fg);margin:.7rem 0 .25rem}
 .req select,.req textarea,.req input[type=text]{width:100%;font:inherit;font-size:1rem;padding:.55rem .7rem;border:1px solid var(--line);border-radius:8px;background:var(--bg);color:var(--fg)}
-.req textarea{min-height:8rem}.req button{min-height:44px;padding:0 1.2rem;border-radius:999px;border:0;background:var(--accent);color:#fff;font:600 1rem system-ui,sans-serif;cursor:pointer}
-@media (prefers-color-scheme:dark){.req button:not(.link){color:#141513}}
+.req textarea{min-height:8rem}
+.top{max-width:none;margin:0 -2%;padding:18px calc(2% + 1rem) 14px;background:var(--brand);transform:rotate(-1.5deg);box-shadow:0 8px 0 var(--brand2),0 14px 24px rgba(0,0,0,.18);justify-content:center}
+.top .name{color:#1d1a16;font-weight:800;text-transform:uppercase;letter-spacing:.02em;font-size:clamp(18px,3.4vw,26px)}
+body{overflow-x:hidden}h1{font-weight:800;text-transform:uppercase;letter-spacing:-.01em}
+.mark{color:var(--accent)}.req .panel{background:rgba(250,182,0,.08)}.req button{min-height:44px;padding:0 1.2rem;border-radius:999px;border:0;background:#1d1a16;color:#fab600;font:600 1rem system-ui,sans-serif;cursor:pointer}
+@media (prefers-color-scheme:dark){.req button:not(.link){background:#fab600;color:#1d1a16}}
 .req button.link{background:none;border:0;min-height:24px;padding:0 .2rem;color:var(--accent);text-decoration:underline;font-weight:600}
 .keyline{display:flex;flex-wrap:wrap;gap:.45rem;align-items:center;margin:0;padding:.55rem .8rem;border:1px solid var(--line);border-radius:10px;color:var(--fg);font-weight:600}
 .dot{width:.7rem;height:.7rem;border-radius:50%;background:#b07a00;flex:none}.has-key .dot{background:#2f8a52}
