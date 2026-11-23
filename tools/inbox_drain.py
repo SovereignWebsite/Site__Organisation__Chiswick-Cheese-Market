@@ -103,7 +103,7 @@ def main():
     print(f'inbox_drain: {len(done)} message(s), {len(acted)} signed by a named requester, {len(done) - len(acted)} not acted on; marked processed {moved}')
     for fid, rec, d in acted:
         imgs = ', '.join(os.path.join(d, i['data']) for i in rec.get('images', []))
-        print(f"\n--- {fid} from {rec['from']} ({rec['verified']}), {rec.get('sent_at')}\nkind: {rec.get('kind')}\n{rec.get('text')}" + (f'\nphotos: {imgs}' if imgs else ''))
+        print(f"\n--- {fid} from {rec['from']} ({rec['verified']}), {rec.get('sent_at')}\nkind: {rec.get('kind')}" + (f"\npage: {rec['page']}" if rec.get('page') else '') + f"\n{rec.get('text')}" + (f'\nphotos: {imgs}' if imgs else ''))
 
 
 if __name__ == '__main__':
